@@ -62,12 +62,12 @@ tagline: String <span class="hint">Optional Gravity Feature : Tagline for the pa
       </div>
       <div class="example">
 
-<!--        <pre>---
+        <pre>---
 layout: page
-title:  "Science"
+title:  "Test"
 permalink:   /science/
 tagline : "Humanity is overrated."
----</pre> -->
+---</pre>
       </div>
 
 
