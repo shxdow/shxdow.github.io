@@ -62,12 +62,12 @@ tagline: String <span class="hint">Optional Gravity Feature : Tagline for the pa
       </div>
       <div class="example">
 
-        <pre>---
+<!--        <pre>---
 layout: page
 title:  "Science"
 permalink:   /science/
 tagline : "Humanity is overrated."
----</pre>
+---</pre> -->
       </div>
 
 
@@ -104,13 +104,13 @@ category : String <span class="hint"> Name of the category of which the page wil
       </div>
       <div class="example">
 
-<!--        <pre>---
+        <pre>---
 layout: archive
 title:  "Design"
 permalink : "Design"
 category: "design"
 tagline: "It's all about perception."
----</pre> -->
+---</pre>
     </div><br>
   </div>
 </p>
