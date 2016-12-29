@@ -1,20 +1,27 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Blog settings
+permalink: /blog/:title
 
-# Site settings
-title: shxdow
-email: hemangsk@gmail.com
-description: Running some tests
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: imshxdow 
-github_username: shxdow 
-paginate: 5
 
-gems: [jekyll-paginate, kramdown]
-# Build settings
+# My variables
+name: Micah Cowell
+description: Futuristic web design
+google_verification: null
+
+
+# File management
+include: [".htaccess"]
+exclude: ["README.md", "LICENSE"]
+
+
+# Sass
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+
+# Markdown
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
