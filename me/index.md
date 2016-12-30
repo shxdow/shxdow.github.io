@@ -6,12 +6,12 @@ Hi.
 
 # What is this blog about?
 
-It's just a clump of stuff of reverse engineering, exploitation and low level things.<br/>
-&nbsp;
-<br/><br/><br/><br/><br/><br/><br/>
+It's just a clump of stuff of reverse engineering, exploitation and low level things.
+<br/>
+<br/>
 My public key:
-
-&nbsp;
+<br/>
+<br/>
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
