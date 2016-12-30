@@ -5,12 +5,11 @@ layout: about
 Hi.
 
 # What is this blog about?
-
-It's just a clump of stuff of reverse engineering, exploitation and low level things.
+It's just a clump of reverse engineering, exploitation and low level things.
 <br/>
 <br/>
+---
 My public key:
-<br/>
 <br/>
 
 ```  
