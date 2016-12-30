@@ -26,6 +26,7 @@ a {
   &:visited {
 	color: $color-black;
 	// text-decoration: none;
+	border-bottom: 1px solid $color-black;
   }
   &:hover {
 	color: $color-black;
@@ -36,6 +37,7 @@ a {
   &:active {
 	color: $color-black;
 	// text-decoration: none;
+	border-bottom: 1px solid $color-black;
   }
 }
 ul {
