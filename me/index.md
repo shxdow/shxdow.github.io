@@ -6,14 +6,14 @@ Hi.
 
 # What is this blog about?
 
-It's mostly a brain dump of reverse engineering, exploitation and low level things.
- 
- 
- 
- 
+It's mostly a brain dump of reverse engineering, exploitation and low level things.  
+  
+  
+  
+  
 My public key:
- 
- 
+  
+  
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
