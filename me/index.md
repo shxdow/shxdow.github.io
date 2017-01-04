@@ -5,7 +5,6 @@ layout: about
 Hi.
 
 # What is this blog about?
-It's just a clump of reverse engineering, exploitation and low level things.
 <br/>
 <br/>
 ---
