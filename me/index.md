@@ -4,11 +4,11 @@ layout: about
 
 Hi.
 
-# What is this blog about?
+<!--# What is this blog about?-->
 <br/>
 <br/>
 ---
-My public key:
+PGP key:
 <br/>
 
 ```  
