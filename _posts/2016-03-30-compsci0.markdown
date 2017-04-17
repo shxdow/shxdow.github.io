@@ -2,8 +2,8 @@
 layout: post
 title:  "Long Longer and more Longer titles look cool too!!"
 date:   2016-03-30 19:45:31 +0530
-categories: science
-author: "Chandler Bing"
+categories: posts
+author: "shxdow"
 ---
 "Could I be anymore pulling ?"
 

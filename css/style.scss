@@ -374,8 +374,8 @@ pre {
 .site-title {
   font-size: 64px;
   font-weight: 100;
-  font-family: 'PT Sans';
-  text-transform: capitalize;
+  font-family: 'Monospace';
+  text-transform: lowercase;
   font-weight: 500;
   margin-top: 1em;
   &,
@@ -402,6 +402,7 @@ pre {
   font-family: 'Josefin Sans';
   font-weight: 300;
   padding-top: 5em;
+  text-align: center
 }
 .page-title {
   text-transform: uppercase;
@@ -412,11 +413,13 @@ pre {
   text-align:center;
 }
 .page-tagline {
-  font-size: 18px;
-  font-family: "PT Sans";
+  /*font-size: 18px;*/
+  font-size: 12px;
+  /*font-family: "PT Sans";*/
+  font-family: "Monospace";
   color: rgb(170, 170, 170);
   text-align: center;
-  text-transform: lowercase;
+  /*text-transform: lowercase;*/
 }
 .page-link {
   color: rgb(170, 170, 170);

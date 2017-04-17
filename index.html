@@ -4,8 +4,8 @@ layout: default
 
 <div class="home">
 
-
-  {% for post in paginator.posts%}
+  <!--  This loop work for every single post. I may limit it to 3 limit: 2 -->
+  {% for post in paginator.posts limit: 5 %}
   <div class="post postContent">
     <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
     </div>
@@ -43,7 +43,8 @@ layout: default
     {% endif %}
     </nav>
   {% endif %}
-  <!--<ul class="post-list">
+  <!-- This is a simple list of all the posts written. It could come in handy -->
+<!--   <ul class="post-list">
     {% for post in site.posts %}
       <li>
         <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -53,8 +54,8 @@ layout: default
         </h2>
       </li>
     {% endfor %}
-  </ul>-->
-
+  </ul>
+ -->
 
 
 </div>

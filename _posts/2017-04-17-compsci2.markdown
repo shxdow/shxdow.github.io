@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Design Stories : Gravity"
-date:   2016-03-30 19:45:31 +0530
-categories: ["design", "science", "life"]
-author: "Hemang Kumar"
+title:  "Long Longer and more Longer titles look cool too!!"
+date:   2017-04-17 19:45:31 +0530
+categories: posts
+author: "shxdow"
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+"Could I be anymore pulling ?"
 
 Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
