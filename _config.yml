@@ -8,10 +8,9 @@
 # Site settings
 title: shxdow
 email: dysonfrost@protonmail.ch
-description: A never ending journey in the inner workings of computers
-# description: Exploitation, reverse engineering and malware
+description: I obsess over ones and zeros
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://shxdow.github.io" # the base hostname & protocol for your site
+url: "https://shxdow.github.io" # the base hostname & protocol for your site
 twitter_username: imshxdow
 github_username:  shxdow
 paginate: 5
