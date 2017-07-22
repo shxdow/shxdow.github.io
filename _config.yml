@@ -1,13 +1,49 @@
-# site details
-title: shxdow's blog
-# tag_line: Y
-description: I'm obsessed with taking things apart ¯\_(ツ)_/¯
-# keywords: simple jekyll theme
-url: https://shxdow.github.io/
-author: shxdow
-excerpt_separator: <!--more-->
-# author_url:
-# email_subscribe: http://eepurl.com/cNZfVz
-# tech
-markdown: kramdown
+# Basic
+name:               "shxdow"
+description:        "I'm obsessed with taking things apart  ¯\\_(ツ)_/¯"
 
+# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+url:                "//shxdow.github.io"
+author:             "shxdow"
+twitter:
+  username:         "imshxdow"
+#facebook:
+#  app_id:           1234
+#    publisher:      1234
+
+# URL
+baseurl:            ""
+#baseurl:            "" #For Root Domain
+permalink:          /:year/:month/:day/:title/
+
+# Markdown
+markdown:           kramdown
+
+# Navigation
+nav:
+  - name:           "About"
+    href:           "//shxdow.github.io/about"
+  # - name:           "Download"
+  #   href:           "//github.com/gfjaru/Kiko/releases"
+
+# Sass
+sass:
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+gems:
+  - jekyll-seo-tag

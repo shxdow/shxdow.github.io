@@ -1,13 +1,18 @@
 ---
-layout: page
 title: About
+permalink: /about/
 ---
 
+<!-- <p class="lead"><a href="http://github.com/gfjaru/Kiko">Kiko</a> is a theme for <a href="http://jekyllrb.com">Jekyll</a>, the static site generator.</p>
+
+Kiko is simple, lightweight theme. It's designed and developed by [@gfjaru](https://twitter.com/gfjaru).
+ -->
+<!-- <p style="text-align: center;color: #c0c0c0;">{{ site.description }}</p> -->
+<p >{{ site.description }}</p>
 <p>This blog is a collection of thoughts on a variety of topics. Low level aspects of computer science are going to be the main focus of my writing. Readers are better off being highly critical of whatever I say.</p>
-
-
-
-<!-- <pre>
+<br>
+<!-- <hr> -->
+<pre style="text-align: center;">
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
 
@@ -60,4 +65,4 @@ EGv2jg5PPJrj0e1tImw6hGESq83NBilwK95elJhqab/zBakZexzcQ51IwoICVyZN
 FvS0kjXEyB3utp/ztT6omviXjA==
 =/ktd
 -----END PGP PUBLIC KEY BLOCK-----
-</pre> -->
+</pre>

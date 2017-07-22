@@ -3,18 +3,19 @@ layout: post
 title: Analysis of Wirenet
 date: 2017-07-04
 ---
-
-<p class="subtitle">Reverse engineering a cross-platform banking trojan.</p>
+<p class="subtitle">Reverse engineering a cross-platform banking trojan</p>
+<!--moore-->
 
 ### Introduction
 
 I came across an [article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/) about an attack that leveraged phishing in order to drop Java malware on victims' machines. This reminded of *Wirenet* a cross-platform malware, that really made me wonder whether there was a link between the two.
 
-### The Analysis
+<!--moore-->
+
+### Analysis
 
 <p style="text-align: center;">For the sake of brevity I'll will only showcase the process of decompiling the keylogger</p>  
 
-  
 <!-- <pre style="background-color: #f5f5f5;padding-left: 1rem;padding-right: 1rem;padding-top: 1rem !important;padding-bottom: 1rem;important;line-height: 1.1rem;font-family: 'Inconsolata', Courier, monospace;font-size: 0.9rem;margin-top: 0rem;margin-bottom: 1.8rem;"> -->
 ```assembly
 void *cpStartKeyLogger(void *)
@@ -62,7 +63,7 @@ The following part starts off with a with a comparsion between `var_20` and `ebp
 2	jl      short  loc_805558B
 ```
 
-The image shows pretty clearly that the previous two lines are part of a loop![cmp loop](../assets/img/ida_cmp_loop.png)
+The image shows pretty clearly that the previous two lines are part of a loop![cmp loop](/assets/img/ida_cmp_loop.png)
 
 <!-- In this part the malware iterates over the list of input devices connected to the system, looking for one containing either `AT` or `System keyboard`. -->
 Every reverse engineer races against mental fatigue, and it is fundamental to be able to dissect the unimportant pieces from the relevant ones. Having said that, I omitted some parts as they were not as important to understand the overall implementation of the keylogger.
