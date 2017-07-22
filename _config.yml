@@ -1,13 +1,13 @@
 # site details
 title: shxdow's blog
 # tag_line: Y
-description: I obsess over ones and zeros
+description: I'm obsessed with taking things apart ¯\_(ツ)_/¯
 # keywords: simple jekyll theme
 url: https://shxdow.github.io/
 author: shxdow
+excerpt_separator: <!--more-->
 # author_url:
 # email_subscribe: http://eepurl.com/cNZfVz
-
 # tech
 markdown: kramdown
 
