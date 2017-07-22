@@ -82,7 +82,7 @@ Every reverse engineer races against mental fatigue, and it is fundamental to be
 ```
 This part is pretty simple, a string _AT_ is passed to _\_strstr_ along with a variable called _haystack_, looking for the first occurence of the former in the latter. To put it simply, the call looks something like this:
 
-```c
+```
 1	void _strstr (void *haystack, void *needle) {
 2		return strstr(*haystack, *needle);
 3	}
@@ -127,7 +127,7 @@ Here lies the heart of the keylogger:
 6	jz      loc_80
 ```
 As the name suggests, after finding the device rappresenting the system keyboard the malware tries to open it with _XOpenDevice_ and return a _XDevice_ structure which are defined as follows
-```c
+```
 1	XDevice *XOpenDevice ( Display *display, XID device_id )
 2	typedef struct {
 3		XID device_id;
@@ -166,7 +166,7 @@ The executions continues to the next function. I won't go over in detail to how 
 12	jz      State_5
 ```
 _XSelectExtensionEvent_ selects an extension event and is defined as follows
-```c
+```
 XSelectExtensionEvent ( Display *display,
                        Window w,
                        XEventClass *event_list,
@@ -175,9 +175,9 @@ XSelectExtensionEvent ( Display *display,
 
 The _KeyLoggerState_ variable is now set to 0
 ```assembly
-mov     KeyLoggerState, 0
-lea     edi, [esp+10Ch+var_E4]
-lea     esi, [esp+10Ch+v
+1	mov     KeyLoggerState, 0
+2	lea     edi, [esp+10Ch+var_E4]
+3	lea     esi, [esp+10Ch+v
 ```
 At this point, we found the system keyboard device, opened a handle and did something else lol  
 All is set and the malware can start logging keystrokes
@@ -197,7 +197,7 @@ All is set and the malware can start logging keystrokes
 
 >The XNextEvent function copies the first event from the event queue into the specified XEvent structure and then removes it from the queue. If the event queue is empty, XNextEvent flushes the output buffer and blocks until an event is received.
 
-```c
+```
 int XNextEvent ( Display *display, XEvent *event_return )
 ```
 
