@@ -162,7 +162,7 @@ The executions continues to the next function. I won't go over in detail to how 
 8	add     esp, 10h
 9	test    eax, eax
 10	jnz     State_5
-11	test    esi, esi 		; event_count
+11	test    esi, esi         ; event_count
 12	jz      State_5
 ```
 _XSelectExtensionEvent_ selects an extension event and is defined as follows
