@@ -36,7 +36,7 @@ Line 2 - 3 call _XOpenDisplay_ which establishes a connection to the X server, l
 2	jmp     loc_80557BA
 ```
 
-Next this code is executed
+Next this part is executed
 
 ```assembly
 1	sub     esp, 0Ch
@@ -200,6 +200,25 @@ All is set and the malware can start logging keystrokes
 ```
 int XNextEvent ( Display *display, XEvent *event_return )
 ```
+_XNextEvent_ is defined as follows
+```
+1	typedef struct {
+2	
+3		int type;
+4	
+5		/* KeyPress or KeyRelease */
+6	
+7		unsigned long serial;
+8	
+9		/* # of last request processed by server */
+[...]
+14	
+15		Display *display;
+16	
+17		/* Display the event was read from */
+[...]
+54	} XKeyEvent;
+```
 
 After an event occures and _XNextEvent_ gets executed the following instructions fill a _XKeyEvent_ structure and pass it to _LogKey_. Line 34 jumps to the previous code snippet (a never ending loop).
 
@@ -209,30 +228,7 @@ After an event occures and _XNextEvent_ gets executed the following instructions
 3	mov     [esp+10Ch+var_84.serial], eax
 4	mov     eax, dword ptr [esp+10Ch+var_E4+0Ch]
 5	mov     [esp+10Ch+var_84.display], eax
-6	mov     eax, dword ptr [esp+10Ch+var_E4+10h]
-7	mov     [esp+10Ch+var_84.window], eax
-8	mov     eax, dword ptr [esp+10Ch+var_E4+18h]
-9	mov     [esp+10Ch+var_84.root], eax
-10	mov     eax, dword ptr [esp+10Ch+var_E4+1Ch]
-11	mov     [esp+10Ch+var_84.subwindow], eax
-12	mov     eax, dword ptr [esp+10Ch+var_E4+20h]
-13	mov     [esp+10Ch+var_84.time], eax
-14	mov     eax, dword ptr [esp+10Ch+var_E4+24h]
-15	mov     [esp+10Ch+var_84.x], eax
-16	mov     eax, dword ptr [esp+10Ch+var_E4+28h]
-17	mov     [esp+10Ch+var_84.y], eax
-18	mov     eax, dword ptr [esp+10Ch+var_E4+2Ch]
-19	mov     [esp+10Ch+var_84.x_root], eax
-20	mov     eax, dword ptr [esp+10Ch+var_E4+30h]
-21	mov     [esp+10Ch+var_84.y_root], eax
-22	mov     eax, dword ptr [esp+10Ch+var_E4+34h]
-23	mov     [esp+10Ch+var_84.state], eax
-24	mov     eax, dword ptr [esp+10Ch+var_E4+38h]
-25	mov     [esp+10Ch+var_84.keycode], eax
-26	mov     eax, dword ptr [esp+10Ch+var_E4+3Ch]
-27	mov     [esp+10Ch+var_84.same_screen], eax
-28	push    eax
-29	push    eax
+...
 30	push    ebx             ; Display *
 31	push    esi             ; XKeyEvent *
 32	call    LogKey
