@@ -10,8 +10,6 @@ date: 2017-07-04
 
 I came across an [article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/) about an attack that leveraged phishing in order to drop Java malware on victims' machines. This reminded of *Wirenet* a cross-platform malware, that really made me wonder whether there was a link between the two.
 
-<!--moore-->
-
 ### Analysis
 
 <p style="text-align: center;">For the sake of brevity I'll will only showcase the process of decompiling the keylogger</p>  
@@ -228,7 +226,7 @@ After an event occures and _XNextEvent_ gets executed the following instructions
 3	mov     [esp+10Ch+var_84.serial], eax
 4	mov     eax, dword ptr [esp+10Ch+var_E4+0Ch]
 5	mov     [esp+10Ch+var_84.display], eax
-...
+[...]
 30	push    ebx             ; Display *
 31	push    esi             ; XKeyEvent *
 32	call    LogKey
