@@ -249,7 +249,8 @@ The _LogKey_ function saves intercepted keystrokes to _/tmp/.m8.dat_.
 
 ### Conclusion
 
-The implementation of the keylogger is quite simple and lean, making it easy replicate it at the cost of its ability to conceal itself, which is completly absent.
+The implementation of the keylogger is quite simple and lean, making it easy replicate it at the cost of its ability to conceal itself, which is completly absent.  
+The decompiled source code can be found [here](https://github.com/shxdow/wirenet-analysis).
 
 <!-- **Obstacles. barriers. Dead ends. They can end your journey or they can cause you to change directions.**
 
