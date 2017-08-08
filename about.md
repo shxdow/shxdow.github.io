@@ -10,7 +10,8 @@ Kiko is simple, lightweight theme. It's designed and developed by [@gfjaru](http
 <!-- <p style="text-align: center;color: #c0c0c0;">{{ site.description }}</p> -->
 <p >{{ site.description }}</p>
 <p>This blog is a collection of thoughts on a variety of topics. Low level aspects of computer science are going to be the main focus of my writing. Readers are better off being highly critical of whatever I say.</p>
-<br>
+* [Twitter](https://twitter.com/imshxdow)
+* [GitHub](https://github.com/shxdow)
 <!-- <hr> -->
 <pre style="text-align: center;">
 -----BEGIN PGP PUBLIC KEY BLOCK-----
