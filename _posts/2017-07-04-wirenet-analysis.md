@@ -5,6 +5,7 @@ date: 2017-07-04
 ---
 <p class="subtitle">Reverse engineering a cross-platform banking trojan</p>
 <!--moore-->
+<!-- permalink: /:title -->
 
 ### Introduction
 
