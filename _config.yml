@@ -14,7 +14,8 @@ twitter:
 # URL
 baseurl:            ""
 #baseurl:            "" #For Root Domain
-permalink:          /:year/:month/:day/:title/
+#permalink:          /:year/:month/:day/:title/
+permalink:          /:title/
 
 # Markdown
 markdown:           kramdown
