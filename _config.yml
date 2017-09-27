@@ -14,6 +14,7 @@ twitter:
 # URL
 baseurl:            ""
 #baseurl:            "" #For Root Domain
+permalink:           /:title/
 #permalink:          /:year/:month/:day/:title/
 
 # Markdown
@@ -43,7 +44,6 @@ defaults:
       path:         ""
       type:         "posts"
     values:
-      permalink:    "/:title"
       layout:       "post"
 
 gems:
