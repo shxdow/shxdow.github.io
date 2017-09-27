@@ -2,7 +2,6 @@
 layout: post
 title: Analysis of Wirenet
 date: 2017-07-04
-permalink: /:title
 ---
 <p class="subtitle">Reverse engineering a cross-platform banking trojan</p>
 <!--moore-->
