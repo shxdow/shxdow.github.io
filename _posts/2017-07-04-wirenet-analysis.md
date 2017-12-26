@@ -13,7 +13,7 @@ I came across an [article](https://securityintelligence.com/news/java-malware-be
 
 ### Analysis
 
-<p style="text-align: center;">For the sake of brevity I'll will only showcase the process of decompiling the keylogger</p>  
+<p>For the sake of brevity I'll will only showcase the process of decompiling the keylogger</p>  
 
 <!-- <pre style="background-color: #f5f5f5;padding-left: 1rem;padding-right: 1rem;padding-top: 1rem !important;padding-bottom: 1rem;important;line-height: 1.1rem;font-family: 'Inconsolata', Courier, monospace;font-size: 0.9rem;margin-top: 0rem;margin-bottom: 1.8rem;"> -->
 ```assembly
