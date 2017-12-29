@@ -13,7 +13,7 @@ Kiko is simple, lightweight theme. It's designed and developed by [@gfjaru](http
 <ul style="list-style:inside">
     <li><a href="https://twitter.com/imshxdow">Twitter</a></li>
     <li><a href="https://github.com/shxdow">GitHub</a></li>
-    <li><a href="https://twitter.com/imshxdow">PGP key</a></li>
+    <li><a href="/assets/key.html">PGP key</a></li>
 </ul>
 <!-- <hr> -->
 <!-- <a href="/assets/public.asc" target="_blank">test</a> -->
