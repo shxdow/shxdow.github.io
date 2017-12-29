@@ -1,5 +1,5 @@
 ---
-title: About
+title: about
 permalink: /about/
 ---
 
@@ -10,8 +10,10 @@ Kiko is simple, lightweight theme. It's designed and developed by [@gfjaru](http
 <!-- <p style="text-align: center;color: #c0c0c0;">{{ site.description }}</p> -->
 <p >{{ site.description }}</p>
 <p>This blog is a collection of thoughts on a variety of topics. Low level aspects of computer science are going to be the main focus of my writing.</p>
-* [Twitter](https://twitter.com/imshxdow)
-* [GitHub](https://github.com/shxdow)
+<ul style="list-style:inside">
+    <li><a href="https://twitter.com/imshxdow">Twitter</a></li>
+    <li><a href="https://github.com/shxdow">GitHub</a></li>
+    <li><a href="https://twitter.com/imshxdow">PGP key</a></li>
+</ul>
 <!-- <hr> -->
-* [PGP key](/assets/key.html)
 <!-- <a href="/assets/public.asc" target="_blank">test</a> -->

@@ -136,11 +136,11 @@ As the name suggests, after finding the device rappresenting the system keyboard
 ```
 There are two conditions two branches that set _KeyLoggerState_ to 5
 
-* The function fails
+The function fails
 ```assembly
 1	mov     KeyLoggerState, 5
 ```
-* The field _device\_id_ (offset _[eax+4]_) is zero
+or the field _device\_id_ (offset _[eax+4]_) is zero
 ```assembly
 1	mov     edx, [eax+4]
 2	test    edx, edx
