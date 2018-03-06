@@ -3,7 +3,7 @@ name:               "shxdow"
 description:        "I'm obsessed with taking things apart  ¯\\_(ツ)_/¯"
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
-url:                "//shxdow.eu"
+url:                "https://shxdow.me"
 author:             "shxdow"
 twitter:
   username:         "imshxdow"
@@ -24,8 +24,10 @@ markdown:           kramdown
 nav:
   - name:           "about"
     href:           "/about"
-  # - name:           "Bookshelf"
-  #   href:           "/bookshelf"
+  - name:           "bookshelf"
+    href:           "/bookshelf"
+  # - name:           "vulnerabilities"
+  #   href:           "/vulnerabilites"
 
 # Sass
 sass:
