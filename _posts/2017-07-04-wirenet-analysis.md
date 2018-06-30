@@ -178,7 +178,7 @@ The _KeyLoggerState_ variable is now set to 0
 2	lea     edi, [esp+10Ch+var_E4]
 3	lea     esi, [esp+10Ch+v
 ```
-At this point, we found the system keyboard device, opened a handle and did something else lol  
+At this point, we found the system keyboard device and opened a handle to it.
 All is set and the malware can start logging keystrokes
 
 ```assembly
@@ -248,7 +248,7 @@ The _LogKey_ function saves intercepted keystrokes to _/tmp/.m8.dat_.
 ```
 -->
 
-### Conclusion
+### Closing Words
 
 The implementation of the keylogger is quite simple and lean, making it easy replicate it at the cost of its ability to conceal itself, which is completly absent.  
 The decompiled source code can be found [here](https://github.com/shxdow/wirenet-analysis).
