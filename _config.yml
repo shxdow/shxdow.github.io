@@ -33,6 +33,10 @@ nav:
 sass:
   style:            :compressed
 
+# toc:
+  # min_level: 2 # default: 1
+  # max_level: 5 # default: 6
+
 # Scopes
 defaults:
   -
@@ -48,5 +52,7 @@ defaults:
     values:
       layout:       "post"
 
-plugins:
- - jekyll-seo-tag
+# plugins_dir:
+#  - jekyll-seo-tag
+plugins_dir:
+  - jekyll-toc
