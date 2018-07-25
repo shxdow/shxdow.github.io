@@ -8,11 +8,11 @@ toc: true
 <p class="subtitle">Reverse engineering a cross-platform banking trojan</p>
 <!--moore-->
 
-### Introduction
+## Introduction
 
 I came across an [article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/) about an attack that leveraged phishing in order to drop Java malware on victims' machines. This reminded of *Wirenet* a cross-platform malware, that really made me wonder whether there was a link between the two.
 
-### Analysis
+## Analysis
 
 <p>For the sake of brevity I'll will only showcase the process of decompiling the keylogger</p>  
 
