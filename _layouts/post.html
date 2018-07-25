@@ -1,16 +1,9 @@
 ---
-layout: default
+layout: page
 ---
-<header class="masthead">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-  <h1 class="masthead-title--small">
-    <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-  </h1>
-</header>
-<div class="content post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-date">
-    <time>{{ page.date | date_to_string }}</time>
-  </div>
-  {{ content }}
+<h2>{{ page.title }}</h2>
+<p class="meta">{{ page.date | date_to_string }}</p>
+
+<div class="post">
+{{ content | toc }}
 </div>

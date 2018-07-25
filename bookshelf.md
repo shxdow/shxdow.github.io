@@ -1,4 +1,5 @@
 ---
+layout: default
 title: bookshelf
 permalink: /bookshelf/
 ---
@@ -50,11 +51,11 @@ permalink: /bookshelf/
 *  The Resiliency Advantage - Al Siebert
 *  Elon Musk - Ashlee Vance
 
-## current
+### current
 
 *  Zero to One - Peter Thiel
 
-## plan to read
+### plan to read
 
 *  The War of Art // book on procrastination. maybe interesting
 *  La fattoria degli animali by George Orwell
@@ -68,12 +69,12 @@ permalink: /bookshelf/
 *  The Happiness Equation
 *  A Powerful Mind: The Self-Education of George Washington
 
-## on hold
+### on hold
 
 *  Becoming a Better Progammer [reference]
 *  Grit: The Power of Passion and Perseverance by Angela Duckworth
 
-## dropped
+### dropped
 
 *  Influence: The Psychology of Persuasion by Robert B. Cialdini
 *  Mastery by Robert Greene

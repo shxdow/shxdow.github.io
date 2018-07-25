@@ -1,31 +1,13 @@
 ---
 layout: default
+title: shxdow's blog
 ---
-<header class="masthead">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-  <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{ site.name }}<span>&#39;s blog</span></a>
-  </h1>
-  <nav class="masthead-nav">
-    {% for nav in site.nav %}
-    <a href="{{ nav.href }}">{{ nav.name }}</a>
-    {% endfor %}
-  </nav>
-</header>
-<div class="content list">
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% else %}
-{% for post in site.posts %}
-  <div class="list-item">
-    <h2 class="list-post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <div class="list-post-date">
-      <time>{{ post.date | date_to_string }}</time>
+<div class="listing">
+    {% for post in paginator.posts %}
+    <div class="post other link">
+      <h2></span> <a href="{{site.url}}{{post.url}}">{{ post.title }}</a></h2>
+      <p class="post-date">{{ post.date | date_to_string }}</p>
+      {{ post.excerpt }}
     </div>
-    {{ post.excerpt }}
-  </div>
-{% endfor %}
-{% endif %}
+    {% endfor %}
 </div>

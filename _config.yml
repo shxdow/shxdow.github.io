@@ -1,58 +1,21 @@
-# Basic
-name:               "shxdow"
-description:        "I'm obsessed with taking things apart  ¯\\_(ツ)_/¯"
+description: >
+    I'm obsessed with taking things apart  ¯\\\_(ツ)_/¯
 
-# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
-url:                "https://shxdow.me"
-author:             "shxdow"
-twitter:
-  username:         "imshxdow"
-#facebook:
-#  app_id:           1234
-#    publisher:      1234
+# master_repo: false
+url: "https://shxdow.me"
+markdown: kramdown
+highlighter: rouge
 
-# URL
-baseurl:            ""
-#baseurl:            "" #For Root Domain
-permalink:           /:title/
-#permalink:          /:year/:month/:day/:title/
+permalink: /:title/
 
-# Markdown
-markdown:           kramdown
+# plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed', 'jekyll-toc']
+plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 
-# Navigation
-nav:
-  - name:           "about"
-    href:           "/about"
-  - name:           "bookshelf"
-    href:           "/bookshelf"
-  # - name:           "vulnerabilities"
-  #   href:           "/vulnerabilites"
+paginate: 4
 
-# Sass
-sass:
-  style:            :compressed
-
-# toc:
-  # min_level: 2 # default: 1
-  # max_level: 5 # default: 6
-
-# Scopes
-defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
-
-# plugins_dir:
-#  - jekyll-seo-tag
-plugins_dir:
-  - jekyll-toc
+rtl: false
+name: shxdow
+owner:
+  email:   "shxdow@pm.me"
+  twitter: imshxdow
+  github:  https://github.com/shxdow
