@@ -10,6 +10,19 @@ h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address
 fieldset { padding: .5em; }
 select option{ padding:0 5px; }
 
+ul {
+    margin-left:40px;
+    font-size: 19px;
+}
+
+/* ul.books { */
+    /* margin-left:40px; */
+/* } */
+
+/* ul { */
+    /* margin-left:40px; */
+/* } */
+
 .access{ display:none; } /* For accessibility related elements */
 .clear{ clear:both; height:0px; font-size:0px; line-height:0px; overflow:hidden; }
 a{ outline:none; }
@@ -88,7 +101,7 @@ hr:before {
 }
 
 .container {
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -363,13 +376,15 @@ blockquote p {
 }
 
 table {
-	width: 100%;
+	width: 60%;
 	border-top: 1px solid #CCCCCC;
 	border-bottom: 2px solid #CCC;
 	color: #000;
 	background: #fff;
 	border-collapse: separate;
-	font-size: 11px;
+	font-size: 17px;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 caption {

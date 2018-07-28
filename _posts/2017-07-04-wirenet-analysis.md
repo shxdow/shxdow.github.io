@@ -3,18 +3,29 @@ layout: post
 title: Analysis of Wirenet
 date: 2017-07-04
 permalink: /:title/
-toc: true
 ---
-<p class="subtitle">Reverse engineering a cross-platform banking trojan</p>
+Reverse engineering a cross-platform banking trojan
 <!--moore-->
 
 ## Introduction
 
-I came across an [article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/) about an attack that leveraged phishing in order to drop Java malware on victims' machines. This reminded of *Wirenet* a cross-platform malware, that really made me wonder whether there was a link between the two.
+I came across an [article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/) about an attack that leveraged phishing in order to drop Java malware on victims' machines. This reminded of *Wirenet*, a cross-platform malware that really made me wonder whether there was a link between the two.
+This was one of the first, if not the first actual attempt I made in applying reverse engineering techniques to real world software (a malware in this case). Despite a superior familiarity with Windows rootkits, I figured this would be a good chance to acquaint myself to Linux. The analysis is pretty low level, analyzing each instruction.
 
-## Analysis
+## Initial Reconnaissance
 
-<p>For the sake of brevity I'll will only showcase the process of decompiling the keylogger</p>  
+Some high level information about the sample
+
+| MD5         | 9a0e765eecc5433af3dc726206ecc56e |
+| Size        | 64.4 KB                          |
+| File        | ELF 32-bit LSB executable        |
+| Arch        | Intel 80386                      |
+
+One of the most important things about the binary is that function names were not stripped, which made the entire process much more smooth
+
+## Keylogger
+
+For the sake of brevity I'll will only showcase the process of decompiling the keylogger
 
 <!-- <pre style="background-color: #f5f5f5;padding-left: 1rem;padding-right: 1rem;padding-top: 1rem !important;padding-bottom: 1rem;important;line-height: 1.1rem;font-family: 'Inconsolata', Courier, monospace;font-size: 0.9rem;margin-top: 0rem;margin-bottom: 1.8rem;"> -->
 ```assembly
@@ -188,22 +199,6 @@ All is set and the malware can start logging keystrokes
 3	push    eax
 4	push    edi             ; XEvent *
 5	push    ebx             ; Display *
-6	call    ds:_XNextEvent
-7	mov     eax, dword ptr [esp+11Ch+var_E4]
-8	add     esp, 10h
-9	cmp     eax, dword_805873C
-10	jnz     short loc_80556D9
-```
-
->The XNextEvent function copies the first event from the event queue into the specified XEvent structure and then removes it from the queue. If the event queue is empty, XNextEvent flushes the output buffer and blocks until an event is received.
-
-```
-int XNextEvent ( Display *display, XEvent *event_return )
-```
-_XNextEvent_ is defined as follows
-```
-1	typedef struct {
-2	
 3		int type;
 4	
 5		/* KeyPress or KeyRelease */
@@ -251,13 +246,11 @@ The _LogKey_ function saves intercepted keystrokes to _/tmp/.m8.dat_.
 
 ### Closing Words
 
+At a high level, the keylogger works as follows:
+
+* Tries to connect to the X server
+* Looks for the device representing the keyboard
+* Sets a call back function that upon execution logs to a file intercepted keys
+
 The implementation of the keylogger is quite simple and lean, making it easy replicate it at the cost of its ability to conceal itself, which is completly absent.  
 The decompiled source code can be found [here](https://github.com/shxdow/wirenet-analysis).
-
-<!-- **Obstacles. barriers. Dead ends. They can end your journey or they can cause you to change directions.**
-
-**No matter what you do in life there will always be something standing in the way of you reaching your goal.** Money, knowledge, location, connections and timing, they can all influence how easy or hard it is to do what you want to do. The question is: what do you do when you’re faced with an obstacle?
-
-**Do you quit or do you change direction?**
-
-**You’ve already decided to build a wall, don’t be stopped by a dead end and change directions to keep on building.** I’ve already started to build a blog, if I lose interest in a topic then I can write about something else. When you reach a barrier I encourage you to change directions and find another way to reach your goal. -->
