@@ -40,7 +40,8 @@ void *cpStartKeyLogger(void *)
 7	jnz     short State_2
 ```
 
-Line 2 - 3 call _XOpenDisplay_ which establishes a connection to the X server, line 4 - 7 do some error checking and jump to _loc\_8055532_ in case _XOpenDisplay_ returns a non-zero value. Otherwise a variable called KeyLoggerState is set to 2
+Line 2 - 3 call `XOpenDisplay` which establishes a connection to the X server, line 4 - 7 do some error checking and jump to `loc_8055532` in case `XOpenDisplay` returns a non-zero value. Otherwise a variable called KeyLoggerState is set to 2.
+As the name suggests, it represents the various states in which the keylogger can exist, is used mostly for error handling purposes and is not relevant for the purpose of the article.
 
 ```assembly
 1	mov     KeyLoggerState, 2
@@ -65,7 +66,7 @@ Next this part is executed
 13	jnz     short loc_805556F
 ```
 
-Line 2 - 4 - 6 load the addresses of the variables into eax, so that line 3 - 5 - 7 can push those values onto the stack and call _XQueryExtension_. _XQueryExtension_ determines if the named extension is present. Line 11 cleans up the stack, line 12 - 13 check if _XInputExtension_ was present.  
+Line 2 - 4 - 6 load the addresses of the variables into eax, so that line 3 - 5 - 7 can push those values onto the stack and call `XQueryExtension`. `XQueryExtension` determines if the named extension is present. Line 11 cleans up the stack, line 12 - 13 check if `XInputExtension` was present.  
 If the function fails KeyLoggerState is set to 3
 
 ```assembly
@@ -73,7 +74,7 @@ If the function fails KeyLoggerState is set to 3
 2	jmp     loc_8
 ```
 
-The following part starts off with a with a comparsion between _var\_20_ and _ebp_
+The following part starts off with a with a comparsion between `var_20` and `ebp`
 
 ```assembly
 1	cmp     ebp, [esp+10Ch+var_20]
@@ -91,7 +92,7 @@ Every reverse engineer races against mental fatigue, and it is fundamental to be
 3	mov     [esp+11Ch+haystack], edx
 4	call    _strstr
 ```
-This part is pretty simple, a string _AT_ is passed to _\_strstr_ along with a variable called _haystack_, looking for the first occurence of the former in the latter. To put it simply, the call looks something like this:
+This part is pretty simple, a string `AT` is passed to `_strstr` along with a variable called `haystack`, looking for the first occurence of the former in the latter. To put it simply, the call looks something like this:
 
 ```
 1	void _strstr (void *haystack, void *needle) {
@@ -99,7 +100,7 @@ This part is pretty simple, a string _AT_ is passed to _\_strstr_ along with a v
 3	}
 ```
 
-Line 5 cleans up the stack, line 6 stores the haystack in edx and line 7 checks _\_strstr_'s return value. If it is zero execution jumps to _loc\_80555D2_ which simply ends the loop by incrementing the counter.
+Line 5 cleans up the stack, line 6 stores the haystack in edx and line 7 checks `_strstr`'s return value. If it is zero execution jumps to `loc_80555D2` which simply ends the loop by incrementing the counter.
 
 ```assembly
 5	add     esp, 10h
@@ -113,7 +114,7 @@ Line 5 cleans up the stack, line 6 stores the haystack in edx and line 7 checks 
 2	add     edi, 18h
 ```
 
-If an occurence is found there's another search, this time using _System keyboard_ as needle.
+If an occurence is found there's another search, this time using `System keyboard` as needle.
 
 ```
 11	push    offset aSystemKeyboard ; "System keyboard"
@@ -124,7 +125,7 @@ If an occurence is found there's another search, this time using _System keyboar
 16	jz      short loc_80555D2
 ```
 
-The interesting part of this branch is over, it is worth however mentioning that under some conditions a variable called _KeyLoggerState_ is set to 4.  
+The interesting part of this branch is over, it is worth however mentioning that under some conditions a variable called `KeyLoggerState` is set to 4.  
 <br>
 Let's go up the abstraction ladder and let's ask ourselves what happens if the previous check happens to be passed.
 Here lies the heart of the keylogger:
@@ -137,7 +138,7 @@ Here lies the heart of the keylogger:
 5	test    eax, eax
 6	jz      loc_80
 ```
-As the name suggests, after finding the device rappresenting the system keyboard the malware tries to open it with _XOpenDevice_ and return a _XDevice_ structure which are defined as follows
+As the name suggests, after finding the device rappresenting the system keyboard the malware tries to open it with `XOpenDevice` and return a `XDevice` structure which are defined as follows
 ```
 1	XDevice *XOpenDevice ( Display *display, XID device_id )
 2	typedef struct {
@@ -146,13 +147,13 @@ As the name suggests, after finding the device rappresenting the system keyboard
 5		XInputClassInfo *classes;
 6	} XDevice;
 ```
-There are two conditions two branches that set _KeyLoggerState_ to 5
+There are two conditions two branches that set `KeyLoggerState` to 5
 
 The function fails
 ```assembly
 1	mov     KeyLoggerState, 5
 ```
-or the field _device\_id_ (offset _[eax+4]_) is zero
+or the field `device_id` (offset `[eax+4]`) is zero
 ```assembly
 1	mov     edx, [eax+4]
 2	test    edx, edx
@@ -176,7 +177,7 @@ The executions continues to the next function. I won't go over in detail to how 
 11	test    esi, esi         ; event_count
 12	jz      State_5
 ```
-_XSelectExtensionEvent_ selects an extension event and is defined as follows
+`XSelectExtensionEvent` selects an extension event and is defined as follows
 ```
 XSelectExtensionEvent ( Display *display,
                        Window w,
@@ -184,7 +185,7 @@ XSelectExtensionEvent ( Display *display,
                        int event_count )
 ```
 
-The _KeyLoggerState_ variable is now set to 0
+The `KeyLoggerState` variable is now set to 0
 ```assembly
 1	mov     KeyLoggerState, 0
 2	lea     edi, [esp+10Ch+var_E4]
@@ -215,7 +216,7 @@ All is set and the malware can start logging keystrokes
 54	} XKeyEvent;
 ```
 
-After an event occures and _XNextEvent_ gets executed the following instructions fill a _XKeyEvent_ structure and pass it to _LogKey_. Line 34 jumps to the previous code snippet (a never ending loop).
+After an event occures and `XNextEvent` gets executed the following instructions fill a `XKeyEvent` structure and pass it to `LogKey`. Line 34 jumps to the previous code snippet (a never ending loop).
 
 ```assembly
 1	mov     [esp+10Ch+var_84.type], eax
@@ -231,7 +232,7 @@ After an event occures and _XNextEvent_ gets executed the following instructions
 34	jmp     loc_80556D9
 ```
 
-The _LogKey_ function saves intercepted keystrokes to _/tmp/.m8.dat_.
+The `LogKey` function saves intercepted keystrokes to `/tmp/.m8.dat`.
 
 <!-- This is what happens right after `KeyLoggerState` is set to 5
 ```assembly
