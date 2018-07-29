@@ -118,7 +118,7 @@ ul.nav {
 }
 ul.nav li {
   display: inline-block;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 18px;
   font-weight: 300;
 }
@@ -345,7 +345,7 @@ h4 {
   text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
 }
 .figure small strong {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .figure img {
   max-width: 100%;
@@ -376,7 +376,7 @@ caption {
 	padding: 10px 10px 5px 0;
 	text-align: left;
 	font-size: 12px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-weight: bold;
 }
 
