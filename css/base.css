@@ -48,8 +48,8 @@ a img{ border:none; }
     font-family: "CMU";
     font-style: normal;
     /* src: url("AvenirLTStd-Book.otf") format("opentype"); */
-    /* src: url("cmr10.ttf"); */
     src: url("cmr10.ttf");
+    /* src: url("cmr10.ttf") format("truetype"); */
     font-display: swap;
 }
 
