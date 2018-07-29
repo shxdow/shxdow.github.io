@@ -10,7 +10,7 @@ Reverse engineering a cross-platform banking trojan
 ## Introduction
 
 I came across an [article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/) about an attack that leveraged phishing in order to drop Java malware on victims' machines. This reminded of *Wirenet*, a cross-platform malware that really made me wonder whether there was a link between the two.
-This was one of the first, if not the first actual attempt I made in applying reverse engineering techniques to real world software (a malware in this case). Despite a superior familiarity with Windows rootkits, I figured this would be a good chance to acquaint myself to Linux. The analysis is pretty low level, analyzing each instruction.
+This was one of the first, if not the first actual attempt I made in applying reverse engineering techniques to real world software (a malware in this case). Despite a superior familiarity with Windows rootkits, I figured this would be a good chance to acquaint myself to Linux. The analysis is pretty low level, it goes over specific instructions as more emphasis was put on the 'how' rather than the 'what'.
 
 ## Initial Reconnaissance
 
@@ -245,7 +245,7 @@ The `LogKey` function saves intercepted keystrokes to `/tmp/.m8.dat`.
 ```
 -->
 
-### Closing Words
+## Closing Words
 
 At a high level, the keylogger works as follows:
 
