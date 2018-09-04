@@ -39,6 +39,7 @@ a img{ border:none; }
 
 body {
   font-family: "AvenirLTStd", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  /* font-family: Raleway; */
   font-size: 14.5px;
   color: #333;
   text-shadow: 0 1px 0 rgba(255,255,255,1.0);
@@ -140,7 +141,7 @@ ul.nav li {
 }
 ul.nav li a {
   color: black;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   text-decoration: none;
   font-weight: lighter;
 }

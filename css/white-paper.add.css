@@ -32,18 +32,19 @@ a img{ border:none; }
 
 
 @font-face {
-    /* font-family: AvenirLTStd; */
-    font-family: "CMU";
-    font-style: normal;
+    font-family: AvenirLTStd;
+    /* font-family: "CMU"; */
+    /* font-style: normal; */
     /* src: url("AvenirLTStd-Book.otf") format("opentype"); */
     /* src: url("cmr10.ttf"); */
-    src: url("cmr10.ttf");
-    font-display: swap;
+    /* src: url("cmr10.ttf"); */
+    /* font-display: swap; */
 }
 
 body {
-  font-family: "CMU", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  /* font-family: "AvenirLTStd", Consolas, "Liberation Mono", Menlo, Courier, monospace; */
+  /* font-family: "CMU", Consolas, "Liberation Mono", Menlo, Courier, monospace; */
+  font-family: "AvenirLTStd", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Raleway;
   font-size: 14.5px;
   color: #333;
   text-shadow: 0 1px 0 rgba(255,255,255,1.0);
