@@ -1,8 +1,10 @@
 source "https://rubygems.org"
 
 gem "jekyll-paginate"
+gem "public_suffix"
 gem "jekyll-gist"
-gem "jekyll"
 gem "jekyll-feed"
+# gem "jekyll-toc"
+# gem "public_suffix", "3.0.1"
+gem "jekyll"
 gem "rouge"
-gem "jekyll-toc"
