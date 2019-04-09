@@ -1,21 +1,85 @@
-description: >
-    I'm obsessed with taking things apart.
+# # # # # # # # # # # # #
+#   K i k o - p l u s   #
+# # # # # # # # # # # # #
 
-# master_repo: false
-url: "https://shxdow.me"
-markdown: kramdown
-highlighter: rouge
+# Basic
+name:               "shxdow"
+description:        "yeet"
 
-permalink: /:title/
+author:
+  twitter:          imshxdow
+  github:           shxdow
+  # stackoverflow:    your-id
+  # quora:            your-id
+  # linkedin:         your-id
+  # pinterest:        your-id
+  # googlePlus:       your-id
+  # instagram:        your-id
+  # reddit:           your-id
+  # medium:           your-id
+  # tumblr:           your-id
+  email:            dysonfrost@pm.me
 
-# plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed', 'jekyll-toc']
-plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+copyright:
+  year:             2019
+  name:             shxdow
 
-paginate: 4
+# Google-analytics
+# google-analytics:
+#   id:               ""
 
-rtl: false
-name: shxdow
-owner:
-  email:   "shxdow@pm.me"
-  twitter: imshxdow
-  github:  https://github.com/shxdow
+# Disqus
+# disqus:
+#   id:               "kiko-plus"
+
+# URL
+url:                "https://shxdow.me" # the base hostname & protocol for your site
+# baseurl:            "/" # the subpath of your site, e.g. /blog
+# baseurl:            "/blog" # the subpath of your site, e.g. /blog
+
+plugins: [jekyll-seo-tag, jekyll-paginate]
+
+# timezone:           Asia/Seoul
+permalink:          /:title/
+
+# Pagination
+paginate:           20
+paginate_path:      /page:num/
+
+# Markdown
+markdown:           kramdown
+kramdown:
+  input:            GFM
+
+# Navigation
+nav:
+  - name:           "about"
+    url:            "/about"
+  - name:           "archive"
+    url:            "/archive"
+  - name:           "tags"
+    url:            "/tags"
+  - name:           "GitHub"
+    url:            "https://github.com/shxdow"
+
+# Sass
+sass:
+  sass_dir:         _sass
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+exclude:            [vendor]

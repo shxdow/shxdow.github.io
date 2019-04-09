@@ -3,9 +3,10 @@ layout: post
 title: Analysis of Wirenet
 date: 2017-07-04
 permalink: /:title/
+description: "Reverse engineering a cross-platform banking trojan"
+tags: [reverse engineering, malware]
+share: true
 ---
-Reverse engineering a cross-platform banking trojan
-<!--moore-->
 
 ## Introduction
 

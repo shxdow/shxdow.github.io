@@ -1,11 +1,10 @@
 ---
-layout: about
 title: about
 permalink: /about/
 ---
 
 <br>
-<!-- <h1 class="owner-name">{{ site.owner.name}} </h1> -->
+<h1 class="owner-name">{{ site.owner.name}} </h1>
 <h1 class="owner-name">{{ site.title }}</h1>
 
 {{site.description}}
