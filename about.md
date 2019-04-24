@@ -4,23 +4,24 @@ permalink: /about/
 ---
 
 <br>
-<h1 class="owner-name">{{ site.owner.name}} </h1>
-<h1 class="owner-name">{{ site.title }}</h1>
+<!-- <h1 class="author-name">{{ site.author.name}} </h1> -->
+<!-- <h1 class="author-name">{{ site.title }}</h1> -->
 
-{{site.description}}
+<!-- {{site.description}} -->
 
-This blog is a collection of thoughts on a variety of topics. Low level aspects of computer science are going to be the main focus of my writing.
+Hi!  
+I'm a computer engineering student interested in cryptography, 
+low level security, maths and too many other things to list here.
 
 <div class="pagination">
-  {% if site.owner.email %}
-    <a href="mailto:{{ site.owner.email }}" class="social-media-icons"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a>
-  {% endif %}
-  {% if site.owner.twitter %}
-    <a href="{{ site.owner.twitter }}" class="social-media-icons"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
-  {% endif %}
-  {% if site.owner.github %}
-    <a href="{{ site.owner.github }}" class="social-media-icons"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
-  {% endif %}
-  <a href="{{ site.url }}/assets/key.html" class="social-media-icons"><i class="fa fa-2x fa-key" aria-hidden="true"></i></a>
-  <!-- <a href="{{ site.url }}/assets/key.html" class="social-media-icons"><i class="fas fa-key" aria-hidden="true"></i></a> -->
+  <!-- {% if site.author.email %} -->
+  <!--   <a href="mailto:{{ site.author.email }}" class="social-media-icons"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a> -->
+  <!-- {% endif %} -->
+  <!-- {% if site.author.twitter %} -->
+  <!--   <a href="{{ site.author.twitter }}" class="social-media-icons"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a> -->
+  <!-- {% endif %} -->
+  <!-- {% if site.author.github %} -->
+  <!--   <a href="{{ site.author.github }}" class="social-media-icons"><i class="fa fa-2x fa-github" aria-hidden="true"></i></a> -->
+  <!-- {% endif %} -->
+  <!-- <a href="{{ site.url }}/assets/key.html" class="social-media-icons"><i class="fa fa-2x fa-key" aria-hidden="true"></i></a> -->
 </div>

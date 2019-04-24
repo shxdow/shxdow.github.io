@@ -1,10 +1,10 @@
 ---
 layout: post
 mathjax: true
-title: Appreciating Fiction
+title: On Appreciating Fiction
 date: 2019-04-20
 permalink: /:title/
-description: "Adventures in..."
+description: "Some thoughts on taste when it comes to books"
 tags: [misc]
 share: true
 ---
@@ -15,9 +15,9 @@ share: true
 I genuinely feel I should not be the person writing this article, but I wish I
 was told the following earlier. Up until very recent times, I was completely
 unable to bear the thought of reading fiction (except few notable
-exceptions[1]). As it is often the case, its not reading per se that is
+exceptions [1]). As it is often the case, its not reading per se that is
 unpleasant, but rather the frustration that arises from a lack of interest or a
-daunting read. This article is not geared towards people who (or whom ?) for
+daunting read. This article is not geared towards people who for
 whatever reason have to read a book. If that is the case I fear I may not be of
 much help.  
 The following are things I personally happened to be doing at one
@@ -36,42 +36,36 @@ a mixture of [Person of Interest]() and some of the classes I'm currently for
 my computer engineering BSc sparked a curiosity in the world of artificial
 intelligence. More books I'm reading (besides every Asimov's book) are 
 dystopian fiction such as [I have no mouth and I must scream]()
-
-## Pick something short and self contained
-
-Despite the countless reccomandations, both online and offline, I tried to
-stick to books with the following hallmarks
-
-* Less than 400/500 pages
-* Clear and concise writing
-
-Love and Peace may be a masterpiece and may also make someone shy away from
-reading altogether Some examples may be: Lovecraft, Asimov, Doyle 
-
-## Read at whim
-
 If something isn’t fun, just close the book and find/do something else. If one
 intends (aka want) to read for pleasure, so should it be: pleasureable.
 
-## Find the time that best suits you to read
+## Pick something short and self contained
 
-For some reasons, I’m much more
-willing to read fiction books past 18:00 PM
+Despite the countless recomandations, both online and offline, on which
+books would be great, I tried to
+stick to books with the following hallmarks
+
+* Ideally ~ 250 / 300 pages
+* Clear and concise writing
+
+War and Peace may be a masterpiece and may also make someone shy away from
+reading fiction altogether. 
 
 ## Commitment devices
 
+> A commitment device is a technique where someone makes it easier for 
+themselves to avoid akrasia (acting against one's better judgment), 
+particularly procrastination. - [Wikipedia]()
+
 The topic of commitment devices would be worth an article of its own, but for
-the sake of the advice I’m presenting here, with that term we refer to any
-system that punishes anyone who does not Services such as Beeminder and Stickk
-provide the said functionality
+the sake of the advice I’m presenting here, we can keep it short and concise.
+Services such as Beeminder and Stickk provide the said functionality: they
+make you pay if you fail to commit on your goal.
 
-
-### Notes
+### Footnotes
 
 **[1]**
 [That](https://www.goodreads.com/book/show/12578220-di-notte-sui-tetti-corsari-perfetti)
 was the first book I was actually happy to have come across. Nevertheless, I had
 to rush the last 150 pages the night before homework was due (which admittedly,
-        its more than half the book)
-
-**[2]** Person
+its more than half the book)
