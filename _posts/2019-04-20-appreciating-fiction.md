@@ -15,7 +15,7 @@ share: true
 I genuinely feel I should not be the person writing this article, but I wish I
 was told the following earlier. Up until very recent times, I was completely
 unable to bear the thought of reading fiction (except few notable
-exceptions [1]). As it is often the case, its not reading per se that is
+exceptions[^1]). As it is often the case, its not reading per se that is
 unpleasant, but rather the frustration that arises from a lack of interest or a
 daunting read. This article is not geared towards people who for
 whatever reason have to read a book. If that is the case I fear I may not be of
@@ -34,8 +34,8 @@ in me anyway). My interests in science and technology, naturally lead me to
 [Isaac Asimov](https://en.wikipedia.org/wiki/Isaac_Asimov). More specifically,
 a mixture of [Person of Interest]() and some of the classes I'm currently for
 my computer engineering BSc sparked a curiosity in the world of artificial
-intelligence. More books I'm reading (besides every Asimov's book) are 
-dystopian fiction such as [I have no mouth and I must scream]()
+intelligence. More books I'm planning to read (besides every Asimov's book) are 
+dystopian fiction such as [I have no mouth and I must scream]().  
 If something isn’t fun, just close the book and find/do something else. If one
 intends (aka want) to read for pleasure, so should it be: pleasureable.
 
@@ -62,10 +62,5 @@ the sake of the advice I’m presenting here, we can keep it short and concise.
 Services such as Beeminder and Stickk provide the said functionality: they
 make you pay if you fail to commit on your goal.
 
-### Footnotes
 
-**[1]**
-[That](https://www.goodreads.com/book/show/12578220-di-notte-sui-tetti-corsari-perfetti)
-was the first book I was actually happy to have come across. Nevertheless, I had
-to rush the last 150 pages the night before homework was due (which admittedly,
-its more than half the book)
+[^1]: [That](https://www.goodreads.com/book/show/12578220-di-notte-sui-tetti-corsari-perfetti) was the first book I was actually happy to have come across. Nevertheless, I had to rush the last 150 pages the night before homework was due (which admittedly, its more than half the book)
