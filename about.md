@@ -11,7 +11,8 @@ permalink: /about/
 
 Hi!  
 I'm a computer engineering student interested in cryptography, 
-low level security, maths and too many other things to list here.
+low level security, maths, books and too many other things to 
+list here.
 
 <div class="pagination">
   <!-- {% if site.author.email %} -->
