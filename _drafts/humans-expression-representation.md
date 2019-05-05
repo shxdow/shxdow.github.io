@@ -1,11 +1,12 @@
-<!-- --- -->
-<!-- layout: post -->
-<!-- title: On Expression, Representation and -->
-<!-- date: 2018-08-10 -->
-<!-- permalink: /:title/ -->
-<!-- --- -->
-Some thoughts on humans, how they express themselves and how they represent reality
-<!--moore-->
+---
+layout: post
+title: On Expression, Representation and
+date: 2018-08-10
+permalink: /:title/
+share: true
+tags: [misc]
+descrition: Some thoughts on humans, how they express themselves and how they represent reality
+---
 
 ## Introduction
 

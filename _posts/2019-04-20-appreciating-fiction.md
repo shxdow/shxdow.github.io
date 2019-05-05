@@ -21,7 +21,7 @@ daunting read. This article is not geared towards people who for
 whatever reason have to read a book. If that is the case I fear I may not be of
 much help.  
 The following are things I personally happened to be doing at one
-point or another that got me _started_.  
+point or another that got me started.  
 
 ## Pick something of interest
 
