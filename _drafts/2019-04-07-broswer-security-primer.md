@@ -57,8 +57,8 @@ vulnerability is quite straighforward. Readers are free to look for the vulnerab
 
 > from bug tracker [...]
 
-
-The vulnerable function can be found in `Source/JavaScriptCore/builtins/ArrayPrototype.js`
+The code is quite lengthy, and as such, I following along with the code in a text editor.
+The vulnerable function is in `Source/JavaScriptCore/builtins/ArrayPrototype.js`.
 
 ```javascript
 function concatSlowPath()
@@ -74,7 +74,7 @@ function concatSlowPath()
     var constructor;
     if (@isArray(currentElement)) {
         constructor = currentElement.constructor;
-        [X]
+        [2]
         if (@isArrayConstructor(constructor) && @Array !== constructor)
             constructor = @undefined;
         else if (@isObject(constructor)) {
@@ -91,7 +91,7 @@ function concatSlowPath()
         result = @newArrayWithSize(0);
     else
         result = new constructor(0);
-    // [7]
+    // [3]
     var resultIsArray = @isJSArray(result);
 
     var resultIndex = 0;
@@ -104,13 +104,13 @@ function concatSlowPath()
             let length = @toLength(currentElement.length);
             // [5]
             if (resultIsArray && @isJSArray(currentElement)) {
-                // [?1]
+                // [6]
                 @appendMemcpy(result, currentElement, resultIndex);
                 resultIndex += length;
             } else {
                 if (length + resultIndex > @MAX_SAFE_INTEGER)
                     @throwTypeError("length exceeded the maximum safe integer");
-                // [6]
+                // [7]
                 for (var i = 0; i < length; i++) {
                     if (i in currentElement)
                         @putByValDirect(result, resultIndex, currentElement[i]);
@@ -125,7 +125,7 @@ function concatSlowPath()
         currentElement = arguments[argIndex];
     } while (argIndex++ < argCount);
 
-    // [?] what if the vunlerability consists in increasing resultIndex
+    // [8] what if the vunlerability consists in increasing resultIndex
     result.length = resultIndex;
     return result;
 }
@@ -226,9 +226,9 @@ bool JSArray::appendMemcpy(ExecState* exec, VM& vm, unsigned startIndex, JSC::JS
 
 As the name suggests, `concatSlowpath` is a function used by v8 to `concat` arrays without optimizinations
 
-#
+# v8's internals
 
-#
+# WebKit's Internals
 
 #
 
