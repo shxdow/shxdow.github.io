@@ -11,7 +11,8 @@ Computer science and engineering, Information science, etc
 
 ### Software Engineering
 
-Why is software engineering such a mess compared to other engineering disciplines ?
+_Why is software engineering such a mess compared to other engineering disciplines ?_
+
 One of the first things I thought about is its very immaterial nature,
-computer systems are far less limited in the growth of their complexity compared to macroscopical physical.
+computer systems are far less limited in the growth of their complexity compared to the phyisical ones that have characterized engineering as a whole for centuries.
 
