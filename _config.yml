@@ -60,6 +60,8 @@ nav:
     url:            "/about"
   - name:           "archive"
     url:            "/archive"
+  - name:           "notes"
+    url:            "/notes"
   - name:           "tags"
     url:            "/tags"
   - name:           "GitHub"
