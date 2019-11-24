@@ -68,4 +68,11 @@ broken assumptions and deeper understanding of the underlying system.
 <!-- - Fundamental limits of computation (Limits of Turing machines, Incompleteness theorems) -->
 <!-- - Very heterogeneous backgrounds among practitioners (This is both a pro and a con) -->
 
+# Quotes
+
+> "In any field, find the strangest thing and then explore it." ~ John Archibald Wheeler
+
+This quotes is a really interesting answer to a question I don't know yet
+
+
 [^1]: Needless to say, primitive and hard to reason about tools do play their role
