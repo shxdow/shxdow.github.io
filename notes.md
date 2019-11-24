@@ -1,9 +1,48 @@
 ---
 title: notes
+layout: post
 permalink: /notes/
 ---
 
 This page is heavily inspired from [gwern.net/notes](www.gwern.net/Notes), it is a collection of things I found interesting enough to store somewhere
+
+# Statistics
+
+It is an understatement to say that I was left unsatisfied by the stats course I took in university.
+I since made it my goal to properly go over statistics making an effort to properly learn the discipline.
+The following notes are mostly taken from [Professor Knudson' s youtube videos](https://www.youtube.com/playlist?list=PLdxWrq0zBgPW0554eqyaR_jYMJ1ux5MgI)
+
+### Probability Groundwork
+
+#### Experiment:
+
+Any procedure that:
+
+1. can be repeated (theoretically) $\infty$ many times
+2. has a well-defined set of possible outcomes  
+
+_eg_: 
+Given $4$ red and $6$ brown M&Ms, choose $1$, record color, and put it back
+
+#### Sample space:
+
+Set of all possible outcomes, denoted $S$
+
+#### Sample outcome
+
+One possible outcome, an element
+$$
+s \in S
+$$
+
+_eg_: flip a coin two times:
+
+$$
+S = \{ HH, HT, TH, TT \}
+$$  
+or  
+$$S = \{HH, HT, TT\}$$ if order does not matter  
+one sample otucome is 2 tails $(TT)$
 
 # Technology
 
