@@ -4,7 +4,12 @@ layout: post
 permalink: /notes/
 ---
 
-This page is heavily inspired from [gwern.net/notes](www.gwern.net/Notes), it is a collection of things I found interesting enough to store somewhere
+This page is heavily inspired from [gwern.net/notes](https://www.gwern.net/Notes), it is a collection of things I found interesting enough to store somewhere
+
+> Half the challenge of fighting procrastination is the pain of starting—I find when
+I actually get into the swing of working on even dull tasks, it’s not so bad. 
+So this suggests a solution: never start. Merely have perpetual drafts, 
+which one tweaks from time to time. And the rest takes care of itself.
 
 # Statistics
 
