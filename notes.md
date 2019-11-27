@@ -68,6 +68,8 @@ broken assumptions and deeper understanding of the underlying system.
 
 > Infosec is all about the mismatch between our intuition and the actual behavior of the systems we build. That makes it harmful to study the field as an abstract, isolated domain. To truly master it, dive into how computers work, then make a habit of asking yourself "okay, but what if assumption X does not hold true?" every step along the way. _~ lcamtuf_
 
+Unlike fields such as medicine and lawyers, it is not unheard of practitioners
+having backgrounds that are all over the place
 <!-- More problems: -->
 <!--  -->
 <!-- - Fundamental limits of computation (Limits of Turing machines, Incompleteness theorems) -->
@@ -77,7 +79,13 @@ broken assumptions and deeper understanding of the underlying system.
 
 > "In any field, find the strangest thing and then explore it." ~ John Archibald Wheeler
 
+
 This quotes is a really interesting answer to a question I don't know yet
 
+--- 
+
+> "A very useful heuristic, a potent filter:  When someone criticizes you, train to immediately ask yourself:  "Would I rather be him/her, or I'd rather be me?" before taking the remark at face value." - Nassim Nicholas Taleb
+
+[Source](https://twitter.com/TalebWisdom/status/1199392662304034816)
 
 [^1]: Needless to say, primitive and hard to reason about tools do play their role
