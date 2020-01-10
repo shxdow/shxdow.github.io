@@ -10,9 +10,9 @@ permalink: /about/
 <!-- {{site.description}} -->
 
 Hi!  
-I'm a computer engineering student at the University of Bergamo.
-I'm interested in applied cryptography, low level security, maths, books 
-and too many other things to list here.
+I'm an computer engineering undergraduate at the University of Bergamo.
+I'm interested in applied cryptography, reverse engineering, system internals,
+binary exploitation, mathematics and too many other things to list here.
 
 <div class="pagination">
   <!-- {% if site.author.email %} -->
