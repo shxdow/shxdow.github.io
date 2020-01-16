@@ -21,7 +21,7 @@ author:
   email:            dysonfrost@pm.me
 
 copyright:
-  year:             2019
+  year:             2020
   name:             shxdow
 
 # Google-analytics
@@ -62,10 +62,14 @@ nav:
     url:            "/archive"
   - name:           "notes"
     url:            "/notes"
-  - name:           "tags"
-    url:            "/tags"
-  - name:           "GitHub"
-    url:            "https://github.com/shxdow"
+  - name:           "books"
+    url:            "/books"
+  # - name:           "tags"
+  #   url:            "/tags"
+  # - name:           "projects"
+  #   url:            "/projects"
+  # - name:           "GitHub"
+  #   url:            "https://github.com/shxdow"
 
 # Sass
 sass:
