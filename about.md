@@ -13,6 +13,13 @@ Hi!
 I'm an computer engineering undergraduate at the University of Bergamo.
 I'm interested in applied cryptography, reverse engineering, system internals,
 binary exploitation, mathematics and too many other things to list here.
+As you may have noticed by the lack of content, there are many more things I 
+find more interesting than writing about them. Don't get me wrong, writing is
+a game of its own league, but I would be lying if I said its the most fun thing
+I can think of. Blog posts are likely to be the result of not finding information
+myself, or not finding it in a format that suits my taste.
+
+I'm currently open to interships.
 
 <div class="pagination">
   <!-- {% if site.author.email %} -->
