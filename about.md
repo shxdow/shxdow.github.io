@@ -10,7 +10,7 @@ permalink: /about/
 <!-- {{site.description}} -->
 
 Hi!  
-I'm an computer engineering undergraduate at the University of Bergamo.
+I'm a computer engineering undergraduate at the University of Bergamo.
 I'm interested in applied cryptography, reverse engineering, system internals,
 binary exploitation, mathematics and too many other things to list here.
 As you may have noticed by the lack of content, there are many more things I 
