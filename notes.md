@@ -79,6 +79,7 @@ having backgrounds that are all over the place
 
 > "In any field, find the strangest thing and then explore it." ~ John Archibald Wheeler
 
+> "When you are overloaded, don't think of it as not having enough time; think of it as having too much to do. You can't give yourself more time, but you can give yourself less to do, at least for the moment." ~ [@KentBeck](https://twitter.com/kentbeck) and [@martinfowler](https://twitter.com/martinfowler)
 
 This quotes is a really interesting answer to a question I don't know yet
 
