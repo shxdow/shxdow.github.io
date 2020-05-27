@@ -49,35 +49,47 @@ which one tweaks from time to time. And the rest takes care of itself.
 <!-- $$S = \{HH, HT, TT\}$$ if order does not matter   -->
 <!-- one sample otucome is 2 tails $(TT)$ -->
 
-# Technology
-
-Computer science and engineering, Information science, etc
-
 ### Software Engineering
 
-_Why is software engineering such a mess compared to other engineering disciplines ?_
+_Why does software seemingly fail more often than other engineering artifacts ?_
+
+It really boils down to two things:
+
+1. Complexity
+2. History
+
+**On complexity**
 
 One of the first things I thought about is its very immaterial nature:
 computer systems are far less limited in the growth of their complexity 
 compared to the physical ones that have characterized engineering as 
 a whole for centuries. Such over-linear growth has systematically 
 made our systems grow in their complexity at a much faster rate at 
-which we comprehend them. Computer security is the epitome of such
+which we comprehend them. Meltdown, Rowhammer, et al. are prime examples.
+Moreover, [@halvarflake](twitter.com/halvarflake)
+in his [keynote]() went over to explain an even more fundamental
+way in which complexity is not bounded: it is much more expensive to
+build a special purpose machine than it is to use a general simulate
+the necessary needed. This effectively makes every special purpose machine
+(i.e. program) inherit the entire jungle in which the general one lives.
+(this is not too clear unless one goes over ot explain the entire OOP 
+banana/jungle analogy)
+
+Computer security is the epitome of such
 phenomena as security vulnerabilities are all about [^1] leveraging
 broken assumptions and deeper understanding of the underlying system.
 
 > Infosec is all about the mismatch between our intuition and the actual behavior of the systems we build. That makes it harmful to study the field as an abstract, isolated domain. To truly master it, dive into how computers work, then make a habit of asking yourself "okay, but what if assumption X does not hold true?" every step along the way. _~ lcamtuf_
 
-Unlike fields such as medicine and lawyers, it is not unheard of practitioners
-having backgrounds that are all over the place
 <!-- More problems: -->
 <!--  -->
 <!-- - Fundamental limits of computation (Limits of Turing machines, Incompleteness theorems) -->
-<!-- - Very heterogeneous backgrounds among practitioners (This is both a pro and a con) -->
 
 # Quotes
 
 > "In any field, find the strangest thing and then explore it." ~ John Archibald Wheeler
+
+If I reacall correctly, this is close to what Paul Graham calls a good heuristic to identify interesting problems
 
 --- 
 
@@ -89,4 +101,4 @@ having backgrounds that are all over the place
 
 [Source](https://twitter.com/TalebWisdom/status/1199392662304034816)
 
-[^1]: Needless to say, primitive and hard to reason about tools do play their role
+[^1]: Needless to say, primitive and hard to reason about tools do play their role. But it goes much much further than that. Producing secure software is really hard.
