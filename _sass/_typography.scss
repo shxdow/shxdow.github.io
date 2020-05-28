@@ -232,16 +232,17 @@ a.footnote {
   .post p &,
   .post ol &,
   .post ul & {
-    margin: 0 3px;
-    padding: 2px 6px 2px;
-    font-size: $base-font-size-sm;
+    // margin: 0 3px;
+    padding: 2px 2px 2px;
+    // font-size: $base-font-size-sm;
+    font-size: ($base-font-size-sm);
+    text-decoration: underline;
     text-align: center;
+    color: black;
     -webkit-text-stroke: 0.25px;
-    border: 1px solid $divider-color;
+    // border: 1px solid $divider-color;
     border-radius: 2px;
     -webkit-transition: 0.2s ease-out all;
-    text-decoration: none;
-
     &:hover {
       background: $background-over-color;
     }
