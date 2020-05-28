@@ -1,14 +1,14 @@
 ---
 layout: post
-title: On Compilers
+title: On compilers
 date: 2020-05-08
 permalink: /:title/
 description: "Logging my journey in the magical world of compilers"
-tags: [programming, compilers, log]
+tags: [compilers, log]
 share: true
 ---
 
-This page are a bunch of timestamped notes I'm taking while trying to learn approach compilers.
+This page are a bunch of timestamped notes I'm taking while trying to learn compilers.
 Most of what I'm currently learning while embarking this magical journey is taken from "Crafting
 Interpreters - Bob Nystrom". I'm by no mean trying to become a compiler god by the end of the week, I
 just consider myself more of a curious undergrad that likes to poke at seemingly obscure areas of
