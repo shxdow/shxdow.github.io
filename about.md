@@ -19,8 +19,6 @@ a game of its own league, but I would be lying if I said its the most fun thing
 I can think of. Blog posts are likely to be the result of not finding information
 myself, or not finding it in a format that suits my taste.
 
-<!-- I'm currently open to interships. -->
-
 <div class="pagination">
   <!-- {% if site.author.email %} -->
   <!--   <a href="mailto:{{ site.author.email }}" class="social-media-icons"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a> -->
