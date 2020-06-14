@@ -1,7 +1,3 @@
-# # # # # # # # # # # # #
-#   K i k o - p l u s   #
-# # # # # # # # # # # # #
-
 # Basic
 name:               "shxdow"
 description:        ""
@@ -18,7 +14,7 @@ author:
   # reddit:           your-id
   # medium:           your-id
   # tumblr:           your-id
-  email:            dysonfrost@pm.me
+  email:            alpha.tpa@gmail.com
 
 copyright:
   year:             2020
@@ -58,14 +54,14 @@ kramdown:
 nav:
   - name:           "about"
     url:            "/about"
-  - name:           "archive"
-    url:            "/archive"
   - name:           "notes"
     url:            "/notes"
+  - name:           "archive"
+    url:            "/archive"
+  - name:           "tags"
+    url:            "/tags"
   - name:           "books"
     url:            "/books"
-  # - name:           "tags"
-  #   url:            "/tags"
   # - name:           "projects"
   #   url:            "/projects"
   # - name:           "GitHub"
