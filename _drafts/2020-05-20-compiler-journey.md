@@ -46,11 +46,4 @@ features that allow recognition of languages that cannot be expressed by a class
 
 ---
 
-###### Wed Oct 21 2020
-
-Lookaheads occur very frequently, thats why most compilers only look a couple 
-characters at most and why lookaheads are so frowned upon in regular expression.
-
-
-
-
+###### Wed 23 Sep 2020
