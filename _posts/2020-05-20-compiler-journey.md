@@ -51,6 +51,21 @@ features that allow recognition of languages that cannot be expressed by a class
 Lookaheads occur very frequently, thats why most compilers only look a couple 
 characters at most and why lookaheads are so frowned upon in regular expression.
 
+---
 
+###### Fri Oct 23 2020
 
+Challenges:
+
+> The lexical grammars of Python and Haskell are not regular. What does that mean, and why aren’t they?
+
+Python and Haskell's lexical grammars are said to be non-regular because they
+can't be expressed with regular expressions (or at least, not in their entirety).
+This implies that scanning strategies can vary.
+
+> Aside from separating tokens—distinguishing print foo from printfoo—spaces aren’t used for much in most languages. However, in a couple of dark corners, a space does affect how code is parsed in CoffeeScript, Ruby, and the C preprocessor. Where and what effect does it have in each of those languages?
+
+> Our scanner here, like most, discards comments and whitespace since those aren’t needed by the parser. Why might you want to write a scanner that does not discard those? What would it be useful for?
+
+> Add support to Lox’s scanner for C-style /* ... */ block comments. Make sure to handle newlines in them. Consider allowing them to nest. Is adding support for nesting more work than you expected? Why?
 
