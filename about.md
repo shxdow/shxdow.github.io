@@ -10,14 +10,17 @@ permalink: /about/
 <!-- {{site.description}} -->
 
 Hi!  
-I'm a computer engineering student at the University of Bergamo.
-I'm interested in applied cryptography, reverse engineering, system internals,
+I'm a computer engineering student at the University of Bergamo, my interests
+are progam analysis, reverse engineering, system internals,
 binary exploitation, mathematics and too many other things to list here.
-As you may have noticed by the lack of content, there are many more things I 
-find more interesting than writing about them. Don't get me wrong, writing is
-a game of its own league, but I would be lying if I said its the most fun thing
-I can think of. Blog posts are likely to be the result of not finding information
-myself, or not finding it in a format that suits my taste.
+
+### Experience
+
+- Penetration testing on multiple systems of various sizes, ranging form banking systems to enterprise networks 
+- Some reverse engineering and malware analysis in my free time
+- BSc thesis: Program analysis via SMT for software vulnerabilities detection
+- High school thesis: Malware static reverse engineering
+
 
 <div class="pagination">
   <!-- {% if site.author.email %} -->
