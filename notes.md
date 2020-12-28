@@ -105,4 +105,4 @@ If I reacall correctly, this is close to what Paul Graham calls a good heuristic
 [Source](https://twitter.com/TalebWisdom/status/1199392662304034816)
 
 [^1]: Needless to say, tools that are hard to reason about do play their role. But it goes much much further than that. Producing secure software is _really_ hard.
-[^2]: Humm I forgot what I wanted to say
+[^2]: Even though such results are indeed obtained by standing on the shoulders of giants they are still very impressive nonetheless
