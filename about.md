@@ -19,8 +19,8 @@ binary exploitation, distributed systems, mathematics and too many other things 
 - Penetration testing on multiple systems of various sizes, ranging form banking systems to enterprise networks 
 - Various programming tasks, some of which involving React Native, NoSQL databases, ElasticSearch
 - Some reverse engineering and malware analysis
-- BSc thesis: Program analysis via SMT for software vulnerabilities detection
-- High school thesis: Malware static reverse engineering
+- BSc thesis: Security related - work in progress
+- High school thesis: Malware analysis via reverse engineering
 
 
 <div class="pagination">
