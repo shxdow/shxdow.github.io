@@ -6,6 +6,7 @@ permalink: /:title/
 description: "Logging my journey in the magical world of compilers"
 tags: [compilers, log]
 share: true
+published: false
 ---
 
 This page are a bunch of timestamped notes I'm taking while trying to learn compilers.

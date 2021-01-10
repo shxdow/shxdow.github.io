@@ -6,6 +6,7 @@ permalink: /:title/
 description: "Or how to tell if the soup needs more salt"
 tags: [reverse engineering, thoughts]
 share: true
+published: false
 ---
 
 When reversing, the resulting artifact of my efforts is usually an explaination in plain english of a system or a component.
