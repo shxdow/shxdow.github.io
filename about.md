@@ -10,16 +10,18 @@ permalink: /about/
 <!-- {{site.description}} -->
 
 Hi!  
-I'm a computer engineering student at the University of Bergamo, my interests
-are progam analysis, reverse engineering, system internals,
-binary exploitation, distributed systems, mathematics and too many other things to list here.
+I'm a studying computer engineering at the University of Bergamo and when I'm not its because
+I work as a penetration tester. I keep a personal blog with posts centered around technical topics.
+My interests are reverse engineering, system internals, binary exploitation, distributed systems, mathematics and 
+too many other things to list here.  
+Feel free to contact me on Twitter.
 
 ### Experience
 
 - Penetration testing on multiple systems of various sizes, ranging form banking systems to enterprise networks 
-- Various programming tasks, some of which involving React Native, NoSQL databases, ElasticSearch
+- Various programming tasks, some of which involving React Native, NoSQL databases and ElasticSearch.
 - Some reverse engineering and malware analysis
-- BSc thesis: Security related - work in progress
+- BSc thesis: security related - work in progress
 - High school thesis: Malware analysis via reverse engineering
 
 
