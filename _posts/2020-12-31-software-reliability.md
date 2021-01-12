@@ -47,10 +47,14 @@ broken assumptions and deeper understanding of the underlying system.
 
 **Economic incentives**
 
-Due to the lack of regulation of the field, the potential financial upside and,
-for the most part, lack of rigid processes to adhere to software could be
-developed at a much higher speed than a bridge would. Now, building a bridge
-takes a much longer time for many more reasons than the ones listed, but bare
+Silicon Valley and the startup culture have been one of the driving forces that power
+<!-- Due to the lack of regulation of the field, the potential financial upside and, -->
+<!-- for the most part, lack of rigid processes to adhere to software could be -->
+<!-- developed at a much higher speed than a bridge would.  -->
+
+
+Now, building a bridge
+takes a much longer time for many more reasons than the ones listed, but bear
 with me for the sake of the argument. 
 
 **On experience**
