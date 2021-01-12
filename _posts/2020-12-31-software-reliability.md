@@ -6,6 +6,7 @@ permalink: /:title/
 description: "Reflections on engineering"
 tags: [software engineering]
 share: true
+status: ongoing
 ---
 
 This post aims to answer a recurring question I've had in the last 9 months as 
@@ -40,10 +41,13 @@ build a special purpose machine than it is to use a general purpose one to simul
 whats needed. This effectively makes every special purpose machine
 (i.e. program) inherit the entire jungle in which the general one lives as opposed to
 only taking a banana one is looking for. Security is the epitome of such
-phenomena as security vulnerabilities are all about [^1] leveraging
+phenomena as security vulnerabilities are all about [[Needless to say, tools that are hard to reason about do play their role. But it goes much much further than that. Producing secure software is _really_ hard.
+::lsn]] leveraging
 broken assumptions and deeper understanding of the underlying system.
 
-> Infosec is all about the mismatch between our intuition and the actual behavior of the systems we build. That makes it harmful to study the field as an abstract, isolated domain. To truly master it, dive into how computers work, then make a habit of asking yourself "okay, but what if assumption X does not hold true?" every step along the way. _~ lcamtuf_
+{:.small .oblique}
+> Infosec is all about the mismatch between our intuition and the actual behavior of the systems we build. That makes it harmful to study the field as an abstract, isolated domain. To truly master it, dive into how computers work, then make a habit of asking yourself "okay, but what if assumption X does not hold true?" every step along the way.
+> <cite>- lcamtuf</cite>
 
 **Economic incentives**
 
@@ -59,7 +63,7 @@ with me for the sake of the argument.
 
 **On experience**
 
-Despite achieving unmatched [^2] results when it comes to changing society,
+Despite achieving unmatched [[Even though such results are indeed obtained by standing on the shoulders of giants they are still very impressive nonetheless::rsn]] results when it comes to changing society,
 computer science has 100 years at most. It does not take too much to think of
 people who were at the frontier of the field and designed very common things
 such as Unix, C, UTF8, PageRank, ...  
@@ -67,5 +71,3 @@ You name it, we have it.
 
 <!-- - Fundamental limits of computation (Limits of Turing machines, Incompleteness theorems) -->
 
-[^1]: Needless to say, tools that are hard to reason about do play their role. But it goes much much further than that. Producing secure software is _really_ hard.
-[^2]: Even though such results are indeed obtained by standing on the shoulders of giants they are still very impressive nonetheless
