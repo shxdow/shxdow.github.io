@@ -46,8 +46,8 @@ phenomena as security vulnerabilities are all about [[Needless to say, tools tha
 broken assumptions and deeper understanding of the underlying system.
 
 {:.small .oblique}
-> Infosec is all about the mismatch between our intuition and the actual behavior of the systems we build. That makes it harmful to study the field as an abstract, isolated domain. To truly master it, dive into how computers work, then make a habit of asking yourself "okay, but what if assumption X does not hold true?" every step along the way.
-> <cite>- lcamtuf</cite>
+> Infosec is all about the mismatch between our intuition and the actual behavior of the systems we build. That makes it harmful to study the field as an abstract, isolated domain. To truly master it, dive into how computers work, then make a habit of asking yourself "okay, but what if assumption X does not hold true?" every step along the way.  
+> <cite> - lcamtuf</cite>
 
 **Economic incentives**
 

@@ -24,7 +24,7 @@ If you like anything about who I am or what I do, please do follow me or reach o
 ## About the website
 
 [[***Changelog***<br/>
-\- 12-01-2021 Theme <br/>
+• 12-01-2021: Theme <br/>
 ::rmn]]
 
 <!-- Features: -->

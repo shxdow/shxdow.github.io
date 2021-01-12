@@ -6,6 +6,7 @@ permalink: /:title/
 description: "Reverse engineering a cross-platform banking trojan"
 tags: [reverse engineering]
 share: true
+comments: false
 ---
 
 
@@ -13,7 +14,7 @@ I came across an [article](https://securityintelligence.com/news/java-malware-be
 This was one of the first, if not the first actual attempt I made in applying reverse engineering techniques to real world software (a malware in this case). Despite a superior familiarity with Windows rootkits, I figured this would be a good chance to acquaint myself to Linux. The analysis is pretty low level, it goes over specific instructions as more emphasis was put on the how rather than the what.
 
 [[***Changelog***<br/>
-\- 12/01/2021 Sidenotes <br/>
+• 12/01/2021: Sidenotes <br/>
 ::rmn]]
 
 ## Initial Reconnaissance
