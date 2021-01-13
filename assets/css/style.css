@@ -779,6 +779,8 @@ hr {
     vertical-align: baseline;
     position: relative; 
     padding-bottom: 5px;
+    white-space: initial;
+    /* word-wrap: break-word;  */
 }
 
 .sn-left,
@@ -794,6 +796,7 @@ hr {
     vertical-align: baseline;
     position: relative; 
     padding-bottom: 5px;
+    white-space: initial;
 }
 
 .sidenote-number {
@@ -820,6 +823,7 @@ hr {
     content: counter(sidenote-counter) " ";
     font-size: 14px;
     top: -0.5rem; 
+    white-space: initial;
 }
 
 blockquote .sn-left,
@@ -829,6 +833,7 @@ blockquote .mn-left {
     margin-left: -58%;
     width: 40%;
     text-align: left; 
+    white-space: initial;
 }
 
 li .sn-left,
@@ -1217,6 +1222,7 @@ label.srs-toggle {
 .mn-left {
     margin-left: -35%;
     width: 30%;
+    white-space: initial;
 }
 
 blockquote .sn-left,

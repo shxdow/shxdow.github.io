@@ -58,7 +58,7 @@ Silicon Valley and the startup culture have been one of the driving forces that 
 
 
 Now, building a bridge
-takes a much longer time for many more reasons than the ones listed, but bear
+takes a much longer time for many more reasons than the ones listed, but bare
 with me for the sake of the argument. 
 
 **On experience**
