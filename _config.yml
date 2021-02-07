@@ -5,8 +5,8 @@ notes_url: ""
 profile_pic: /assets/img/profile.png
 favicon: /favicon.ico
 copyright_name: imshxdow
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "shxdow.me" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"
+url: "https://shxdow.me"
 encoding: utf-8
 
 # Build settings
