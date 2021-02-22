@@ -29,6 +29,7 @@ reading, thinking, my thoughts tend to follow a very non-linear path which I fel
 by adding meta content.
 
 [[***Changelog***<br/>
+• 22-02-2021: Logo header <br/>
 • 07-02-2021: Descriptions <br/>
 • 12-01-2021: Theme <br/>
 ::rmn]]
