@@ -1,6 +1,5 @@
 ---
 layout: post
-title: By Tags
 permalink: /tags/
 content-type: eg
 ---
