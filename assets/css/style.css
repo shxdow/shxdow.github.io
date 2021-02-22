@@ -311,7 +311,11 @@ hr {
 }
 
 .userboard {
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
+    background-image: url("/assets/img/left_logo.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
 }
 
