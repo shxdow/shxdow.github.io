@@ -77,6 +77,8 @@
             {%- assign link_text = '<a href="' | append: url | append: '">' | append: title | append: '<sup ><i class="fa fa-youtume"></i></sup></a>' -%}
         {%- elsif url contains "twitter.com" -%}
             {%- assign link_text = '<a href="' | append: url | append: '">' | append: title | append: '<sup ><i class="fa fa-twitter"></i></sup></a>' -%}
+        {%- elsif url contains "instagram.com" -%}
+            {%- assign link_text = '<a href="' | append: url | append: '">' | append: title | append: '<sup ><i class="fa fa-instagram"></i></sup></a>' -%}
         {%- elsif url contains "github.com" or url contains "github.io" -%}
             {%- assign link_text = '<a href="' | append: url | append: '">' | append: title | append: '<sup ><i class="fa fa-github"></i></sup></a>' -%}
         {%- elsif url == "highlight" -%}

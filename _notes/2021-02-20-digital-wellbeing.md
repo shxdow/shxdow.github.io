@@ -6,7 +6,7 @@ date: 2021-01-17
 permalink: /:title/
 description: "Or better how to impose keep digital "
 tags: [health, productivity]
-share: false
+share: true
 published: true
 ---
 
