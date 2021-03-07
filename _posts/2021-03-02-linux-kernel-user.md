@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Brad Spengler on copy_to_user() & copy_from_user
+title: Brad Spengler on copy_*_user()
 date: 2021-03-02
 permalink: /:title/
 description: "Notes on Linux copy_*_user()"
 tags: [kernel linux]
 share: true
-status: ongoing
 ---
 
 Bradley Spengler on "Why do we use copy_to_user()/copy_from_user in kernel code?":
