@@ -2,10 +2,11 @@
 layout: post
 title: About
 permalink: /about/
+content-type: page
 ---
 
 Hi!  
-I earned my BSc and I'm currently attending the MSc program in computer engineering at the University of Bergamo whilst working as a penetration tester on the side.   
+I hold a BSc in engineering and I'm currently attending the MSc program at the University of Bergamo whilst working as a penetration tester on the side.   
 My interests are reverse engineering, system internals, binary exploitation, distributed systems, compilers,
 kernels, science, mathematics and too many other things to list here.  
 
