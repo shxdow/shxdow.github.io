@@ -2,7 +2,7 @@
 layout: post
 title: About
 permalink: /about/
-content-type: page
+content-type: eg
 ---
 
 Hi!  
