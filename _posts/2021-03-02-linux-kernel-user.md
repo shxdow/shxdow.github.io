@@ -4,7 +4,7 @@ title: Brad Spengler on copy_*_user()
 date: 2021-03-02
 permalink: /:title/
 description: "Notes on Linux copy_*_user()"
-tags: [kernel, linux]
+tags: [micro]
 share: true
 ---
 
