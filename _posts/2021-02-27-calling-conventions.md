@@ -1,1 +1,11 @@
-/Users/alpha/Workspace/git/notes/blog/2021-02-27-calling-conventions.md
+---
+layout: post
+title: Notes on calling conventions
+date: 2020-12-28
+permalink: /:title/
+description: ""
+tags: [software engineering, reverse engineering]
+share: true
+published: false
+status: ongoing
+---
