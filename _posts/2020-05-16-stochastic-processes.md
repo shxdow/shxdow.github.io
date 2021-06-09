@@ -1,0 +1,1 @@
+/Users/alpha/Workspace/git/notes/blog/2020-05-16-stochastic-processes.md

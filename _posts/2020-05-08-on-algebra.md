@@ -1,0 +1,1 @@
+/Users/alpha/Workspace/git/notes/blog/2020-05-08-on-algebra.md

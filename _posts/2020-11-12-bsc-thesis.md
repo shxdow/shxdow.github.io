@@ -1,0 +1,1 @@
+/Users/alpha/Workspace/git/notes/blog/2020-11-12-bsc-thesis.md

@@ -1,0 +1,1 @@
+/Users/alpha/Workspace/git/notes/blog/2020-11-17-skin-in-the-game.md

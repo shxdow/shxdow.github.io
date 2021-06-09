@@ -16,7 +16,7 @@ things simpler, I'm based in Bergamo a city that as you may know has been hit by
 the virus in a way that I would have never thought would have been this close in
 my life. COVID aside, which is not what is meant to be discussed here, at least
 not wholeheartedly, one of the problems that we face in modern society is the
-lack of a tru disconnection from stimulus. Of all kinds.
+lack of a true disconnection from stimulus. Of all kinds.
 
 <!-- Introduction -->
 <!--   - COVID, overwork -->
@@ -24,3 +24,5 @@ lack of a tru disconnection from stimulus. Of all kinds.
 <!--   - man had used to solve problems physically -->
 <!-- Solution -->
 <!--   - one of the two can be solved with a few tweaks in ones devices -->
+<!--   - mindfulness -->
+<!--   - exercise -->
