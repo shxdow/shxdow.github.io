@@ -72,3 +72,7 @@ You name it, we have it.
 
 <!-- - Fundamental limits of computation (Limits of Turing machines, Incompleteness theorems) -->
 
+what do I think makes very reliable software ?
+how do we measure reliability ?
+
+
