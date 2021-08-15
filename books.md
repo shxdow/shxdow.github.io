@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: post
+title: Books
 permalink: /books/
 ---
 

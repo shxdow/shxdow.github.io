@@ -1,51 +1,60 @@
-title: wrld
-name: alpha
-user_description: my Internet corner
-notes_url: ""
-profile_pic: /assets/img/profile.png
-favicon: /favicon.ico
-copyright_name: imshxdow
-baseurl: "/"
-url: "https://shxdow.me"
-encoding: utf-8
+title: shxdow
+author:
+  name: P. Alpha Toure
+  email: alpha.tpa@gmail.com
+description: > # this means to ignore newlines until "show_excerpts:"
+  A collection of thoghts regarding vulnerability research, distributed
+  systems, mathematics, engineering and more.
+
+show_excerpts: true # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    twitter: jekyllrb
+    github:  jekyll
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+ - about.md
+ - books.md
 
 # Build settings
-theme: null
+theme: minima
+
 plugins:
-  - jekyll-feed 
-  - jekyll-sitemap 
-
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  hard_wrap: false
-  math_engine: mathjax
-  smart_quotes: ["apos", "apos", "quot", "quot"]
-  syntax_highlighter: rouge
-
-sass:
-  style: compressed
-
-collections:
-    notes:
-      output: true
-      permalink: /notes/:title
-
-disqus:
-  shortname: imshxdow
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      permalink: /posts/:title
-      content-type: post
-  - scope:
-      path: ""
-      type: notes
-    values:
-      layout: post
-      content-type: notes
+ - jekyll-feed
+ - jekyll-seo-tag

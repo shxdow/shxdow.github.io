@@ -1,4 +1,10 @@
 ---
 layout: post
-permalink: /notes
+title: Notes
+permalink: /notes/
+content-type: eg
 ---
+
+
+
+AAAAAAAA

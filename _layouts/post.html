@@ -1,66 +1,38 @@
 ---
+layout: default
 ---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Blog" property="og:site_name"/>
-    <meta content="A non-linear thread of thoughts, ideas, notes, feelings and more..." property="og:description">
-    <meta content="{{ site.url }}/about/" property="article:author">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        ~ 
+        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ mdate | date: date_format }}
+        </time>
+      {%- endif -%}
+      {%- if page.author -%}
+        • {% for author in page.author %}
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+            {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      {%- endif -%}</p>
+  </header>
 
-    {%- if page.title -%}
-    <meta content="{{ page.title }}" property="og:title">
-    <meta content="article" property="og:type">
-    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
-    {%- else -%}
-    <meta content="website" property="og:type">
-    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
-    {%- endif -%}
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
 
-    <title>{{site.title}}</title>
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
 
-    <link rel="canonical" href="{{site.url}}{{page.url}}"/>
-    <link rel="apple-touch-icon" href="{{site.profile_pic}}">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
-
-    <link rel="icon" href="{{site.favicon}}" type="image/png" sizes="16x16"/>
-    <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default"/>
-
-    <!--[if IE]>
-        <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
-    <![endif]-->
-    <!--<link href="/assets/css/prism.css" rel="stylesheet" />-->
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml">
-</head>
-
-<body>
-    <div class="container">                    
-        <div class = "box">
-            {%- include header.html -%}
-            {%- include feed.html -%}
-
-            {%- if page.content-type == "notes" 
-                or page.content-type == "post" 
-                or page.content-type == "eg" -%}
-            <main>
-                <h1>{{page.title}}</h1>
-                {%- include content.html -%}
-                {%- include backlinks.html -%}
-                {%- include related.html -%}
-            </main>
-            {%- endif -%}
-            {%- include comments.html -%}
-            {%- include footer.html -%}
-        </div>
-        <button class="scroll-to-top" id="scroll-to-top"><i class="fa fa-chevron-up"></i></button>
-    </div>
-    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script>
-        document.getElementById("scroll-to-top").addEventListener("click", function() {
-            window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-        });
-    </script>
-    {%- include contextmenu.html -%}
-</body>
-</html>
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
