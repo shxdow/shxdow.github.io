@@ -1,7 +1,7 @@
 title: shxdow
 author:
-  name: P. Alpha Toure
-  email: alpha.tpa@gmail.com
+  name: P. Alpha "shxdow" Toure 
+  email: ""
 description: > # this means to ignore newlines until "show_excerpts:"
   A collection of thoghts regarding vulnerability research, distributed
   systems, mathematics, engineering and more.
@@ -54,6 +54,8 @@ header_pages:
 
 # Build settings
 theme: minima
+minima:
+  skin: classic
 
 plugins:
  - jekyll-feed
