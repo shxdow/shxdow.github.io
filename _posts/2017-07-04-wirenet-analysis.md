@@ -100,7 +100,7 @@ Every reverse engineer races against mental fatigue, and it is fundamental to be
 ```
 This part is pretty simple, a string `AT` is passed to `_strstr` along with a variable called `haystack`, looking for the first occurence of the former in the latter. To put it simply, the call looks something like this:
 
-```
+```assembly
 1	void _strstr (void *haystack, void *needle) {
 2		return strstr(*haystack, *needle);
 3	}
@@ -122,7 +122,7 @@ Line 5 cleans up the stack, line 6 stores the haystack in edx and line 7 checks 
 
 If an occurence is found there's another search, this time using `System keyboard` as needle.
 
-```
+```assembly
 11	push    offset aSystemKeyboard ; "System keyboard"
 12	push    edx             ; haystack
 13	call    _strstr
@@ -145,7 +145,7 @@ Here lies the heart of the keylogger:
 6	jz      loc_80
 ```
 As the name suggests, after finding the device rappresenting the system keyboard the malware tries to open it with `XOpenDevice` and return a `XDevice` structure which are defined as follows
-```
+```assembly
 1	XDevice *XOpenDevice ( Display *display, XID device_id )
 2	typedef struct {
 3		XID device_id;
@@ -184,7 +184,7 @@ The executions continues to the next function. I won't go over in detail to how 
 12	jz      State_5
 ```
 `XSelectExtensionEvent` selects an extension event and is defined as follows
-```
+```assembly
 XSelectExtensionEvent ( Display *display,
                        Window w,
                        XEventClass *event_list,
