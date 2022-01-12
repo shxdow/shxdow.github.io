@@ -18,7 +18,7 @@ now ? Anyone is familiar with the feeling of clicking one of the dearest
 held links only to be met with a 404 error, assuming the web server is
 running at all.
 
-What would we gain if the internet was less unreliable ?
+What would we gain if the internet was more reliable ?
 
 - easier to cancel people ?
 - accountability 
