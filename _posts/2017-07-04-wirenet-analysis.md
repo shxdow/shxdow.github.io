@@ -112,7 +112,12 @@ The following part starts off with a with a comparsion between `var_20` and `ebp
 The image shows pretty clearly that the previous two lines are part of a loop![cmp loop](/assets/img/ida_cmp_loop.png)
 
 <!-- In this part the malware iterates over the list of input devices connected to the system, looking for one containing either `AT` or `System keyboard`. -->
-Every reverse engineer races against mental fatigue, and it is fundamental to be able to dissect the unimportant pieces from the relevant ones. Having said that, I omitted some parts as they were not as important to understand the overall implementation of the keylogger.
+Every reverse engineer races against mental fatigue,
+and it is fundamental to be able to dissect the
+unimportant pieces from the relevant ones. This kind
+of fatigue can be felt even when reading dense
+material and as such I omitted parts I deemed as not
+important to cover.
 
 ```assembly
 1	push    offset aAt      ; "AT"
