@@ -45,8 +45,8 @@
         validity ✅
       - Equivalence and
         implications ✅
-      - Substitution
-      - Normal Forms
+      - Substitution ✅
+      - Normal Forms ✅
       - Decision Procedures for Satisfiability
     - learn first order logic
       - Syntax
