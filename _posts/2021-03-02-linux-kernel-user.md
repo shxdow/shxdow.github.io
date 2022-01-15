@@ -5,7 +5,7 @@ date: 2021-03-02
 permalink: /:title/
 description: "Notes on Linux copy_*_user()"
 tags: [short]
-published: true
+published: false
 share: true
 ---
 
