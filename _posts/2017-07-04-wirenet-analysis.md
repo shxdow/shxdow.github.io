@@ -11,27 +11,49 @@ comments: false
 ---
 
 
-I came across an [article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/) about an attack that leveraged phishing in order to drop Java malware on victims' machines. This reminded of *Wirenet*, a cross-platform malware that really made me wonder whether there was a link between the two.
-This was one of the first, if not the first actual attempt I made in applying reverse engineering techniques to real world software (a malware in this case). Despite a superior familiarity with Windows rootkits, I figured this would be a good chance to acquaint myself to Linux. The analysis is pretty low level, it goes over specific instructions as more emphasis was put on the how rather than the what.
+I came across an
+[article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/)
+about a phishing attack that installs Java malware upon
+success.  This reminded of *Wirenet*, a cross-platform
+malware that made me wonder whether there was a link
+between the two.  
+  
+This was one of the first, if not the
+first committed attempt I made in applying reverse
+engineering techniques to real world software (a
+malware in this case). Despite a superior familiarity
+with Windows internals (rootkits specifically), I
+figured this would be a good chance to acquaint myself
+to Linux.  
+  
+The analysis is pretty low level, it goes
+over specific instructions and puts more emphasis was
+put on the how (i.e. techniques used) rather than the
+what (i.e. results obtained).
 
 <!--[[***Changelog***<br/>
 • 12/01/2021: Sidenotes <br/>
 ::rmn]]-->
 
-## Initial Reconnaissance
+## Reconnaissance
 
-Some high level information about the sample
+The talbe contains some high level information about the sample
 
-| MD5         | 9a0e765eecc5433af3dc726206ecc56e |
-| Size        | 64.4 KB                          |
-| File        | ELF 32-bit LSB executable        |
-| Arch        | Intel 80386                      |
 
-One of the most important things about the binary is that function names were not stripped, which made the entire process much more smooth
+| :----:          | :----:                           |
+| **MD5**         | 9a0e765eecc5433af3dc726206ecc56e |
+| **Size**        | 64.4 KB                          |
+| **File**        | ELF 32-bit LSB executable        |
+| **Arch**        | Intel 80386                      |
 
-## Keylogger
+One of the most important things about the binary is that function names were
+not stripped, which made the entire process much more smooth
 
-For the sake of brevity I'll will only showcase the process of decompiling the keylogger
+## Keylogger analysis
+
+Wirenet, being a baking trojan, features a keylogger
+among the spying functionalities, whose decompilation
+process is shown below
 
 <!-- <pre style="background-color: #f5f5f5;padding-left: 1rem;padding-right: 1rem;padding-top: 1rem !important;padding-bottom: 1rem;important;line-height: 1.1rem;font-family: 'Inconsolata', Courier, monospace;font-size: 0.9rem;margin-top: 0rem;margin-bottom: 1.8rem;"> -->
 ```assembly
@@ -46,15 +68,15 @@ void *cpStartKeyLogger(void *)
 7	jnz     short State_2
 ```
 
-Line 2 - 3 call `XOpenDisplay` which establishes a connection to the X server, line 4 - 7 do some error checking and jump to `loc_8055532` in case `XOpenDisplay` returns a non-zero value. Otherwise a variable called KeyLoggerState is set to 2.
-As the name suggests, it represents the various states in which the keylogger can exist, is used mostly for error handling purposes and is not relevant for the purpose of the article.
+Line 2 - 3 call `XOpenDisplay` which establishes a connection to the X server, line 4 - 7 do error checking and jump to `loc_8055532` in case `XOpenDisplay` returns a non-zero value. Otherwise a variable called KeyLoggerState is set to 2.
+As the name suggests, it represents the various states in which the keylogger can exist, it is used mostly for error handling purposes and is not of much interest.
 
 ```assembly
 1	mov     KeyLoggerState, 2
 2	jmp     loc_80557BA
 ```
 
-Next this part is executed
+Next, these instructions are executed
 
 ```assembly
 1	sub     esp, 0Ch
@@ -72,7 +94,7 @@ Next this part is executed
 13	jnz     short loc_805556F
 ```
 
-Line 2 - 4 - 6 load the addresses of the variables into eax, so that line 3 - 5 - 7 can push those values onto the stack and call `XQueryExtension`. `XQueryExtension` determines if the named extension is present. Line 11 cleans up the stack, line 12 - 13 check if `XInputExtension` was present.  
+Line 2 - 4 - 6 load variables addresses into eax, so that line 3 - 5 - 7 can push those values onto the stack and call `XQueryExtension`. `XQueryExtension` determines if the named extension is present. Line 11 cleans up the stack, line 12 - 13 check if `XInputExtension` was present.  
 If the function fails KeyLoggerState is set to 3
 
 ```assembly
@@ -153,9 +175,10 @@ As the name suggests, after finding the device rappresenting the system keyboard
 5		XInputClassInfo *classes;
 6	} XDevice;
 ```
-There are two conditions two branches that set `KeyLoggerState` to 5
+There are two conditions two branches that set
+`KeyLoggerState` to 5
 
-The function fails
+The function either fails
 ```assembly
 1	mov     KeyLoggerState, 5
 ```
@@ -167,7 +190,9 @@ or the field `device_id` (offset `[eax+4]`) is zero
 4	jle     State_5
 ```
 
-The executions continues to the next function. I won't go over in detail to how variables are passed to the function as it would be somewhat redundant
+The executions continues to the next function. I won't
+go over in detail to how variables are passed to the
+function as it would be somewhat redundant
 
 ```assembly
 1	push    esi             ; _DWORD
@@ -183,7 +208,8 @@ The executions continues to the next function. I won't go over in detail to how 
 11	test    esi, esi         ; event_count
 12	jz      State_5
 ```
-`XSelectExtensionEvent` selects an extension event and is defined as follows
+`XSelectExtensionEvent` selects an extension event and
+is defined as follows
 ```assembly
 XSelectExtensionEvent ( Display *display,
                        Window w,
@@ -197,8 +223,9 @@ The `KeyLoggerState` variable is now set to 0
 2	lea     edi, [esp+10Ch+var_E4]
 3	lea     esi, [esp+10Ch+v
 ```
-At this point, we found the system keyboard device and opened a handle to it.
-All is set and the malware can start logging keystrokes
+At this point, we found the system keyboard device and
+opened a handle to it.  All is set and the malware can
+start logging keystrokes
 
 ```assembly
 1	loc_80556D9:
@@ -222,7 +249,10 @@ All is set and the malware can start logging keystrokes
 54	} XKeyEvent;
 ```
 
-After an event occures and `XNextEvent` gets executed the following instructions fill a `XKeyEvent` structure and pass it to `LogKey`. Line 34 jumps to the previous code snippet (a never ending loop).
+After an event occures and `XNextEvent` gets executed
+the following instructions fill a `XKeyEvent`
+structure and pass it to `LogKey`. Line 34 jumps to
+the previous code snippet (a never ending loop).
 
 ```assembly
 1	mov     [esp+10Ch+var_84.type], eax
