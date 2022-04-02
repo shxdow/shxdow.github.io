@@ -15,7 +15,7 @@ managed to get interested enough in weightlifting to make
 it a part of my daily life.
 
 I occasionally write about things I'm learning on my
-[blog](/blog).
+[blog](/blog).  
 If you'd like to buy me a tea (sorry, I don't drink coffe)
 you can drop a donation on [ko-fi](https://ko-fi.com/shxdow).
 
@@ -32,7 +32,7 @@ Currently working on
 Past projects
 -------------
 
-*   Brief analysis on a Chrome 0 day (Security Engineering grad. course) ~ 2021
+*   [Brief analysis on a Chrome 0 day (Security Engineering grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
 *   Dynamic Binary Instrumentation for security research (B.Sc. thesis) ~ 2020
 *   [Matasano Cryptopals challenges (set 3) ~ 2019](https://github.com/shxdow/matasano)
 *   [Wirenet Analysis (high school thesis on malware analysis) ~ 2017](https://github.com/shxdow/wirenet-analysis)
