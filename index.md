@@ -28,11 +28,12 @@ Currently working on
 --------------------
 
 *   Penetration tester at █████████████
+*   CVE-2018-1160, Netatalk n-day RCE
 
 Past projects
 -------------
 
-*   [Brief analysis on a Chrome 0 day (Security Engineering grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
+*   [Brief analysis of a Chrome 0-day (Security Engineering grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
 *   Dynamic Binary Instrumentation for security research (B.Sc. thesis) ~ 2020
 *   [Matasano Cryptopals challenges (set 3) ~ 2019](https://github.com/shxdow/matasano)
 *   [Wirenet Analysis (high school thesis on malware analysis) ~ 2017](https://github.com/shxdow/wirenet-analysis)
