@@ -6,7 +6,7 @@ permalink: /
 
 # Hi! I'm Alpha.
 
-I am completing my M.Sc. in engineering whilst working in
+I am completing my M.Sc. in computer engineering whilst working in
 computer security.
 
 I like compilers, reverse engineering, vulnerability
@@ -28,16 +28,18 @@ Currently working on
 --------------------
 
 *   Penetration tester at █████████████
-*   CVE-2018-1160, Netatalk n-day RCE
+*   [CVE-2018-1160, Netatalk n-day RCE](/cve-2018-1160)
 
-Past projects
+Projects
 -------------
+
+This is stuff I've done at some point, it might not be finished/polished
 
 *   [Brief analysis of a Chrome 0-day (Security Engineering grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
 *   Dynamic Binary Instrumentation for security research (B.Sc. thesis) ~ 2020
 *   [Matasano Cryptopals challenges (set 3) ~ 2019](https://github.com/shxdow/matasano)
 *   [Wirenet Analysis (high school thesis on malware analysis) ~ 2017](https://github.com/shxdow/wirenet-analysis)
-*   [Windows kernel reverse engineering ~ 2016](https://github.com/shxdow/low-level-exercises/tree/master/practical-reverse-engineering)
+*   [Windows kernel reverse engineering exercises ~ 2016](https://github.com/shxdow/low-level-exercises/tree/master/practical-reverse-engineering)
 
 Past jobs/positions:
 --------------------
