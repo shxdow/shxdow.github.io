@@ -24,7 +24,7 @@ Feel free to reach me out at
 
 * * *
 
-Currently working on
+Currently
 --------------------
 
 *   Offensive security engineer at █████████████
