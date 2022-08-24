@@ -17,7 +17,7 @@ it a part of my daily life.
 I occasionally write about things I'm learning on my
 [blog](/blog).  
 If you'd like to buy me a tea (sorry, I don't drink coffe)
-you can drop a donation on [ko-fi](https://ko-fi.com/shxdow).
+you can drop a donation on [ko-fi](https://ko-fi.com/shxdow)
 
 Feel free to reach me out at
 [@imshxdow](https://twitter.com/imshxdow).
@@ -27,14 +27,14 @@ Feel free to reach me out at
 Currently working on
 --------------------
 
-*   Penetration tester at █████████████
-*   [CVE-2018-1160, Netatalk n-day RCE](/cve-2018-1160)
+*   Offensive security engineer at █████████████
 
 Projects
 -------------
 
-This is stuff I've done at some point, it might not be finished/polished
+These are things I've done at some point, they might not be polished
 
+*   [CVE-2018-1160, Netatalk n-day RCE](/cve-2018-1160)
 *   [Brief analysis of a Chrome 0-day (Security Engineering grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
 *   Dynamic Binary Instrumentation for security research (B.Sc. thesis) ~ 2020
 *   [Matasano Cryptopals challenges (set 3) ~ 2019](https://github.com/shxdow/matasano)
