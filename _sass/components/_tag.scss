@@ -4,8 +4,9 @@
 
 .c-tags {
   list-style: none;
-  margin: 0;
-  overflow: hidden; 
+  margin-right: 30px;
+  margin-left: 6px;
+  // overflow: hidden; 
   padding: 0;
 }
 
@@ -15,7 +16,7 @@
 
 .c-tag {
   background: #eee;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0px 0 0 0px;
   color: #999;
   display: inline-block;
   height: 26px;
@@ -27,37 +28,82 @@
   -webkit-transition: color 0.2s;
 }
 
-.c-tag::before {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-  content: '';
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  width: 6px;
-  top: 10px;
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
 }
 
-.c-tag::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
-  border-top: 13px solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
+:root {
+    --borderColor: #797979;
 }
 
-.c-tag:hover {
-  background-color: $c-accent__blue;
-  color: white;
+.rainbow {
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        transition: .35s ease-in-out;
+    }
+
+    &::before {
+        top: -5px;
+        left: -10px;
+        border-top: 1px solid var(--borderColor);
+        border-left: 1px solid var(--borderColor);
+    }
+
+    &::after {
+        right: -10px;
+        bottom: -5px;
+        border-bottom: 1px solid var(--borderColor);
+        border-right: 1px solid var(--borderColor);
+    }
+
+    &:hover::before,
+    &:hover::after {
+        width: calc(100% + 20px);
+        height: calc(100% + 9px);
+    }
 }
 
-.c-tag:hover::after {
-   border-left-color: $c-accent__blue;
-}
+
+// .c-tag::before {
+//   background: #fff;
+//   border-radius: 10px;
+//   box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+//   content: '';
+//   height: 6px;
+//   left: 10px;
+//   position: absolute;
+//   width: 6px;
+//   top: 10px;
+// }
+
+// .c-tag::after {
+//   background: #fff;
+//   border-bottom: 13px solid transparent;
+//   border-left: 10px solid #eee;
+//   border-top: 13px solid transparent;
+//   content: '';
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+// }
+
+// .c-tag:hover {
+//   background-color: $c-accent__blue;
+//   color: white;
+// }
+
+// .c-tag:hover::after {
+//    border-left-color: $c-accent__blue;
+// }
 
 .c-c-tag {
     margin-right: 1rem;

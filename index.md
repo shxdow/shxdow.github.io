@@ -10,7 +10,7 @@ I am completing my M.Sc. in computer engineering whilst working in
 computer security.
 
 I like compilers, reverse engineering, vulnerability
-research, logic and mathematics. Even to my surprise, I
+research, binary exploitation, logic and mathematics. Even to my surprise, I
 managed to get interested enough in weightlifting to make
 it a part of my daily life.
 
@@ -27,6 +27,7 @@ Feel free to reach me out at
 Currently
 --------------------
 
+*   GLIBC heap exploitation techniques
 *   Offensive security engineer at █████████████
 
 Projects

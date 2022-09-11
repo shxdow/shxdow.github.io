@@ -91,7 +91,8 @@ svg {
 /* Links */
 
 a {
-    color: $c-accent__blue;
+    color: $c-accent__text;
+    border-bottom: 1px solid #EFF1F3;
     background-color: transparent;
     text-decoration: none;
 
@@ -109,7 +110,7 @@ a {
       height: 0%;
       left: 0;
       bottom: 0;
-      background-color: $c-accent__blue;
+      background-color: $c-accent__grey;
       transition: all ease 0.3s;
     }
 
@@ -120,6 +121,10 @@ a {
       }
     }
 
+}
+
+._override_border {
+    border: 0px;
 }
 
 /* Override hover animation with no-hov class */

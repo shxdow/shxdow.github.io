@@ -13,11 +13,15 @@ title: Notebook
     {% endif %}
     <li class="c-archives__item">
       <h3>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+        <a class="_override_border" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
         <br>
         <small>{{post.description}}</small>
       </h3>
-      <p>{{ post.date | date: "%b %-d, %Y" }}</p>
+      <h3>
+        <a class="_override_border"></a>
+        <br>
+        <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+      </h3>
     </li>
     {% if forloop.last %}
   </ul>

@@ -10,9 +10,10 @@ layout: page
   <!-- Post Tags -->
   <ul class="c-tags">
     {% for tag in page.tags %}
-    <li class="c-tag">{{ tag }}</li>
+    <li class="c-tags rainbow">{{ tag }}</li>
     {% endfor %}
   </ul>
+  <!-- <br> -->
   <div class="c-article__main">
     {{ content }}
   </div>
