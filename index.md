@@ -17,7 +17,7 @@ it a part of my daily life.
 I occasionally write about things I'm learning on my
 [blog](/blog).  
 If you'd like to buy me a tea (sorry, I don't drink coffe)
-you can drop a donation on [ko-fi](https://ko-fi.com/shxdow).
+you can drop a [donation](https://ko-fi.com/shxdow).
 
 Feel free to reach me out at
 [@imshxdow](https://twitter.com/imshxdow).

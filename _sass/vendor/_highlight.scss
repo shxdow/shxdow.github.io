@@ -22,10 +22,10 @@ pre, code {
 }
 
 .highlight {
-    border-radius: 4px;
-    background: #FDFDFD;
-    border: 1px solid #E8E8EB;
-    color: #93a1a1;
+    // border-radius: 4px;
+    // background: #FDFDFD;
+    // border: 1px dashed #797979;
+    // color: #93a1a1;
 
     .gutter {
         padding: 1.2rem;
@@ -36,6 +36,7 @@ pre, code {
         padding: 1.2rem;
     }
 }
+
 span.lineno {
     padding: 1rem;
     border-right: 1px solid #E8E8EB;

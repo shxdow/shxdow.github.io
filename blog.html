@@ -17,11 +17,11 @@ title: Notebook
         <br>
         <small>{{post.description}}</small>
       </h3>
-      <h3>
-        <a class="_override_border"></a>
-        <br>
-        <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-      </h3>
+      <!-- <h3> -->
+      <!--   <!-1- <a  class="_override_border"></a> -1-> -->
+      <!--   <!-1- <br> -1-> -->
+      <!-- </h3> -->
+      <small class="c-date">{{ post.date | date: "%b %-d, %Y" }}</small>
     </li>
     {% if forloop.last %}
   </ul>
