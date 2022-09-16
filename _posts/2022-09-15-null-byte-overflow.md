@@ -93,4 +93,4 @@ overlaps the same one pointed to by the unsortedbin
 
 # References
 
-[^1]: ![Google Project Zero Null Poison attack, pkexec exploit](https://googleprojectzero.blogspot.com/2014/08/the-poisoned-nul-byte-2014-edition.html).
+[^1]: [Google Project Zero Null Poison attack, pkexec exploit](https://googleprojectzero.blogspot.com/2014/08/the-poisoned-nul-byte-2014-edition.html).
