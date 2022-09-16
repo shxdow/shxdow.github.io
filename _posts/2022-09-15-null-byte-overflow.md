@@ -18,15 +18,15 @@ status: Ongoing
 
 This attack originated from Google Project Zero's team, as an updated version
 of The House of Einherjar, a `NUL` byte overflow technique originally published
-in Malloc Maleficarium[1].
+in Malloc Maleficarium[^1].
 
-## Goals
+# Goals
 
 As its predecessor, it aims to obtain two malloc chunks overlapping the same
 memory region, the former considered free, the latter allocated and
 attacker controlled.
 
-## Constraints
+# Constraints
 
 One of the core differences in this version of the attack is the lack of
 control of the `prev_size` field.
@@ -45,13 +45,13 @@ Lastly, if the program is compiled with a GLIBC version > 2.26 they have to
 deal with additional mitigations that make targeting an allocated chunk even
 harder.
 
-## Execution
+# Execution
 
 In order to achieve its goal, which is creating two overlapping chunks, this
 technique makes use of an additional chunk that is used to set a `prev_size`
 field. 
-Friendly tip: drawing blocks while reading the following steps will make
-everything easier. Please, save yourself an headache and do it.
+<!-- Friendly tip: drawing blocks while reading the following steps will make -->
+<!-- everything easier. Please, save yourself an headache and do it. -->
 
 Given `3` consecutive allocated chunks `A`, `B`, and `C` of sizes
 `0x20`, `0x110`, `0x20`, the following steps will grant as the
@@ -90,3 +90,7 @@ exploitation primitive
 
 Allocating a big enough chunk will provide a pointer a memory region that
 overlaps the same one pointed to by the unsortedbin
+
+# References
+
+[^1]: ![Google Project Zero Null Poison attack, pkexec exploit](https://googleprojectzero.blogspot.com/2014/08/the-poisoned-nul-byte-2014-edition.html).
