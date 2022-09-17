@@ -28,12 +28,11 @@ Currently
 --------------------
 
 *   GLIBC security research
-*   Offensive security engineer at █████████████
 
 Projects
 -------------
 
-These are things I've done at some point, they might not be polished
+These are things I've done at some point
 
 *   [CVE-2018-1160, Netatalk n-day RCE ~ 2022](/cve-2018-1160)
 *   [Brief analysis of a Chrome 0-day (Security Eng. grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
@@ -45,4 +44,5 @@ These are things I've done at some point, they might not be polished
 Past jobs/positions:
 --------------------
 
+*   Offensive security engineer at █████████████
 *   Software engineer at █████████████

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Null Poison attack
+title: Google NUL Poison attack
 date: 2022-09-15
 permalink: /:title/
 description: "Notes on exploitation techniques in Gnu C Library"
