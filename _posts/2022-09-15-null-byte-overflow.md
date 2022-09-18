@@ -27,11 +27,14 @@ from one another, rather than a body of knowledge existing on its own.
 
 # Introduction
 
-Memory corruption vulnerabilities can arise from very benign programming
-errors and can lead to code execution if exploited by a skilled attacker.  
+Memory corruption vulnerabilities can arise from very
+benign programming errors and can lead to arbitrary code
+execution if exploited by a skilled attacker.  
 
-One byte overflows are no different, and can be leveraged to craft fully
-fledged exploits against binaries linked to Linux's ptmalloc2 memory allocator.  
+One byte overflows are no different and can be leveraged to craft fully
+fledged exploits against binaries linked to the Gnu C Library's memory
+allocator, which is derived from ptmalloc (pthreads malloc), which in
+turn is derived from dlmalloc (Doug Lea malloc).  
 
 This technique was originally discovered by Google Project Zero's team, as an
 updated version of [The House of Einherjar](https://github.com/umbum/pwn-archive/blob/master/how2heap/house_of_einherjar.c),
@@ -39,9 +42,11 @@ a `NUL` byte overflow exploitation technique dating several years prior to 2014.
 
 As many modern heap exploitation techniques, it can be used to leak memory
 addresses by obtaining two malloc chunks overlapping the same memory region.
-One considered free and the other one allocated and attacker controlled. This
-post covers backward consolidation specifically, but the principles can be
-applied to forward consolidation as well.
+One considered free and the other one allocated and attacker controlled.  
+
+This post covers backward consolidation specifically, but
+the principles can be applied to forward consolidation as
+well.
 
 # Required reading
 
@@ -51,12 +56,14 @@ The reader should be familiar with malloc internals before reading the following
 
 # Constraints and and `NUL` termination errors
 
-One of the core differences in this version of the attack is the lack of
-control of the `prev_size` field:
-`NUL` termination errors are typical of string related tasks.  
-An attacker would not be able to provide a `prev_size` containing `NUL` bytes
-as they would terminate the string supplied prematurely, being restricted to
-impractically large values.
+One of the core differences in this version of the attack
+is the lack of control of the `prev_size` field.  `NUL`
+termination errors are typical of string related tasks,
+therefore an attacker would not be able to
+provide a `prev_size` containing `NUL` bytes
+as they would terminate the string supplied
+prematurely, being restricted to impractically
+large values.
 
 For instance, `0x0000000000000090` would terminate the string
 provided before overflowing into the `size` field.
