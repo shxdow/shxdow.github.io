@@ -11,13 +11,6 @@ published: true
 status: Ongoing
 ---
 
-The hacking community has always been built upon intellectual curiosity,
-knowledge sharing and the desire of pushing the boundaries of what is
-currently possible. Despite these tenants, or perhaps becasue of them, it
-often falls short in the systematization of knowledge, leading to treating
-memory corruption exploitation as a folkloristic discipline, passed informally
-from one another, rather than a body of knowledge existing on its own.
-
 
 ---
 * toc
@@ -152,5 +145,5 @@ values by reading memory from a chunk overlapping the one just free'd.
 # References
 
 - [Google Project Zero Null Poison attack, pkexec exploit](https://googleprojectzero.blogspot.com/2014/08/the-poisoned-nul-byte-2014-edition.html).
-- [Chromium ticket](https://bugs.chromium.org/p/project-zero/issues/detail?id=96&redir=1)
+- [Project Zero Bug tracker](https://bugs.chromium.org/p/project-zero/issues/detail?id=96&redir=1)
 
