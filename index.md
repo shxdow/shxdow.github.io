@@ -9,10 +9,9 @@ permalink: /
 I am completing my M.Sc. in computer engineering whilst working in
 computer security.
 
-I like compilers, reverse engineering, vulnerability
-research, binary exploitation, logic and mathematics. Even to my surprise, I
-managed to get interested enough in weightlifting to make
-it a part of my daily life.
+I like vulnerability research, binary {exploitation, analysis}, logic and
+mathematics, compilers, reverse engineering. Even to my surprise, I managed to
+get interested enough in weightlifting to make it a part of my daily life.
 
 I occasionally write about things I'm learning on my
 [blog](/blog).  
@@ -27,7 +26,7 @@ Feel free to reach me out at
 Currently
 --------------------
 
-*   GLIBC security research
+*   V8 security research
 
 Projects
 -------------
