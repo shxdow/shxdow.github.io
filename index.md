@@ -19,14 +19,14 @@ If you'd like to buy me a tea (sorry, I don't drink coffe)
 you can drop a [donation](https://ko-fi.com/shxdow).
 
 Feel free to reach me out at
-[@imshxdow](https://twitter.com/imshxdow).
+[@__shadow9__](https://twitter.com/__shadow9__).
 
 * * *
 
 Currently
 --------------------
 
-*   V8 security research
+*   Safari security research
 
 Projects
 -------------
