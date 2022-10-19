@@ -19,7 +19,7 @@ If you'd like to buy me a tea (sorry, I don't drink coffe)
 you can drop a [donation](https://ko-fi.com/shxdow).
 
 Feel free to reach me out at
-[@__shadow9__](https://twitter.com/__shadow9__).
+[@shxdowtc](https://twitter.com/shxdowtc).
 
 * * *
 
