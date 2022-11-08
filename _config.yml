@@ -7,6 +7,7 @@ description: >
 author: shxdow
 email: 
 twitter_username: shxdowtc
+mastodon_username: shxdow
 github_username: shxdow
 
 baseurl: "" # the subpath of your site, e.g. /blog
