@@ -35,6 +35,7 @@ Projects
 
 These are things I've done at some point
 
+*   [CVE-2020-9802, Safari n-day RCE ~ 2022](/cve-2020-9802)
 *   [CVE-2018-1160, Netatalk n-day RCE ~ 2022](/cve-2018-1160)
 *   [Brief analysis of a Chrome 0-day (Security Eng. grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
 *   Dynamic Binary Instrumentation for security research (B.Sc. thesis) ~ 2020
