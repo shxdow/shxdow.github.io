@@ -4,7 +4,7 @@ title: Heuristically measure reverse engineering efforts
 date: 2020-01-11
 permalink: /:title/
 description: "Or how to tell if the soup needs more salt"
-tags: [reverse engineering, thoughts]
+tags: [reverse-engineering, thoughts]
 share: true
 published: false
 ---

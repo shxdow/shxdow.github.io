@@ -45,7 +45,7 @@ well.
 
 The reader should be familiar with malloc internals before reading the following chapters:
 
-- [Gnu C Library Wiki, Overview of Malloc](https://sourceware.org/glibc/wiki/MallocInternals)
+- [Gnu C Library wiki, overview of Malloc](https://sourceware.org/glibc/wiki/MallocInternals)
 
 # Constraints and and `NUL` termination errors
 

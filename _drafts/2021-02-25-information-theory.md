@@ -4,7 +4,7 @@ title: Notes on Information Theory
 date: 2021-02-25
 permalink: /:title/
 description: "Reflections on Shannon's work"
-tags: [math, software engineering]
+tags: [math, software-engineering]
 share: true
 published: false
 status: ongoing

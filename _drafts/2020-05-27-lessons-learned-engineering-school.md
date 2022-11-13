@@ -16,7 +16,7 @@ first hand. You name it, I have it.
 Is this a letter to oneself, you may ask ? Not really. I'm afraid of the turn things could have taken
 if I had foreseen the future.
 
-#### On engineering, having 'skin in the game' and life advice
+# On engineering, having 'skin in the game' and life advice
 
 Really, what is engineering at its core ? What does it feel to study engineering ?
 These are some of the questions I had before enrolling in this fun ride and don't

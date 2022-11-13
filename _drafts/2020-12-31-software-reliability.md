@@ -4,7 +4,7 @@ title: On software, engineering and reliability
 date: 2020-12-28
 permalink: /:title/
 description: "Reflections on engineering"
-tags: [software engineering]
+tags: [software-engineering]
 share: true
 published: false
 status: ongoing
@@ -76,3 +76,5 @@ what do I think makes very reliable software ?
 how do we measure reliability ?
 
 
+# Tags
+- [[software-engineering|Software engineering]]

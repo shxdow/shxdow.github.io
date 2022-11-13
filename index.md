@@ -15,11 +15,11 @@ get interested enough in weightlifting to make it a part of my daily life.
 
 I occasionally write about things I'm learning on my
 [blog](/blog).  
-If you'd like to buy me a tea (sorry, I don't drink coffe)
+If you'd like to buy me tea (sorry, I don't drink coffe)
 you can drop a [donation](https://ko-fi.com/shxdow).
 
 Feel free to reach me out at
-[twitter@shxdowtc](https://twitter.com/shxdowtc)
+[twitter.com/shxdowtc](https://twitter.com/shxdowtc)
 or 
 [@shxdow@mastodon.online](https://mastodon.online/@shxdow#).
 
