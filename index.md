@@ -6,8 +6,10 @@ permalink: /
 
 # Hi! I'm Alpha.
 
+_I'm considering (remote) offers in vulnerability research, if interested reach out via email (website footer)._  
+
 I am completing my M.Sc. in computer engineering whilst working in
-computer security.
+computer security.  
 
 I like vulnerability research, binary {exploitation, analysis}, logic and
 mathematics, compilers, reverse engineering. Even to my surprise, I managed to
