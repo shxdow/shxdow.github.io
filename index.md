@@ -11,7 +11,7 @@ _I'm considering (remote) offers in vulnerability research, if interested reach 
 I am completing my M.Sc. in computer engineering whilst working in
 computer security.  
 
-I like vulnerability research, binary {exploitation, analysis}, logic and
+I like vulnerability research, binary exploitation, program analysis, logic and
 mathematics, compilers, reverse engineering. Even to my surprise, I managed to
 get interested enough in weightlifting to make it a part of my daily life.
 
@@ -31,6 +31,7 @@ Currently
 --------------------
 
 *   Safari security research
+    *   CVE-2022-22629
 
 Projects
 -------------
@@ -48,5 +49,7 @@ These are things I've done at some point
 Past jobs/positions:
 --------------------
 
+For more details, see my CV (available on request).
+
 *   Offensive security engineer at █████████████
-*   Software engineer at █████████████
+*   Software engineer at           █████████████
