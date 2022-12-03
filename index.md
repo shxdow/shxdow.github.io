@@ -31,7 +31,6 @@ Currently
 --------------------
 
 *   Safari security research
-    *   CVE-2022-22629
 
 Projects
 -------------
@@ -50,6 +49,3 @@ Past jobs/positions:
 --------------------
 
 For more details, see my CV (available on request).
-
-*   Offensive security engineer at █████████████
-*   Software engineer at           █████████████
