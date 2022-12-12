@@ -6,8 +6,6 @@ permalink: /
 
 # Hi! I'm Alpha.
 
-_I'm considering (remote) offers in vulnerability research, if interested reach out via email (website footer)._  
-
 I am completing my M.Sc. in computer engineering whilst working in
 computer security.  
 
@@ -35,7 +33,7 @@ Currently
 Projects
 -------------
 
-These are things I've done at some point
+These are things I've done at some point:
 
 *   [CVE-2020-9802, Safari n-day RCE ~ 2022](/cve-2020-9802)
 *   [CVE-2018-1160, Netatalk n-day RCE ~ 2022](/cve-2018-1160)
