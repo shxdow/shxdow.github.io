@@ -16,12 +16,12 @@
 
 // Font families
 @mixin ff--sans-serif($font-weight: normal) {
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 350;
 }
 
 @mixin ff--code {
-    font-family: 'Courier', monospace;
+    font-family: 'SFMono-Regular', monospace;
 }
 
 // Font sizing
