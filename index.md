@@ -10,16 +10,19 @@ I am completing my M.Sc. in computer engineering whilst working in
 computer security.  
 
 I like vulnerability research, binary exploitation, program analysis, logic and
-mathematics, compilers, reverse engineering. Even to my surprise, I managed to
-get interested enough in weightlifting to make it a part of my daily life.
+mathematics, compilers, reverse engineering.  
+Even to my surprise, I managed to get interested enough in
+weightlifting to make it a part of my daily life. I do a
+lot of other stuff in the little free time I have.
 
 I occasionally write about things I'm learning on my
 [blog](/blog).  
 If you'd like to buy me tea (sorry, I don't drink coffe)
 you can drop a [donation](https://ko-fi.com/shxdow).
 
-Feel free to reach me out at
-[twitter.com/shxdowtc](https://twitter.com/shxdowtc)
+I'm phasing out my usage of [Twitter](https://twitter.com/shxdowtc) so
+feel free to reach me out at
+[@imshxdow:matrix.org](https://matrix.to/#/@imshxdow:matrix.org)
 or 
 [@shxdow@mastodon.online](https://mastodon.online/@shxdow#).
 
@@ -28,7 +31,8 @@ or
 Currently
 --------------------
 
-*   Safari security research
+*   ████████████████
+<!-- *   I'm ████ for ████ focusing on ████ -->
 
 Projects
 -------------
