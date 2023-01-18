@@ -51,3 +51,5 @@ Past jobs/positions:
 --------------------
 
 For more details, see my CV (available on request).
+
+<a rel="me" href="https://mastodon.online/@shxdow"></a>
