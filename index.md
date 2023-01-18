@@ -24,7 +24,7 @@ I'm phasing out my usage of [Twitter](https://twitter.com/shxdowtc) so
 feel free to reach me out at
 [@imshxdow:matrix.org](https://matrix.to/#/@imshxdow:matrix.org)
 or 
-[@shxdow@mastodon.online](https://mastodon.online/@shxdow#).
+[@shxdow@treehouse.systems](https://social.treehouse.systems/@shxdow).
 
 * * *
 

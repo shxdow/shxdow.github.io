@@ -14,13 +14,19 @@
         <span class="u-separate"></span>
     {% endif %}
     {% if site.mastodon_username %}
-        <a href="https://mastodon.online/@{{ site.mastodon_username }}">Mastodon</a>
+        <a href="https://social.treehouse.systems/@{{ site.mastodon_username }}">Mastodon</a>
     {% endif %}
     {% if site.github_username %}
         <span class="u-separate"></span>
     {% endif %}
     {% if site.github_username %}
         <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+    {% endif %}
+    {% if site.matrix_username %}
+        <span class="u-separate"></span>
+    {% endif %}
+    {% if site.matrix_username %}
+        <a href="https://matrix.to/#/@imshxdow:matrix.org">Matrix</a>
     {% endif %}
     <a rel="me" href="https://mastodon.online/@shxdow"></a>
     <a rel="me" href="https://social.treehouse.systems/@shxdow"></a>
