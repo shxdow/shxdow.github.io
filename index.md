@@ -14,7 +14,7 @@ logic,  compilers, emulation and reverse
 engineering. Even to my surprise, I managed to
 get interested enough in various forms of physical
 exerices to make them a part of my daily life. I
-// do a lot of other stuff in the little free time I have.
+do a lot of other stuff in the little free time I have.
 
 I occasionally write about things I'm learning on my
 [blog](/blog).  
