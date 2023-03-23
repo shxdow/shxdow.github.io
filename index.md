@@ -6,14 +6,15 @@ permalink: /
 
 # Hi! I'm Alpha.
 
-I am completing my M.Sc. in computer engineering whilst working in
-computer security.  
+I am completing my M.Sc. in computer engineering whilst 
+working in security research.  
 
-I like vulnerability research, binary exploitation, program analysis, logic and
-mathematics, compilers, reverse engineering.  
-Even to my surprise, I managed to get interested enough in
-weightlifting to make it a part of my daily life. I do a
-lot of other stuff in the little free time I have.
+I like binary exploitation, program analysis,
+logic,  compilers, emulation and reverse
+engineering. Even to my surprise, I managed to
+get interested enough in various forms of physical
+exerices to make them a part of my daily life. I
+// do a lot of other stuff in the little free time I have.
 
 I occasionally write about things I'm learning on my
 [blog](/blog).  
@@ -26,13 +27,12 @@ feel free to reach me out at
 or 
 [@shxdow@treehouse.systems](https://social.treehouse.systems/@shxdow).
 
-* * *
+<!--  * * * -->
 
-Currently
---------------------
+<!-- Currently -->
+<!-- -------------------- -->
 
-*   ████████████████
-<!-- *   I'm ████ for ████ focusing on ████ -->
+<!-- *   Research at ████████ -->
 
 Projects
 -------------
@@ -51,4 +51,3 @@ Past jobs/positions:
 --------------------
 
 For more details, see my CV (available on request).
-
