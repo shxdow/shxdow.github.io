@@ -7,7 +7,7 @@ permalink: /
 # Hi! I'm Alpha.
 
 I am completing my M.Sc. in computer engineering whilst 
-working in security research.  
+working in security.  
 
 I like binary exploitation, program analysis,
 logic,  compilers, emulation and reverse
