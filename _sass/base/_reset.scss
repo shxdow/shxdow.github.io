@@ -92,9 +92,15 @@ svg {
 
 a {
     color: $c-accent__text;
-    border-bottom: 1px solid lightgrey;
+    // border-bottom: 1px solid lightgrey;
     background-color: transparent;
-    text-decoration: none;
+
+    text-decoration: underline 1px solid lightgrey;
+    background-color: transparent;
+    -webkit-text-decoration-color: lightgrey;
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-style: solid;
+    text-decoration-thickness: 1px;
 
     position: relative;
     display: inline-block;
