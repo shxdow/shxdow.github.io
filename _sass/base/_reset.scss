@@ -105,7 +105,7 @@ a {
     position: relative;
     display: inline-block;
     padding: 0px 1px;
-    transition: color ease 0.3s;
+    transition: color ease 0.15s;
     
     /* Hover animation effect for all buttons */
     &::after {
@@ -118,7 +118,7 @@ a {
       bottom: 0;
       // background-color: $c-accent__grey;
       background-color: black;
-      transition: all ease 0.3s;
+      transition: all ease 0.15s;
     }
 
     &:hover {
