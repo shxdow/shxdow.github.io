@@ -4,7 +4,7 @@ title: Home
 permalink: /
 ---
 
-# Hi! I'm Alpha.
+# Hi!
 
 I am completing my M.Sc. in computer engineering whilst 
 working in security.  
@@ -15,10 +15,9 @@ engineering. I do a lot of other stuff in the little free time I have.
 
 I occasionally write about things that interest me on my [blog](/blog).  
 
-I'm phasing out my usage of [Twitter](https://twitter.com/shxdowtc) so
-follow me on 
+You can find me on 
 [@shxdow@treehouse.systems](https://social.treehouse.systems/@shxdow).
-and feel free to reach me out at
+and 
 [@imshxdow:matrix.org](https://matrix.to/#/@imshxdow:matrix.org)
 
 These are things I've done at some point:
