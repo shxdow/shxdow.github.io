@@ -108,10 +108,10 @@ a {
 
     // text-decoration: underline 1px dotted lightgrey;
     // background-color: transparent;
-    // -webkit-text-decoration-color: lightgrey;
+    -webkit-text-decoration-color: lightgrey;
     // -webkit-text-decoration-line: underline;
     -webkit-text-decoration-style: dotted;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
 
     // position: relative;
     // display: inline-block;

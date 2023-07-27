@@ -1,34 +1,31 @@
 ---
 layout: post
-mathjax: true
 title: Kernel Notes
-date: 2019-04-20
+date: 2016-04-20
 permalink: /:title/
 description: "Notes on OS internals, kernels and ..."
-tags: [notes]
-share: true
+tags: ["notes"]
 ---
 
 
 # Introduction
 
 This is a collections of notes on various kernel related topics, featuring
-Windows NT, Linux. A good chunk of these snippets were gathered as a precocius 
-high schooler, therefore, do not expect the quality to be on par of a research paper
-The notes don't lie in any particular order besides their 
-respective operating system. I happened to most of this material through books during
-self study.
+Windows NT, Linux. A good chunk of these snippets were gathered as a precocius
+high schooler around somewhere between 2016 and 2017, therefore, do not expect
+the quality to be on par of a peer reviewd research paper, far from it. The
+notes don't lie in any particular order besides their  respective operating
+system. I happened to most of this material through books during self study.
 
-Table of contents
+# Table of contents
+
 * TOC
 {:toc}
 
 
-# Linux
-
-
 # Windows Kernel
 
+---
 
 ## What are PCR, PRCB and why do we have them?
 
@@ -70,11 +67,13 @@ the "priority" of the int. IRQL is an unsigned char and is per-processor:
 interrupts are handled only if they number is equal or higher than the
 current IRQL. 
 
-doubt 1: How does the CPU know when to increase/decrease IRQL ? Does it
+<!-- doubt 1: How does the CPU know when to increase/decrease IRQL ? Does it
 have a queue or something ?
 
 
 ## What are MDLs,why do we need them and what is their relationship w/ the MMU ?
+
+-->
 
 
 
@@ -84,8 +83,6 @@ Unlike Linux, Windows distinguishes threads from processess (every process
 has at least 1 thread). A contest is a collection of all the information
 relevant to the process.
 
-doubt 1: Are they 'relevant' for the reverse engineers?
-
 
 ## Explain what a work item is 
 
@@ -94,9 +91,6 @@ caller.
 
 # References
 
-[1] Practical Reverse Engineering - Bruce Dang  
-[2] Windows Internals -  
-[3]  
-[4]  
-[5]  
-
+- [Practical Reverse Engineering: x86, x64, ARM, Windows Kernel, Reversing Tools, and Obfuscation](https://www.goodreads.com/en/book/show/18227589)
+- [Windows Internals Series](https://learn.microsoft.com/en-us/sysinternals/resources/windows-internals)
+- [Geoff Chappell, Software Analyst](geoffchappell.com)

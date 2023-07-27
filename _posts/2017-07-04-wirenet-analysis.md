@@ -62,54 +62,54 @@ process is shown below
 <!-- <pre style="background-color: #f5f5f5;padding-left: 1rem;padding-right: 1rem;padding-top: 1rem !important;padding-bottom: 1rem;important;line-height: 1.1rem;font-family: 'Inconsolata', Courier, monospace;font-size: 0.9rem;margin-top: 0rem;margin-bottom: 1.8rem;"> -->
 ```nasm
 void *cpStartKeyLogger(void *)
-    sub     esp, 0Ch
-    push    0               ; char *
-    call    ds:_XOpenDisplay
-    add     esp, 10h
-    test    eax, eax
-    mov     ebx, eax
-    jnz     short State_2
+1   sub     esp, 0Ch
+2   push    0               ; char *
+3   call    ds:_XOpenDisplay
+4   add     esp, 10h
+5   test    eax, eax
+6   mov     ebx, eax
+7   jnz     short State_2
 ```
 
 Line 2 - 3 call `XOpenDisplay` which establishes a connection to the X server, line 4 - 7 do error checking and jump to `loc_8055532` in case `XOpenDisplay` returns a non-zero value. Otherwise a variable called KeyLoggerState is set to 2.
 As the name suggests, it represents the various states in which the keylogger can exist, it is used mostly for error handling purposes and is not of much interest.
 
 ```nasm
-    mov     KeyLoggerState, 2
-    jmp     loc_80557BA
+1    mov     KeyLoggerState, 2
+2    jmp     loc_80557BA
 ```
 
 Next, these instructions are executed
 
 ```nasm
-    sub     esp, 0Ch
-    lea     eax, [esp+118h+var_28]
-    push    eax             ; int *
-    lea     eax, [esp+11Ch+var_2C]
-    push    eax             ; int *
-    lea     eax, [esp+120h+var_24]
-    push    eax             ; int *
-    push    offset aXinputextensio ; "XInputExtension"
-    push    ebx             ; Display *
-    call    ds:_XQueryExtension
-    add     esp, 20h
-    test    eax, eax
-    jnz     short loc_805556F
+1   sub     esp, 0Ch
+2   lea     eax, [esp+118h+var_28]
+3   push    eax             ; int *
+4   lea     eax, [esp+11Ch+var_2C]
+5   push    eax             ; int *
+6   lea     eax, [esp+120h+var_24]
+7   push    eax             ; int *
+8   push    offset aXinputextensio ; "XInputExtension"
+9   push    ebx             ; Display *
+10   call    ds:_XQueryExtension
+11   add     esp, 20h
+12   test    eax, eax
+13   jnz     short loc_805556F
 ```
 
 Line 2 - 4 - 6 load variables addresses into eax, so that line 3 - 5 - 7 can push those values onto the stack and call `XQueryExtension`. `XQueryExtension` determines if the named extension is present. Line 11 cleans up the stack, line 12 - 13 check if `XInputExtension` was present.  
 If the function fails KeyLoggerState is set to 3
 
 ```nasm
-    mov     KeyLoggerState, 3
-    jmp     loc_8
+1   mov     KeyLoggerState, 3
+2   jmp     loc_8
 ```
 
 The following part starts off with a with a comparsion between `var_20` and `ebp`
 
 ```nasm
-    cmp     ebp, [esp+10Ch+var_20]
-    jl      short  loc_805558B
+1   cmp     ebp, [esp+10Ch+var_20]
+2   jl      short  loc_805558B
 ```
 
 The image shows pretty clearly that the previous two lines are part of a loop![cmp loop](/assets/img/ida_cmp_loop.png)
@@ -123,10 +123,10 @@ material and as such I omitted parts I deemed as not
 important to cover.
 
 ```nasm
-    push    offset aAt      ; "AT"
-    push    edx             ; haystack
-    mov     [esp+11Ch+haystack], edx
-    call    _strstr
+1   push    offset aAt      ; "AT"
+2   push    edx             ; haystack
+3   mov     [esp+11Ch+haystack], edx
+4   call    _strstr
 ```
 This part is pretty simple, a string `AT` is passed to `_strstr` along with a variable called `haystack`, looking for the first occurence of the former in the latter. To put it simply, the call looks something like this:
 
@@ -139,40 +139,37 @@ void _strstr (void *haystack, void *needle) {
 Line 5 cleans up the stack, line 6 stores the haystack in edx and line 7 checks `_strstr`'s return value. If it is zero execution jumps to `loc_80555D2` which simply ends the loop by incrementing the counter.
 
 ```nasm
-    add     esp, 10h
-    mov     edx, [esp+10Ch+haystack]
-    test    eax, eax
-    jnz     short loc_80555D0
-```
-
-```nasm
-    inc     ebp
-    add     edi, 18h
+5    add     esp, 10h
+6    mov     edx, [esp+10Ch+haystack]
+7    test    eax, eax
+8    jnz     short loc_80555D0
+9    inc     ebp
+10   add     edi, 18h
 ```
 
 If an occurence is found there's another search, this time using `System keyboard` as needle.
 
 ```nasm
-    push    offset aSystemKeyboard ; "System keyboard"
-    push    edx             ; haystack
-    call    _strstr
-    add     esp, 10h
-    test    eax, eax
-    jz      short loc_80555D2
+push    offset aSystemKeyboard ; "System keyboard"
+push    edx             ; haystack
+call    _strstr
+add     esp, 10h
+test    eax, eax
+jz      short loc_80555D2
 ```
 
 The interesting part of this branch is over, it is worth however mentioning that under some conditions a variable called `KeyLoggerState` is set to 4.  
-<br>
+
 Let's go up the abstraction ladder and let's ask ourselves what happens if the previous check happens to be passed.
 Here lies the heart of the keylogger:
 
 ```nasm
-    push    dword ptr [esi] ; _DWORD
-    push    ebx             ; _DWORD
-    call    ds:_XOpenDevice
-    add     esp, 10h
-    test    eax, eax
-    jz      loc_80
+push    dword ptr [esi] ; _DWORD
+push    ebx             ; _DWORD
+call    ds:_XOpenDevice
+add     esp, 10h
+test    eax, eax
+jz      loc_80
 ```
 As the name suggests, after finding the device rappresenting the system keyboard the malware tries to open it with `XOpenDevice` and return a `XDevice` structure which are defined as follows
 ```c
@@ -188,14 +185,14 @@ There are two conditions two branches that set
 
 The function either fails
 ```nasm
-    mov     KeyLoggerState, 5
+mov     KeyLoggerState, 5
 ```
 or the field `device_id` (offset `[eax+4]`) is zero
 ```nasm
-    mov     edx, [eax+4]
-    test    edx, edx
-    mov     [esp+10Ch+var_FC], edx
-    jle     State_5
+mov     edx, [eax+4]
+test    edx, edx
+mov     [esp+10Ch+var_FC], edx
+jle     State_5
 ```
 
 The executions continues to the next function. I won't
@@ -203,18 +200,18 @@ go over in detail to how variables are passed to the
 function as it would be somewhat redundant
 
 ```nasm
-    push    esi             ; _DWORD
-    lea     eax, [esp+110h+var_48]
-    push    eax             ; _DWORD
-    push    [esp+114h+var_F4] ; _DWORD
-    mov     dword_805873C, ecx
-    push    ebx             ; _DWORD
-    call    ds:_XSelectExtensionEvent
-    add     esp, 10h
-    test    eax, eax
-    jnz     State_5
-    test    esi, esi         ; event_count
-    jz      State_5
+push    esi             ; _DWORD
+lea     eax, [esp+110h+var_48]
+push    eax             ; _DWORD
+push    [esp+114h+var_F4] ; _DWORD
+mov     dword_805873C, ecx
+push    ebx             ; _DWORD
+call    ds:_XSelectExtensionEvent
+add     esp, 10h
+test    eax, eax
+jnz     State_5
+test    esi, esi         ; event_count
+jz      State_5
 ```
 `XSelectExtensionEvent` selects an extension event and
 is defined as follows
@@ -227,34 +224,34 @@ XSelectExtensionEvent ( Display *display,
 
 The `KeyLoggerState` variable is now set to 0
 ```nasm
-    mov     KeyLoggerState, 0
-    lea     edi, [esp+10Ch+var_E4]
-    lea     esi, [esp+10Ch+v
+mov     KeyLoggerState, 0
+lea     edi, [esp+10Ch+var_E4]
+lea     esi, [esp+10Ch+v
 ```
 At this point, we found the system keyboard device and
 opened a handle to it.  All is set and the malware can
 start logging keystrokes
 
 ```nasm
-    loc_80556D9:
-    push    eax
-    push    eax
-    push    edi             ; XEvent *
-    push    ebx             ; Display *
-    	int type;
-    
-    	/* KeyPress or KeyRelease */
-    
-    	unsigned long serial;
-    
-    	/* # of last request processed by server */
-[...]
-    
-    	Display *display;
-    
-    	/* Display the event was read from */
-[...]
-    } XKeyEvent;
+5   loc_80556D9:
+6   push    eax
+7   push    eax
+8   push    edi             ; XEvent *
+9   push    ebx             ; Display *
+10  int type;
+11  
+12  /* KeyPress or KeyRelease */
+13  
+14  unsigned long serial;
+15  
+16  /* # of last request processed by server */
+17  [...]
+18  
+19  Display *display;
+20  
+21  /* Display the event was read from */
+22  [...]
+23  } XKeyEvent;
 ```
 
 After an event occures and `XNextEvent` gets executed
@@ -263,17 +260,17 @@ structure and pass it to `LogKey`. Line 34 jumps to
 the previous code snippet (a never ending loop).
 
 ```nasm
-    mov     [esp+10Ch+var_84.type], eax
-    mov     eax, dword ptr [esp+10Ch+var_E4+4]
-    mov     [esp+10Ch+var_84.serial], eax
-    mov     eax, dword ptr [esp+10Ch+var_E4+0Ch]
-    mov     [esp+10Ch+var_84.display], eax
-[...]
-    push    ebx             ; Display *
-    push    esi             ; XKeyEvent *
-    call    LogKey
-    add     esp, 10h
-    jmp     loc_80556D9
+24  mov     [esp+10Ch+var_84.type], eax
+25  mov     eax, dword ptr [esp+10Ch+var_E4+4]
+26  mov     [esp+10Ch+var_84.serial], eax
+27  mov     eax, dword ptr [esp+10Ch+var_E4+0Ch]
+28  mov     [esp+10Ch+var_84.display], eax
+29  [...]
+30  push    ebx             ; Display *
+31  push    esi             ; XKeyEvent *
+32  call    LogKey
+33  add     esp, 10h
+34    jmp     loc_80556D9
 ```
 
 The `LogKey` function saves intercepted keystrokes to `/tmp/.m8.dat`.
