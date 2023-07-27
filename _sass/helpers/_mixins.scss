@@ -16,7 +16,7 @@
 
 // Font families
 @mixin ff--sans-serif($font-weight: normal) {
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: ui-rounded, 'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 350;
 }
 
