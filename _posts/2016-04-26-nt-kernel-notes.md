@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kernel Notes
+title: Kernel notes
 date: 2016-04-20
 permalink: /:title/
 description: "Notes on OS internals, kernels and ..."
