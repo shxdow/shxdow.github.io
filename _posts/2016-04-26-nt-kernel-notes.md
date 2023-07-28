@@ -14,9 +14,11 @@ quality to be on par of a peer reviewd research paper, far from it. The notes
 don't lie in any particular order as most of this material was gathered through
 books during self study.
 
-# Table of contents
-
+---
+**Table of contents**
+* toc
 {:toc}
+---
 
 ## What are PCR, PRCB and why do we have them?
 
@@ -86,4 +88,4 @@ See [GitHub](https://github.com/shxdow/low-level-exercises/tree/master/practical
 
 - [Practical Reverse Engineering: x86, x64, ARM, Windows Kernel, Reversing Tools, and Obfuscation](https://www.goodreads.com/en/book/show/18227589)
 - [Windows Internals Series](https://learn.microsoft.com/en-us/sysinternals/resources/windows-internals)
-- [Geoff Chappell, Software Analyst](geoffchappell.com)
+- [Geoff Chappell, Software Analyst](https://geoffchappell.com)
