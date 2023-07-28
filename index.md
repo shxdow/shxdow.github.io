@@ -7,17 +7,17 @@ permalink: /
 # Hi!
 
 I am completing my M.Sc. in computer
-engineering whilst  working in security.
+engineering whilst working in security.
 
 I like browsers, operatings systems,
-compilers, emulation and reverse
+compilers, mathematics, program
+analysis, emulation and reverse
 engineering. I like to keep myself busy
 hence I do a lot of other stuff in the
 little free time I have.
 
 I occasionally write about things that
 interest me on my [blog](/blog).
-
 
 You can find me on 
 [@shxdow@treehouse.systems](https://social.treehouse.systems/@shxdow)
@@ -32,6 +32,6 @@ and
 * [Brief analysis of a Chrome 0-day (Security Eng. grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
 * Dynamic Binary Instrumentation for security research (B.Sc. thesis) ~ 2020
 * [Matasano Cryptopals challenges (set 3) ~ 2019](https://github.com/shxdow/matasano)
-* [Wirenet Analysis (high school thesis on malware analysis) ~ 2017](/wirenet-analysis/)
-* [Windows kernel reverse engineering exercises ~ 2016](/nt-kernel-notes/)
+* [Wirenet analysis (high school thesis on malware analysis) ~ 2017](/wirenet-analysis/)
+* [Windows kernel reverse engineering notes ~ 2016](/nt-kernel-notes/)
 

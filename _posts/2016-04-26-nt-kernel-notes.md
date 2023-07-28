@@ -7,25 +7,16 @@ description: "Notes on OS internals, kernels and ..."
 tags: ["notes"]
 ---
 
-
-# Introduction
-
 This is a collections of notes on various kernel related topics, featuring
-Windows NT, Linux. A good chunk of these snippets were gathered as a precocius
-high schooler around somewhere between 2016 and 2017, therefore, do not expect
-the quality to be on par of a peer reviewd research paper, far from it. The
-notes don't lie in any particular order besides their  respective operating
-system. I happened to most of this material through books during self study.
+Windows NT. A good chunk of these snippets were gathered as a precocius high
+schooler around somewhere between 2016 and 2017, therefore, do not expect the
+quality to be on par of a peer reviewd research paper, far from it. The notes
+don't lie in any particular order as most of this material was gathered through
+books during self study.
 
 # Table of contents
 
-* TOC
 {:toc}
-
-
-# Windows Kernel
-
----
 
 ## What are PCR, PRCB and why do we have them?
 
@@ -75,8 +66,6 @@ have a queue or something ?
 
 -->
 
-
-
 ## Explain execution contests
 
 Unlike Linux, Windows distinguishes threads from processess (every process
@@ -88,6 +77,10 @@ relevant to the process.
 
 Worker threads are kernel mode threads executed on behalf of the
 caller. 
+
+## Kernel routines decompilation
+
+See [GitHub](https://github.com/shxdow/low-level-exercises/tree/master/practical-reverse-engineering).
 
 # References
 
