@@ -106,16 +106,16 @@ a {
     // border-bottom: 1px solid lightgrey;
     // background-color: transparent;
 
-    text-decoration: underline 2px dotted lightgrey;
     // background-color: transparent;
-    -webkit-text-decoration-color: lightgrey;
-    // -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-style: dotted;
-    text-decoration-thickness: 2px;
+    text-decoration: underline 3px underline rgb(231, 204, 236);
+    -webkit-text-decoration-color: rgb(231, 204, 236);
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-style: solid;
+    text-decoration-thickness: 3px;
 
     // position: relative;
     // display: inline-block;
-    padding: 0px 1px;
+    // padding: 0px 1px;
     // transition: color ease 0.15s;
     
     /* Hover animation effect for all buttons */

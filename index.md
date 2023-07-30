@@ -10,11 +10,11 @@ I am completing my M.Sc. in computer
 engineering whilst working in security.
 
 I like browsers, operatings systems,
-compilers, mathematics, program
-analysis, emulation and reverse
-engineering. I like to keep myself busy
-hence I do a lot of other stuff in the
-little free time I have.
+compilers, logic, algebra, program
+analysis, emulation, reverse
+engineering, typography. I keep myself
+busy by do a lot of other stuff in
+the little free time I have.
 
 I occasionally write about things that
 interest me on my [blog](/blog).
