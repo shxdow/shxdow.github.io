@@ -10,11 +10,6 @@ published: true
 comments: false
 ---
 
----
-**Table of contents**
-* toc
-{:toc}
----
 
 I came across an
 [article](https://securityintelligence.com/news/java-malware-becomes-a-cross-platform-threat/)
@@ -36,9 +31,11 @@ over specific instructions and puts more emphasis was
 put on the how (i.e. techniques used) rather than the
 what (i.e. results obtained).
 
-<!--[[***Changelog***<br/>
-• 12/01/2021: Sidenotes <br/>
-::rmn]]-->
+---
+**Table of contents**
+* toc
+{:toc}
+---
 
 ## Reconnaissance
 
