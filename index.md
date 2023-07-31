@@ -13,7 +13,7 @@ I like browsers, operatings systems,
 compilers, logic, algebra, program
 analysis, emulation, reverse
 engineering, typography. I keep myself
-busy by do a lot of other stuff in
+busy by doing a lot of other stuff in
 the little free time I have.
 
 I occasionally write about things that
