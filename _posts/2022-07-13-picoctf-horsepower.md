@@ -11,12 +11,6 @@ published: true
 status: ongoing
 ---
 
----
-**Table of contents**
-* toc
-{:toc}
----
-
 This is the solution to Horsepower, one of the simplest v8 challenges
 available I solved one year ago or so.
 Writeups can be found all over the internet so I'd rather not write

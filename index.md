@@ -12,7 +12,7 @@ engineering whilst working in security.
 I like browsers, operatings systems,
 compilers, logic, algebra, program
 analysis, emulation, reverse
-engineering, typography. I keep myself
+engineering and typography. I keep myself
 busy by doing a lot of other stuff in
 the little free time I have.
 
