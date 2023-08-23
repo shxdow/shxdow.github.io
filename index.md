@@ -11,7 +11,7 @@ engineering whilst working in security.
 
 I like browsers, operatings systems,
 compilers, logic, algebra, program
-analysis, emulation, reverse
+analysis, reverse
 engineering and typography. I keep myself
 busy by doing a lot of other stuff in
 the little free time I have.
@@ -29,9 +29,16 @@ and
 * ▗ ▚▗▜▖▘▛ ▟ ▖ ▚ ~ 2023
 * [CVE-2020-9802, Safari n-day RCE ~ 2022](/cve-2020-9802)
 * [CVE-2018-1160, Netatalk n-day RCE ~ 2022](/cve-2018-1160)
-* [Brief analysis of a Chrome 0-day (Security Eng. grad. course)](https://raw.githubusercontent.com/shxdow/talks/main/short-browser-exploitation.pdf) ~ 2021
+* [Brief analysis of a Chrome 0-day (Security Eng. grad. course)](https://github.com/shxdow/presentations/blob/main/presentation.html) ~ 2021
 * Dynamic Binary Instrumentation for security research (B.Sc. thesis) ~ 2020
 * [Matasano Cryptopals challenges (set 3) ~ 2019](https://github.com/shxdow/matasano)
 * [Wirenet analysis (high school thesis on malware analysis) ~ 2017](/wirenet-analysis/)
 * [Windows kernel reverse engineering notes ~ 2016](/nt-kernel-notes/)
 
+<!--
+##### These are 5 technologies worth checking out:
+
+* Elixir + Erlang/OTP: this is problably one of the most pieces of engineering I've ever witnessed
+* **<mark>TiddlyWiki</mark>**: hackable, non-linear and flexible note taking tool
+* **Helix**: a Kakoune inspired modal text editor
+-->
