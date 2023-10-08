@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <!-- <div id="particles-js"></div> -->
-  {% include head.html %}
-  <body>
-    <main class="u-container">
-      {{ content }}
-    </main>
-    {% if jekyll.environment == 'production' %}
-        {% include analytics.html %}
-    {% endif %}
-  </body>
+<!-- <div id="particles-js"></div> -->
+{% include head.html %}
+
+<body>
+  <main class="u-container">
+    {{ content }}
+  </main>
+  {% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+</body>
+
 </html>
 
 <script src="/assets/js/particles.min.js"></script>
 <script>
-    particlesJS.load('particles-js', '/assets/js/particles.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
+  particlesJS.load('particles-js', '/assets/js/particles.json', function () {
+    console.log('callback - particles.js config loaded');
+  });
 </script>

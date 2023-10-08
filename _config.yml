@@ -33,3 +33,8 @@ sass:
 
 exclude: [vendor]
 
+# plugins:
+#     - jekyll-postcss-v2
+
+postcss:
+    cache: false

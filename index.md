@@ -26,7 +26,8 @@ and
 
 ##### These are things I've done at some point:
 
-* ▗ ▚▗▜▖▘▛ ▟ ▖ ▚ ~ 2023
+<!-- * ▗ ▚▗▜▖▘▛ ▟ ▖ ▚ ~ 2023 -->
+* [CVE-2023-32439, Safari type confusion ~ (coming soon) 2023](/)
 * [CVE-2020-9802, Safari n-day RCE ~ 2022](/cve-2020-9802)
 * [CVE-2018-1160, Netatalk n-day RCE ~ 2022](/cve-2018-1160)
 * [Brief analysis of a Chrome 0-day (Security Eng. grad. course)](https://github.com/shxdow/presentations/blob/main/presentation.html) ~ 2021
