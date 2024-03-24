@@ -193,7 +193,11 @@ hr {
 
 /* Code Blocks */
 
-pre { overflow: auto; }
+pre {
+  overflow: auto;
+  border: 2px black dotted;
+  border-radius: 10px;
+}
 
 code, pre {
     // white-space: pre-wrap;
