@@ -35,11 +35,3 @@ and
 * [Matasano Cryptopals challenges (set 3) ~ 2019](https://github.com/shxdow/matasano)
 * [Wirenet analysis (high school thesis on malware analysis) ~ 2017](/wirenet-analysis/)
 * [Windows kernel reverse engineering notes ~ 2016](/nt-kernel-notes/)
-
-<!--
-##### These are 5 technologies worth checking out:
-
-* Elixir + Erlang/OTP: this is problably one of the most pieces of engineering I've ever witnessed
-* **<mark>TiddlyWiki</mark>**: hackable, non-linear and flexible note taking tool
-* **Helix**: a Kakoune inspired modal text editor
--->
