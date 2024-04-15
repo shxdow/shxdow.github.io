@@ -9,22 +9,18 @@ permalink: /
 I am completing my M.Sc. in computer
 engineering whilst working in security.
 
-I like browsers, operatings systems,
-compilers, logic, algebra, program
-analysis, reverse
-engineering and typography. I keep myself
-busy by doing a lot of other stuff in
-the little free time I have.
+I'm interested in browsers, operatings systems,
+compilers, program analysis, software reverse
+engineering and typography.  
 
-I occasionally write about things that
-interest me on my [blog](/blog).
+I occasionally write about the aforementioned topics [here](/blog).
 
-You can find me on 
+You can subscribe to this website's content via RSS or you can find me on 
 [@shxdow@treehouse.systems](https://social.treehouse.systems/@shxdow)
 and 
 [@imshxdow:matrix.org](https://matrix.to/#/@imshxdow:matrix.org).
 
-##### These are things I've done at some point:
+### Things I've done at some point:
 
 <!-- * ▗ ▚▗▜▖▘▛ ▟ ▖ ▚ ~ 2023 -->
 * [CVE-2023-32439, Safari type confusion ~ 2023](/cve-2023-32439/)
