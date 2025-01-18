@@ -9,9 +9,9 @@ permalink: /
 I am completing my M.Sc. in computer
 engineering whilst working in security.
 
-I'm interested in browsers, operatings systems,
-compilers, program analysis, software reverse
-engineering and typography.  
+I'm interested in browsers, operatings systems, virtual machines,
+compilers, program analysis, decentralised systems,
+software reverse engineering and typography.  
 
 I occasionally write about the aforementioned topics [here](/blog).
 
