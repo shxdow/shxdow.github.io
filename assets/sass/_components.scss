@@ -234,6 +234,13 @@
             margin-bottom: 0.4rem;  // Tighter spacing for nested items
             line-height: 1.5;
         }
+        
+        // Different symbol for nested items (smaller, more subtle)
+        a::before {
+            content: "·";  // Middle dot for nested items
+            opacity: 0.5;  // More subtle than top-level
+            font-size: 0.85em;
+        }
     }
 
     // Links: subtle, formal styling with proper word wrapping
@@ -247,6 +254,18 @@
         word-wrap: break-word;  // Allow long words to break
         overflow-wrap: break-word;  // Modern property for word breaking
         hyphens: auto;  // Allow hyphenation for better wrapping
+        padding-left: 1.2rem;  // Space for symbol
+        position: relative;  // For positioning symbol
+        
+        // Symbol before link text (helps distinguish entries)
+        &::before {
+            content: "›";  // Right-pointing angle bracket
+            position: absolute;
+            left: 0;
+            color: var(--text-color);
+            opacity: 0.6;  // Subtle, not too prominent
+            font-size: 0.9em;
+        }
         
         // Hover: subtle color change and underline
         &:hover {
@@ -254,6 +273,12 @@
             text-decoration: underline;
             text-decoration-color: var(--text-color-dark);
             text-decoration-thickness: 1px;
+            
+            // Darker symbol on hover
+            &::before {
+                opacity: 0.8;
+                color: var(--text-color-dark);
+            }
         }
     }
     

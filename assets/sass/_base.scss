@@ -29,7 +29,7 @@ $bp__sm: 45rem; // 450px - small screens
 // Using 500 (Medium) for that thicker, more substantial feel like Practical Typography
 @mixin ff--serif($font-weight: normal) {
     font-family: 'Source Serif Pro', Georgia, serif;
-    font-weight: 500;  // Medium weight for thicker, more substantial feel
+    font-weight: 500;
     letter-spacing: 0;
 }
 
