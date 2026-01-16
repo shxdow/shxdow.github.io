@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="c-page">
+  {{ partial "header.html" . }}
+  <div class="c-page__main">
+    <article class="c-article" aria-label="Page content">
+      <div class="c-article__main">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</div>
+{{ end }}

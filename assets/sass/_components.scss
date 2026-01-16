@@ -1,0 +1,381 @@
+/* ==========================================================================
+   Layout - container for main content
+   ========================================================================== */
+
+// Utility class: centers content, max width 620px
+.u-container {
+    max-width: 72rem; // 620px
+    margin-right: auto;  // auto margins center the element
+    margin-left: auto;
+    padding-right: 1rem; // 10px
+    padding-left: 1rem; // 10px
+}
+
+/* ==========================================================================
+   Page
+   ========================================================================== */
+
+.c-page__header {
+    margin-bottom: 1.8rem;
+    @include ff--sans-serif(400);  // Sans-serif for headers/UI
+
+    h1 {
+        @include fs--heading-2;
+        color: var(--text-color-dark);
+    }
+
+    p {
+        @include fs--meta;
+    }
+}
+
+// Page main content area (homepage, about page, etc.)
+.c-page__main {
+    // > * means "direct children only" - adds spacing between elements
+    > * {
+        margin-bottom: 1.8rem;
+    }
+
+    h1 {
+        @include fs--heading-1;
+        color: var(--text-color-dark);
+    }
+
+    h2 {
+        @include fs--heading-2;
+    }
+
+    h3 {
+        @include fs--heading-3;
+    }
+
+    h4 {
+        @include fs--heading-4;
+    }
+
+    p {
+        @include fs--body;
+        color: var(--text-color);
+    }
+
+    // Lists get indented by default
+    ul, ol {
+        @include fs--body;
+        color: var(--text-color);
+        margin-left: 2.1rem;
+    }
+
+    // Override: blog list shouldn't be indented
+    .c-archives__list {
+        margin-left: 0;
+    }
+}
+
+/* ==========================================================================
+   Article
+   ========================================================================== */
+
+.c-article {
+    margin-bottom: 10rem;
+}
+
+// Article header: title and date
+.c-article__header {
+    margin-bottom: 2rem;
+    // On wide screens, use flexbox to put title and date side-by-side
+    @media screen and (min-width: $bp__sm) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;  // flexbox = layout system for arranging items
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: baseline;
+        -webkit-align-items: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+    }
+}
+
+.c-article__title {
+    @include fs--heading-1;
+    color: var(--text-color-dark);
+}
+
+.c-article__time {
+    @include fs--body;
+    color: var(--text-color);
+}
+
+// Main article content area
+.c-article__main {
+    margin-bottom: 5rem;
+    @include fs--body;
+    color: var(--text-color);
+    
+    // Better paragraph spacing for readability
+    p {
+        margin-bottom: 1.5rem;  // Generous paragraph spacing
+    }
+
+    // Spacing between other elements
+    > * {
+        margin-bottom: 1.8rem;
+    }
+
+    h2 {
+        @include fs--heading-2;
+    }
+
+    h3 {
+        @include fs--heading-3;
+    }
+
+    h4 {
+        @include fs--heading-4;
+    }
+
+    h5 {
+        @include fs--body;
+    }
+
+    strong {
+        color: var(--text-color-dark);
+        font-weight: 700;
+    }
+
+    // Blockquotes: left border + left padding for quote styling
+    blockquote {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1.8rem;
+        border-left: 5px solid #ccc;
+    }
+
+    ul,
+    ol {
+        margin-left: 2.1rem;
+    }
+}
+
+.c-date {
+    align-self: flex-end;
+}
+
+/* ==========================================================================
+   Table of Contents - bookish/formal styling
+   ========================================================================== */
+
+// TOC container: thicker, darker left border accent, lines above and below, subtle background
+.toc {
+    margin-top: 2rem;  // Space above TOC
+    margin-bottom: 3rem;  // Space between TOC and content
+    padding-left: 1.5rem;  // Space for left border
+    padding-top: 1.5rem;  // Padding inside top border
+    padding-bottom: 1.5rem;  // Padding inside bottom border
+    padding-right: 1.5rem;  // Right padding for balance
+    border-left: 4px solid var(--text-color-dark);  // Thicker, darker book spine accent
+    border-top: 1px solid var(--border-color);  // Line above TOC
+    border-bottom: 1px solid var(--border-color);  // Line below TOC
+    background-color: var(--toc-bg);  // Subtle background to make TOC stand out
+    word-wrap: break-word;  // Allow long words to break
+    overflow-wrap: break-word;  // Modern property for word breaking
+    max-width: 100%;  // Ensure container doesn't exceed parent width
+    box-sizing: border-box;  // Include padding/border in width calculation
+    @include ff--serif(400);  // Serif font for bookish feel
+}
+
+// TOC heading: smaller, formal style
+.toc h2 {
+    @include fs--heading-3;  // Smaller than main headings
+    color: var(--text-color-dark);
+    font-weight: 600;
+    letter-spacing: 0.01em;  // Slight letter spacing for elegance
+    margin-bottom: 1.2rem;
+    text-transform: none;  // Keep original casing
+}
+
+// TOC navigation container
+#TableOfContents {
+    max-width: 100%;  // Ensure TOC doesn't exceed container width
+    overflow-x: hidden;  // Prevent horizontal overflow from leader dots
+    
+    // Remove default list styling
+    ul {
+        list-style: none;  // No bullets
+        margin-left: 0;
+        padding-left: 0;
+        max-width: 100%;  // Ensure lists don't overflow
+    }
+
+    // Top-level list items
+    > ul {
+        width: 100%;  // Use full width
+        
+        > li {
+            margin-bottom: 0.6rem;  // Spacing between main sections
+            line-height: 1.6;
+            width: 100%;  // Use full width
+        }
+    }
+
+    // Nested lists (subheadings): indented like book chapters
+    ul ul {
+        margin-top: 0.4rem;
+        margin-left: 1.5rem;  // Indentation for hierarchy
+        padding-left: 0;
+        
+        li {
+            margin-bottom: 0.4rem;  // Tighter spacing for nested items
+            line-height: 1.5;
+        }
+    }
+
+    // Links: subtle, formal styling with proper word wrapping
+    a {
+        color: var(--text-color);
+        text-decoration: none;  // No underline by default
+        transition: color 0.2s ease;  // Smooth color transition
+        display: block;  // Make link fill the space
+        width: 100%;  // Use full available width
+        box-sizing: border-box;  // Include padding/border in width
+        word-wrap: break-word;  // Allow long words to break
+        overflow-wrap: break-word;  // Modern property for word breaking
+        hyphens: auto;  // Allow hyphenation for better wrapping
+        
+        // Hover: subtle color change and underline
+        &:hover {
+            color: var(--text-color-dark);
+            text-decoration: underline;
+            text-decoration-color: var(--text-color-dark);
+            text-decoration-thickness: 1px;
+        }
+    }
+    
+    // Leader dots only on top-level items (not nested subheadings)
+    // Hidden on mobile to prevent layout issues, shown on larger screens
+    > ul > li > a {
+        position: relative;  // For positioning dots
+        
+        // Leader dots after link text (classic book TOC style)
+        // Only show on larger screens where there's enough space
+        @media screen and (min-width: $bp__sm) {
+            // Text wraps naturally, dots positioned absolutely at end
+            padding-right: 8rem;  // Space for dots on the right
+            
+            // Leader dots positioned at the end
+            &::after {
+                content: " · · · · · · · · · · · · · · · · · · · ·";  // Leader dots
+                color: var(--border-color);  // Subtle dot color
+                position: absolute;  // Position absolutely
+                right: 0;  // Align to right edge
+                top: 0;  // Align to top
+                opacity: 0.4;  // Make dots subtle
+                font-size: 0.8em;  // Slightly smaller dots
+                letter-spacing: 0.1em;  // Space between dots
+                white-space: nowrap;  // Keep dots on one line
+                pointer-events: none;  // Don't interfere with link clicks
+            }
+            
+            // Darker dots on hover
+            &:hover::after {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.c-tags {
+  list-style: none;
+  margin-right: 30px;
+  margin-left: 6px;
+  padding: 0;
+}
+
+.c-tags li {
+  float: left; 
+}
+
+// Previous/Next navigation between blog posts
+.pagenav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid var(--border-color);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  font-size: 18px;
+  padding: 10px 0;
+  margin-bottom: 8rem;
+}
+
+.pagenav div {
+  border-color: transparent;
+}
+
+.wrapper {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+}
+
+#left {
+  text-align: left;
+}
+
+#right {
+  text-align: right;
+}
+
+/* ==========================================================================
+   Archives
+   ========================================================================== */
+
+.c-archives {
+    margin-bottom: 10rem;
+}
+
+.c-archives__list {
+    margin-bottom: 2.5rem;
+    margin-left: 0;
+    list-style: none;
+}
+
+// Individual blog post item in the list
+.c-archives__item {
+    padding-top: 2.5rem;
+    border-bottom: 1px solid var(--border-color);  // separator line
+    // On wide screens, use flexbox to align title and date
+    @media screen and (min-width: $bp__sm) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    h3 {
+        @include fs--body;
+    }
+
+    p {
+        @include fs--body;
+        color: var(--text-color);
+        opacity: 0.8;  // Slightly lighter for descriptions
+    }
+}

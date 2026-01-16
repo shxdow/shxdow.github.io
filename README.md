@@ -1,35 +1,63 @@
-# [Archived] Simply Jekyll - A simple jekyll theme
+# shxdow's notebook
 
-### This repo is no longer maintained, but you can still use it in its current form
+Personal blog built with [Hugo](https://gohugo.io/), a static site generator.
 
-Please note that you can still fork/star this repository and use it in its current form, but there will not be any active development in this repo going forward. 
+## Development
 
-The reason for this decision is the development of my own "home-made" SSG(Static Site Generator). I have moved completely to my own static site generator that I developed using Rust and will be using that instead of any of the "off-the-shelf" SSGs like Jekyll, Hugo, Gatsby etc. 
+### Prerequisites
 
-The custom SSG that I am talking about here is pretty hacky and very usecase specific, so I have not shared it yet publicly, but if there is enough interest among the users of "Simply-Jekyll" I will try to refine it and opensource it here on GitHub.
+- [Hugo](https://gohugo.io/installation/) (extended version recommended for SCSS support)
 
----
+### Local Development
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/42c75d17-5f01-4aea-9da3-4538ba92122e/deploy-status)](https://app.netlify.com/sites/simply-jekyll/deploys)
-<a href="https://jekyll-themes.com">
-    <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+```bash
+# Install Hugo (if not already installed)
+# macOS: brew install hugo
+# Linux: see https://gohugo.io/installation/
 
-# Simply Jekyll - A simple jekyll theme
+# Run development server
+hugo server
 
-Simply Jekyll is a simple yet highly functional jekyll-based theme that combines the best of different worlds (atleast tries to 😅). It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for. This is an evolving project and is garanteed to be maintained at least for quite some time as I myself am a beneficiary of this theme and the project.
+# Build site
+hugo
 
-Preview the template here: https://simply-jekyll.netlify.app/
+# Build with clean destination
+hugo --cleanDestinationDir
+```
 
-I wrote a tutorial explaining how to set it up: https://simply-jekyll.netlify.app/posts/how-to-setup-simply-jekyll
+The site will be available at `http://localhost:1313` by default.
 
-- Based on Jekyll, a static website generator
-- Creates backlinks to other notes automatically
-- Context menu on feed to instantly see related posts and backlinks
-- Supports Roam-style double bracket link syntax to other notes
-- On hover page previews
-- Features a simple and responsive design
-- Supports Markdown or HTML notes
+## Project Structure
 
+```
+.
+├── assets/          # Source files (SCSS, processed by Hugo)
+│   ├── css/        # Main stylesheet entry point
+│   └── sass/       # SCSS partials
+├── content/         # Content files (Markdown)
+│   └── blog/       # Blog posts
+├── layouts/         # HTML templates
+│   ├── _default/   # Default page templates
+│   ├── blog/       # Blog-specific templates
+│   └── partials/   # Reusable template components
+├── static/          # Static files (images, copied as-is)
+│   └── assets/     # Images and other static assets
+└── config.toml     # Hugo configuration
+```
 
-<img src="https://www.dropbox.com/s/46yfu5fwvfugfvc/end_result.JPG?raw=1" style="box-shadow: 2px 2px 20px 0 #ddd;"/>
+## Features
+
+- Minimal, readable design inspired by Practical Typography
+- System theme support (dark/light mode)
+- Accessible (screen reader friendly, keyboard navigation)
+- MathJax support for mathematical notation
+- RSS feed
+- Responsive design
+
+## Deployment
+
+The `public/` directory contains the generated static site. Deploy this directory to any static hosting service (GitHub Pages, Netlify, Vercel, etc.).
+
+## License
+
+Content is copyright. Code is available for reference.

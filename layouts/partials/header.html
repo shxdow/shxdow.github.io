@@ -1,0 +1,13 @@
+{{ if ne .Title "Home" }}
+    <header class="c-page__header">
+          <h1>{{ .Site.Params.blogtitle }}</h1>
+          <nav aria-label="Main navigation">
+            <p>
+              <a href="/" {{ if eq .Kind "home" }}aria-current="page"{{ end }}>about</a> •
+              <a href="/blog" {{ if eq .Section "blog" }}aria-current="page"{{ end }}>blog</a> •
+              <!-- <a href="/archive">archive</a> • -->
+              <a href="/index.xml">rss</a>
+            </p>
+          </nav>
+    </header>
+{{ end }}

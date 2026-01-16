@@ -1,0 +1,63 @@
+{{ define "main" }}
+<script type="text/javascript">
+window.MathJax = {
+  tex: {
+    packages: ['base', 'ams']
+  },
+  loader: {
+    load: ['ui/menu', '[tex]/ams']
+  },
+  options: {
+    enableMenu: true,
+    menuOptions: {
+      settings: {
+        assistiveMML: true  // Enable MathML for screen readers
+      }
+    }
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+{{ partial "header.html" . }}
+<article class="c-article" aria-label="Blog post">
+  <header class="c-article__header">
+    <h1 class="c-article__title">{{ .Title }}</h1>
+    <p class="c-article__time"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "Jan 2, 2006" }}</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    {{ range .Params.tags }}
+    <!-- <li class="c-tags rainbow">{{ . }}</li> -->
+    {{ end }}
+  </ul>
+  <!-- <br> -->
+  <div class="c-article__main">
+    {{ if .Params.toc }}
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Table of contents</h2>
+      {{ .TableOfContents }}
+    </nav>
+    {{ end }}
+    {{ .Content }}
+  </div>
+  <!-- Previous / Next Buttons -->
+  <nav class="pagenav" aria-label="Post navigation">
+    {{ with .PrevInSection }}
+    <div class="wrapper" id="left">
+      <small><b>Previous post:</b> {{ .Date.Format "Jan 2, 2006" }}</small>
+      <br>
+      <a class="no-hov" href="{{ .Permalink }}" rel="prev" aria-label="Previous post: {{ .Title }}">&laquo; {{ .Title }}</a>
+    </div>
+    {{ end }}
+    {{ with .NextInSection }}
+    <div class="wrapper" id="right">
+      <small>{{ .Date.Format "Jan 2, 2006" }} <b>Next post:</b></small>
+      <br>
+      <a class="no-hov" href="{{ .Permalink }}" rel="next" aria-label="Next post: {{ .Title }}">{{ .Title }} &raquo;</a>
+    </div>
+    {{ end }}
+  </nav>
+</article>
+{{ end }}

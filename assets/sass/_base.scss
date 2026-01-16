@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Variables - reusable values (like constants)
+   ========================================================================== */
+
+// Colors (most are black, kept separate for consistency)
+$c-base__01: #000000;
+$c-base__02: #000000;
+$c-accent__text: #000000;
+$c-accent__darkblue: #0029F9;
+
+// Breakpoints - screen width thresholds for responsive design
+$bp__sm: 45rem; // 450px - small screens
+
+/* ==========================================================================
+   Mixins - reusable code blocks (like functions)
+   ========================================================================== */
+
+// Font families - Practical Typography style
+// Uses serif for body text (like Equity) and clean sans-serif for UI
+// Source Serif Pro and Source Sans Pro are web fonts that load consistently across all browsers
+@mixin ff--sans-serif($font-weight: normal) {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+// Serif font for body text (Practical Typography style)
+// Source Serif Pro is primary - consistent across all browsers
+// Using 500 (Medium) for that thicker, more substantial feel like Practical Typography
+@mixin ff--serif($font-weight: normal) {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    font-weight: 500;  // Medium weight for thicker, more substantial feel
+    letter-spacing: 0;
+}
+
+@mixin ff--code {
+    font-family: 'SFMono-Regular', monospace;
+}
+
+// Font sizing mixins - use @include fs--heading-1 to apply these styles
+@mixin fs--heading-1 {
+    line-height: 1.5;
+    font-size: 3.2rem; // 32px
+}
+
+@mixin fs--heading-2 {
+    line-height: 1.5;
+    font-size: 2.4rem; // 24px
+}
+
+@mixin fs--heading-3 {
+    line-height: 1.5;
+    font-size: 2rem; // 20px
+}
+
+@mixin fs--heading-4 {
+    line-height: 1.6;
+    font-size: 1.8rem; // 18px
+}
+
+@mixin fs--body {
+    line-height: 1.75;  // More generous for readability
+    font-size: 1.8rem; // 18px
+}
+
+@mixin fs--meta {
+    line-height: 1;
+    font-size: 1.8rem; // 18px
+}
+
+@mixin fs--code {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Reset - removes browser default styles
+   ========================================================================== */
+
+// Remove all default margins/padding from every element
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Box-sizing: border-box means width includes padding/border (easier sizing)
+*, *:before, *:after { box-sizing: inherit; }
+
+html {
+    min-height: 100%;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 62.5%; // 1rem = 10px (makes rem math easier: 1.8rem = 18px)
+}
+
+body {
+    @include ff--serif(400);  // Serif for body text like Practical Typography
+    -webkit-font-smoothing: antialiased;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+header a {
+  padding: 5px 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden], template { display: none; }
+
+img {
+    max-width: 100%;
+    font-style: italic;
+    vertical-align: middle;
+    border: 0;
+}
+
+svg:not(:root) { overflow: hidden; }
+svg {
+    pointer-events: none;
+    max-height: 100%
+}
+
+a {
+    color: var(--text-color-dark);
+    text-decoration: underline 1px var(--text-color-dark);
+    -webkit-text-decoration-color: var(--text-color-dark);
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+}
+
+// Focus indicators for keyboard navigation (accessibility)
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--text-color-dark);
+    outline-offset: 2px;
+}
+
+._override_border {
+    border: 0px;
+}
+
+a.no-hov {
+	&:after {
+		content: none
+	}
+	
+	&:hover {
+		color: $c-accent__darkblue
+	}
+}
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong   { font-weight: bold; }
+i, em       { font-weight: italic; }
+
+figure {
+    margin: 0;
+}
+
+hr {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background: var(--border-color);
+}
+
+pre {
+  overflow: auto;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+small {
+    color: gray;
+}
+
+ul {
+    list-style-type: "• ";
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Code Highlighting
+   ========================================================================== */
+
+pre, code {
+    @include ff--code;
+    @include fs--code;
+}
+
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: var(--text-color-dark);
+  margin: 10px;
+  font-family: Inconsolata;
+}

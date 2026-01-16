@@ -1,0 +1,90 @@
+// Sass = CSS preprocessor. Adds variables, mixins (reusable code blocks), nesting.
+// Hugo compiles this to regular CSS automatically.
+
+@charset "utf-8";
+
+// Import base styles (reset, variables, mixins) and components
+@import '../sass/base';
+@import '../sass/components';
+
+// Skip link for screen readers (hidden until focused)
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: -9999px;
+    background: var(--text-color-dark);
+    color: var(--bg-color);
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+    
+    &:focus {
+        top: 0;
+        left: 0;
+    }
+}
+
+// CSS variables for theme colors (can change with system preference)
+// Text color slightly softer than pure black for better readability
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;  // Softer than #444 for better readability
+    --text-color-dark: #1a1a1a;  // Not pure black, easier on eyes
+    --border-color: #EFF1F3;
+    --selection-bg: #000;
+    --selection-color: #FFF;
+    --toc-bg: rgba(0, 0, 0, 0.02);  // Very subtle background for TOC in light mode
+}
+
+// Dark mode: follow system preference
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --text-color-dark: #ffffff;
+        --border-color: #333;
+        --selection-bg: #fff;
+        --selection-color: #000;
+        --toc-bg: rgba(255, 255, 255, 0.03);  // Very subtle background for TOC in dark mode
+    }
+}
+
+// Main page layout: center content, optimal reading width
+// Practical Typography principles: 65-75 characters per line, generous line-height
+body {
+    margin: 40px auto 40px auto;  // top/bottom: 40px, left/right: auto (centers)
+    max-width: 650px;  // Optimal reading width (~65-70 chars at 18px)
+    line-height: 1.75;  // More generous for readability (was 1.6)
+    font-size: 18px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0 20px;  // More padding for breathing room
+    text-rendering: optimizeLegibility;  // Better font rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    hyphens: auto;  // Automatic hyphenation for better line breaks
+    hyphenate-limit-chars: 6 3 3;  // Min word length, chars before/after hyphen
+}
+
+// On wider screens (>800px), add left margin instead of centering
+@media screen and (min-width:800px) {
+    body{
+        margin: 40px auto 40px 5%;  // 5% left margin on wide screens
+        max-width: 650px;  // Consistent reading width
+        line-height: 1.75;
+        font-size: 18px;
+        color: var(--text-color);
+        padding: 0 20px;
+    }
+}
+
+// Headings: tighter line-height but still readable
+h1, h2, h3{
+    line-height: 1.3;  // Slightly more breathing room (was 1.2)
+    font-weight: 600;  // Slightly lighter than bold for elegance
+    letter-spacing: -0.02em;  // Slight negative letter-spacing for headings
+}
+
+hr {
+    color: var(--border-color);
+}

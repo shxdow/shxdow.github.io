@@ -1,0 +1,34 @@
+baseURL = "https://shxdow.me"
+languageCode = "en-us"
+title = "shxdow"
+
+[params]
+  blogtitle = "shxdow's notebook"
+  description = "shxdow's notebook"
+  author = "shxdow"
+  email = "<redacted>"
+  mastodon_username = "shxdow"
+  matrix_username = "imshxdow:matrix.org"
+  github_username = "shxdow"
+
+[permalinks]
+  blog = "/:slug/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "default"
+    lineNos = false
+    noClasses = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS"]
