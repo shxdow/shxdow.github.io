@@ -34,6 +34,7 @@
     --selection-bg: #000;
     --selection-color: #FFF;
     --toc-bg: rgba(0, 0, 0, 0.02);  // Very subtle background for TOC in light mode
+    --code-border-color: #1a1a1a;  // Dark border for code blocks in light mode
 }
 
 // Dark mode: follow system preference
@@ -46,6 +47,7 @@
         --selection-bg: #fff;
         --selection-color: #000;
         --toc-bg: rgba(255, 255, 255, 0.03);  // Very subtle background for TOC in dark mode
+        --code-border-color: #666;  // Light border for code blocks in dark mode
     }
 }
 
