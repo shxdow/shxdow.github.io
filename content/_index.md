@@ -7,7 +7,7 @@ title: "Home"
 I am completing my M.Sc. in computer
 engineering whilst working in security.
 
-I'm interested in browsers, operatings systems, virtual machines,
+I'm interested in browsers, operating systems, virtual machines,
 compilers, program analysis, decentralised systems,
 software reverse engineering and typography.  
 
