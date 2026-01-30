@@ -43,14 +43,20 @@
 
     h2 {
         @include fs--heading-2;
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-weight: 600;
     }
 
     h3 {
         @include fs--heading-3;
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-weight: 600;
     }
 
     h4 {
         @include fs--heading-4;
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-weight: 600;
     }
 
     p {
@@ -130,14 +136,20 @@
 
     h2 {
         @include fs--heading-2;
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-weight: 600;
     }
 
     h3 {
         @include fs--heading-3;
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-weight: 600;
     }
 
     h4 {
         @include fs--heading-4;
+        font-family: 'Source Serif Pro', Georgia, serif;
+        font-weight: 600;
     }
 
     h5 {

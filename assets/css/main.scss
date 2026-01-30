@@ -82,9 +82,10 @@ body {
 
 // Headings: tighter line-height but still readable
 h1, h2, h3{
+    font-family: 'Fredoka', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.3;  // Slightly more breathing room (was 1.2)
-    font-weight: 600;  // Slightly lighter than bold for elegance
-    letter-spacing: -0.02em;  // Slight negative letter-spacing for headings
+    font-weight: 500;  // Medium weight for good balance
+    letter-spacing: 0;  // Normal letter-spacing for rounded fonts
 }
 
 hr {

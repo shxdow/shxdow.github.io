@@ -26,10 +26,10 @@ $bp__sm: 45rem; // 450px - small screens
 
 // Serif font for body text (Practical Typography style)
 // Source Serif Pro is primary - consistent across all browsers
-// Using 500 (Medium) for that thicker, more substantial feel like Practical Typography
+// Using 400 (Regular) for better readability in extended reading
 @mixin ff--serif($font-weight: normal) {
     font-family: 'Source Serif Pro', Georgia, serif;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0;
 }
 
