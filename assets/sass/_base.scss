@@ -143,6 +143,8 @@ a {
     -webkit-text-decoration-line: underline;
     -webkit-text-decoration-style: solid;
     text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;  // Extra space between text and underline
+    text-decoration-skip-ink: auto;
 }
 
 // Focus indicators for keyboard navigation (accessibility)
