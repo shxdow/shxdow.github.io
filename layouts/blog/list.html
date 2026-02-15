@@ -8,10 +8,11 @@
         <li class="c-archives__item">
           <h3>
             <a class="_override_border" href="{{ .Permalink }}">{{ .Title }}</a>
-            <br>
-            <small>{{ .Description }}</small>
           </h3>
-          <time class="c-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          <div class="c-archives__meta">
+            <small>{{ .Description }}</small>
+            <time class="c-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          </div>
         </li>
         {{ end }}
       </ul>

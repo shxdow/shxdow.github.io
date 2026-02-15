@@ -43,20 +43,20 @@
 
     h2 {
         @include fs--heading-2;
-        font-family: 'Source Serif Pro', Georgia, serif;
-        font-weight: 600;
+        font-family: 'Averia Serif Libre', serif;
+        font-weight: 400;
     }
 
     h3 {
         @include fs--heading-3;
-        font-family: 'Source Serif Pro', Georgia, serif;
-        font-weight: 600;
+        font-family: 'Averia Serif Libre', serif;
+        font-weight: 400;
     }
 
     h4 {
         @include fs--heading-4;
-        font-family: 'Source Serif Pro', Georgia, serif;
-        font-weight: 600;
+        font-family: 'Averia Serif Libre', serif;
+        font-weight: 400;
     }
 
     p {
@@ -123,7 +123,7 @@
     margin-bottom: 5rem;
     @include fs--body;
     color: var(--text-color);
-    
+
     // Better paragraph spacing for readability
     p {
         margin-bottom: 1.5rem;  // Generous paragraph spacing
@@ -136,20 +136,20 @@
 
     h2 {
         @include fs--heading-2;
-        font-family: 'Source Serif Pro', Georgia, serif;
-        font-weight: 600;
+        font-family: 'Averia Serif Libre', serif;
+        font-weight: 400;
     }
 
     h3 {
         @include fs--heading-3;
-        font-family: 'Source Serif Pro', Georgia, serif;
-        font-weight: 600;
+        font-family: 'Averia Serif Libre', serif;
+        font-weight: 400;
     }
 
     h4 {
         @include fs--heading-4;
-        font-family: 'Source Serif Pro', Georgia, serif;
-        font-weight: 600;
+        font-family: 'Averia Serif Libre', serif;
+        font-weight: 400;
     }
 
     h5 {
@@ -216,7 +216,7 @@
 #TableOfContents {
     max-width: 100%;  // Ensure TOC doesn't exceed container width
     overflow-x: hidden;  // Prevent horizontal overflow from leader dots
-    
+
     // Remove default list styling
     ul {
         list-style: none;  // No bullets
@@ -228,7 +228,7 @@
     // Top-level list items
     > ul {
         width: 100%;  // Use full width
-        
+
         > li {
             margin-bottom: 0.6rem;  // Spacing between main sections
             line-height: 1.6;
@@ -241,12 +241,12 @@
         margin-top: 0.4rem;
         margin-left: 1.5rem;  // Indentation for hierarchy
         padding-left: 0;
-        
+
         li {
             margin-bottom: 0.4rem;  // Tighter spacing for nested items
             line-height: 1.5;
         }
-        
+
         // Different symbol for nested items (smaller, more subtle)
         a::before {
             content: "·";  // Middle dot for nested items
@@ -268,7 +268,7 @@
         hyphens: auto;  // Allow hyphenation for better wrapping
         padding-left: 1.2rem;  // Space for symbol
         position: relative;  // For positioning symbol
-        
+
         // Symbol before link text (helps distinguish entries)
         &::before {
             content: "›";  // Right-pointing angle bracket
@@ -278,14 +278,14 @@
             opacity: 0.6;  // Subtle, not too prominent
             font-size: 0.9em;
         }
-        
+
         // Hover: subtle color change and underline
         &:hover {
             color: var(--text-color-dark);
             text-decoration: underline;
             text-decoration-color: var(--text-color-dark);
             text-decoration-thickness: 1px;
-            
+
             // Darker symbol on hover
             &::before {
                 opacity: 0.8;
@@ -293,18 +293,18 @@
             }
         }
     }
-    
+
     // Leader dots only on top-level items (not nested subheadings)
     // Hidden on mobile to prevent layout issues, shown on larger screens
     > ul > li > a {
         position: relative;  // For positioning dots
-        
+
         // Leader dots after link text (classic book TOC style)
         // Only show on larger screens where there's enough space
         @media screen and (min-width: $bp__sm) {
             // Text wraps naturally, dots positioned absolutely at end
             padding-right: 8rem;  // Space for dots on the right
-            
+
             // Leader dots positioned at the end
             &::after {
                 content: " · · · · · · · · · · · · · · · · · · · ·";  // Leader dots
@@ -318,7 +318,7 @@
                 white-space: nowrap;  // Keep dots on one line
                 pointer-events: none;  // Don't interfere with link clicks
             }
-            
+
             // Darker dots on hover
             &:hover::after {
                 opacity: 0.6;
@@ -335,7 +335,7 @@
 }
 
 .c-tags li {
-  float: left; 
+  float: left;
 }
 
 // Previous/Next navigation between blog posts
@@ -414,5 +414,33 @@
         @include fs--body;
         color: var(--text-color);
         opacity: 0.8;  // Slightly lighter for descriptions
+    }
+}
+
+// Description and date container on the same row
+.c-archives__meta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    gap: 1rem;  // Space between description and date
+
+    small {
+        flex: 1;  // Description takes available space
+        min-width: 0;  // Allow flex to shrink if needed
+        color: var(--text-color);
+        opacity: 0.8;
+    }
+
+    .c-date {
+        white-space: nowrap;  // Keep date on one line
     }
 }
