@@ -1,30 +1,10 @@
 {{ define "main" }}
-<script type="text/javascript">
-window.MathJax = {
-  tex: {
-    packages: ['base', 'ams']
-  },
-  loader: {
-    load: ['ui/menu', '[tex]/ams']
-  },
-  options: {
-    enableMenu: true,
-    menuOptions: {
-      settings: {
-        assistiveMML: true  // Enable MathML for screen readers
-      }
-    }
-  }
-};
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
 {{ partial "header.html" . }}
 <article class="c-article" aria-label="Blog post">
   <header class="c-article__header">
     <h1 class="c-article__title">{{ .Title }}</h1>
-    <p class="c-article__time"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "Jan 2, 2006" }}</time></p>
+    <p class="c-article__time"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"
+        itemprop="datePublished">{{ .Date.Format "Jan 2, 2006" }}</time></p>
   </header>
   <!-- Post Tags -->
   <ul class="c-tags">
@@ -35,10 +15,10 @@ window.MathJax = {
   <!-- <br> -->
   <div class="c-article__main">
     {{ if .Params.toc }}
-    <nav class="toc" aria-label="Table of contents">
-      <h2>Table of contents</h2>
+    <section class="toc" aria-labelledby="toc-heading">
+      <h2 id="toc-heading">Table of Contents</h2>
       {{ .TableOfContents }}
-    </nav>
+    </section>
     {{ end }}
     {{ .Content }}
   </div>
@@ -48,7 +28,8 @@ window.MathJax = {
     <div class="wrapper" id="left">
       <small><b>Previous post:</b> {{ .Date.Format "Jan 2, 2006" }}</small>
       <br>
-      <a class="no-hov" href="{{ .Permalink }}" rel="prev" aria-label="Previous post: {{ .Title }}">&laquo; {{ .Title }}</a>
+      <a class="no-hov" href="{{ .Permalink }}" rel="prev" aria-label="Previous post: {{ .Title }}">&laquo; {{ .Title
+        }}</a>
     </div>
     {{ end }}
     {{ with .NextInSection }}
