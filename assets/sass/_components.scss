@@ -199,7 +199,7 @@
     overflow-wrap: break-word;  // Modern property for word breaking
     max-width: 100%;  // Ensure container doesn't exceed parent width
     box-sizing: border-box;  // Include padding/border in width calculation
-    @include ff--serif(400);  // Serif font for bookish feel
+    @include ff--body(400);  // Match the table of contents to the body font stack
 }
 
 // TOC heading: smaller, formal style

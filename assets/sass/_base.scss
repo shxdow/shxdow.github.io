@@ -15,20 +15,18 @@ $bp__sm: 45rem; // 450px - small screens
    Mixins - reusable code blocks (like functions)
    ========================================================================== */
 
-// Font families - Practical Typography style
-// Uses serif for body text (like Equity) and clean sans-serif for UI
-// Source Serif Pro and Source Sans Pro are web fonts that load consistently across all browsers
+// Font families - body copy uses a highly legible sans, while UI keeps a clean system-like sans
+// Atkinson Hyperlegible is the primary reading font, Source Sans Pro backs UI text
 @mixin ff--sans-serif($font-weight: normal) {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
     letter-spacing: 0;
 }
 
-// Serif font for body text (Practical Typography style)
-// Source Serif Pro is primary - consistent across all browsers
-// Using 400 (Regular) for better readability in extended reading
-@mixin ff--serif($font-weight: normal) {
-    font-family: 'Source Serif Pro', Georgia, serif;
+// Body font for long-form reading
+// Atkinson Hyperlegible is primary, with Source Sans Pro and system sans as fallbacks
+@mixin ff--body($font-weight: normal) {
+    font-family: 'Atkinson Hyperlegible', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
     letter-spacing: 0;
 }
@@ -94,7 +92,7 @@ html {
 }
 
 body {
-    @include ff--serif(400);  // Serif for body text like Practical Typography
+    @include ff--body(400);  // Keep normal reading text on the body font stack
     -webkit-font-smoothing: antialiased;
 }
 
