@@ -58,7 +58,7 @@ $bp__sm: 45rem; // 450px - small screens
 
 @mixin fs--body {
     line-height: 1.75;  // More generous for readability
-    font-size: 1.8rem; // 18px
+    font-size: 1.9rem; // 19px
 }
 
 @mixin fs--meta {
@@ -136,13 +136,20 @@ svg {
 
 a {
     color: var(--text-color-dark);
-    text-decoration: underline 1px var(--text-color-dark);
-    -webkit-text-decoration-color: var(--text-color-dark);
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: var(--link-underline-color);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.15em;  // Extra space between text and underline
     text-decoration-skip-ink: auto;
+    -webkit-text-decoration-color: var(--link-underline-color);
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-style: solid;
+    transition: text-decoration-color 0.2s ease;
+}
+
+a:hover {
+    text-decoration-color: var(--text-color-dark);
+    -webkit-text-decoration-color: var(--text-color-dark);
 }
 
 // Focus indicators for keyboard navigation (accessibility)
@@ -187,9 +194,17 @@ hr {
 }
 
 pre {
-  overflow: auto;
-  border: 1px var(--code-border-color) solid;
-  border-radius: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    margin: 2.8rem 0 2.4rem;
+    padding: 1.4rem 1.7rem;
+    color: var(--text-color-dark);
+    background-color: var(--code-card-bg);
+    border: 0.2rem solid var(--code-border-color);
+    border-radius: 0.8rem;
+    box-shadow: 0.55rem 0.55rem 0 0 var(--code-card-shadow);
+    -webkit-overflow-scrolling: touch;
 }
 
 small {
@@ -215,10 +230,58 @@ pre, code {
     @include fs--code;
 }
 
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
+code {
+    color: inherit;
+}
+
+pre > code {
+    display: block;
+    min-width: max-content;
+}
+
+.highlight {
+    margin: 2.8rem 0 2.4rem;
+    color: var(--text-color-dark);
+    background-color: var(--code-card-bg);
+    border: 0.2rem solid var(--code-border-color);
+    border-radius: 0.8rem;
+    box-shadow: 0.55rem 0.55rem 0 0 var(--code-card-shadow);
+    overflow: hidden;
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 1.4rem 1.7rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+.highlight table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.highlight table td {
+    padding: 0;
+    vertical-align: top;
+}
+
+.highlight table td:first-child {
+    background: color-mix(in srgb, var(--code-border-color) 4%, transparent);
+    border-right: 1px solid color-mix(in srgb, var(--code-border-color) 18%, transparent);
+}
+
+.highlight table td:first-child pre {
+    padding-right: 0.9rem;
+    padding-left: 1.1rem;
+}
+
+.highlight table td:last-child pre {
+    padding-left: 1.3rem;
+}
+
 .highlight, .highlight .w {
-  color: var(--text-color-dark);
-  margin: 10px;
-  font-family: Inconsolata;
+    color: var(--text-color-dark);
 }
