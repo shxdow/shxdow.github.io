@@ -14,9 +14,6 @@ software reverse engineering and typography.
 I occasionally write about the aforementioned topics on my [blog](/blog).
 
 You can subscribe to this website's content via RSS.
-<!-- or you can find me on --> 
-<!-- [@shxdow@treehouse.systems](https://social.treehouse.systems/@shxdow) -->
-<!-- and --> 
 <!-- [@imshxdow:matrix.org](https://matrix.to/#/@imshxdow:matrix.org). -->
 
 ### Things I've done at some point:

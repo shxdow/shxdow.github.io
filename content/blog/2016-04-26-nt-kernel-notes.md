@@ -11,7 +11,7 @@ toc: true
 This is a collections of notes on various kernel related topics, featuring
 Windows NT. A good chunk of these snippets were gathered as a precocius high
 schooler around somewhere between 2016 and 2017, therefore, do not expect the
-quality to be on par of a peer reviewd research paper, far from it. The notes
+quality to be on par of a peer reviewed research paper, far from it. The notes
 don't lie in any particular order as most of this material was gathered through
 books during self study.
 
