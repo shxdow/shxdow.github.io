@@ -71,13 +71,13 @@ Start by allocating 4 consecutive chunks `A`, `B`, `C` and `D`:will of sizes
 `0x20`, `0x110`, `0x90`, `0x20` respectively. Note that chunk `D` is only used
 to prevent consolidation with the top chunk and as such is not strictly necessary.
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-1.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-1.svg)
 
 Free chunk `B`, the runtime will set `C.prev_size = 0x210` and `C.prev_inuse =
 0`. Chunk `B` is added to the unsortedbin as its size does not fit any of the
 fastbins (singly-linked lists holding sizes from `0x20` to `0xb0`)
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-2.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-2.svg)
 
 ## Leveraging the overflow
 
@@ -85,14 +85,14 @@ Now it's the time to use the overflow bug at the attacker's disposal:
 overflow into `B` and decrease its size from `0x210` to `0x200`.  
 Keep in mind that `C.prev_size` is still `0x210`
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-3.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-3.svg)
 
 Request a chunk `B1` of size `0x100`. Malloc searches through its unsortedbin
 for a block of size greater than or equal to `0x100`.
 Finding chunk `B`, it triggers remaindering, linking the remaining `0x100`
 bytes into the unsortedbin.
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-4.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-4.svg)
 
 Request a chunk `B2` of size `0x100`: malloc tries to access the next chunk at
 address `&B2+chunk_size(B2)` and tries to set its `prev_size` to `0x100` and
@@ -101,27 +101,27 @@ before `C`, therefore leaving its fields untouched.
 Any requested size is fine, requesting a `0x100` chunk requests the last
 remainder leaving the heap in a cleaner state.
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-5.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-5.svg)
 
 Free chunk `B1`, setting up a backward consolidation that starts from chunk
 `C` and goes all the way back to `C1`.  
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-6.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-6.svg)
 
 Free chunk `C` 
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-7.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-7.svg)
 
 this triggers the backward consolidation and create a free chunk spanning from
 `B1` to `C` therefore overlapping `B2`, which is still allocated.
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-8.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-8.svg)
 
 Allocating a big enough chunk will trigger remaindering once again and links
 the remainder into the unsortedbin, thus setting the first two quadwords of `C`
 to the address of the unsortedbin.
 
-![](/assets/img/posts/glibc-research/null-poison-starting-heap-9.png)
+![](/assets/img/posts/glibc-research/null-poison-starting-heap-9.svg)
 
 ## Leakage of memory addresses
 
