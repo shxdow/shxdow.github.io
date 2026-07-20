@@ -46,17 +46,19 @@
 // Dark mode: follow system preference
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #25272b;
-        --text-color: #d9d7d1;
-        --text-color-dark: #f2eee7;
-        --border-color: #4d5159;
-        --link-underline-color: #c8ccd4;
-        --selection-bg: #f2eee7;
-        --selection-color: #181a1d;
-        --toc-bg: rgba(255, 255, 255, 0.045);  // Slightly softer panel tint in dark mode
-        --code-border-color: #7c828c;  // Softer contrast than pure light gray
-        --code-card-bg: #2d3036;
-        --code-card-shadow: rgba(0, 0, 0, 0.5);
+        // Neutral cool-gray dark palette tuned for accessible contrast:
+        // body ~11.5:1, headings ~13:1 (comfortable, not harsh), muted AA (~6:1).
+        --bg-color: #16181d;                 // deep neutral, not pure black (avoids halation)
+        --text-color: #cad0d9;               // off-white body, not pure white
+        --text-color-dark: #dde1e8;          // headings, softened to avoid glare
+        --border-color: #565d69;             // separators, now actually visible
+        --link-underline-color: #aeb4bf;
+        --selection-bg: #dde1e8;
+        --selection-color: #16181d;
+        --toc-bg: rgba(255, 255, 255, 0.05);
+        --code-border-color: #697181;
+        --code-card-bg: #22252c;             // elevated surface: lighter than bg (Material elevation)
+        --code-card-shadow: rgba(0, 0, 0, 0.45);
     }
 }
 

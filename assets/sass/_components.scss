@@ -288,6 +288,18 @@
   border-color: transparent;
 }
 
+.pagenav small {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  opacity: 0.75;
+}
+
+.pagenav a {
+  font-size: 1.8rem;
+}
+
 .wrapper {
   padding: 10px;
   border: 1px solid var(--border-color);
@@ -315,10 +327,21 @@
     list-style: none;
 }
 
-// Individual blog post item in the list
+// Individual blog post item — styled as a code-block-style card
 .c-archives__item {
-    padding-top: 2.5rem;
-    border-bottom: 1px solid var(--border-color);  // separator line
+    position: relative;  // anchor for stretched link
+    margin: 2.8rem 0;
+    padding: 1.8rem 2rem;
+    background-color: var(--code-card-bg);
+    border: 0.2rem solid var(--code-border-color);
+    border-radius: 0.8rem;
+    box-shadow: 0.55rem 0.55rem 0 0 var(--code-card-shadow);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+
+    &:hover {
+        transform: translate(-0.35rem, -0.35rem);
+        box-shadow: 0.9rem 0.9rem 0 0 var(--code-card-shadow);
+    }
     // On wide screens, use flexbox to align title and date
     @media screen and (min-width: $bp__sm) {
         display: -webkit-box;
@@ -340,6 +363,12 @@
 
     h3 {
         @include fs--body;
+
+        a::after {  // stretch the link over the whole card
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
     }
 
     p {
