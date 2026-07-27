@@ -104,7 +104,7 @@ The following part starts off with a with a comparsion between `var_20` and `ebp
 2   jl      short  loc_805558B
 ```
 
-The image shows pretty clearly that the previous two lines are part of a loop![cmp loop](/assets/img/ida_cmp_loop.png)
+The image shows pretty clearly that the previous two lines are part of a loop![IDA graph view of get_sys_keyboard, showing three basic blocks that loop back on a cmp instruction — the back-edge that marks the routine as a loop.](/assets/img/ida_cmp_loop.png)
 
 <!-- In this part the malware iterates over the list of input devices connected to the system, looking for one containing either `AT` or `System keyboard`. -->
 Every reverse engineer races against mental fatigue,

@@ -13,7 +13,7 @@ available I solved one year ago or so.
 Writeups can be found all over the internet so I'd rather not write
 one of my own. Thanks to all the people that helped me!
 
-![solution](/assets/img/d8-horsepower.png)
+![d8 terminal output from the exploit: leaked float_map, element and object-array addresses, a WASM RWX page at 0xd8966000, shellcode written, ending in flag{this_is_not_the_real_flag}.](/assets/img/d8-horsepower.png)
 
 # Full exploit code
 
